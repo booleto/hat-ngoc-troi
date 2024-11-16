@@ -2,6 +2,11 @@
 
 ## Hướng dẫn dự án
 
+### Phiên bản
+
+- Godot v4.3 stable
+- Dialogic 2.0 - Alpha 16
+
 ### Bố trí folder
 
 - addons: các plugin
