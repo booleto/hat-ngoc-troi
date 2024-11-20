@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsb25rej8w2hn"]
+
+[ext_resource type="Texture2D" uid="uid://c0in3y70q7s0i" path="res://asset/visual/sprite/logo/Logo.png" id="1_a251x"]
+[ext_resource type="Texture2D" uid="uid://c3fbyvbksg6e3" path="res://asset/visual/sprite/background/Main screen.png" id="2_5g4sf"]
+[ext_resource type="FontFile" uid="uid://cqdodb7scm4sn" path="res://asset/font/Montserrat-Bold.otf" id="3_6dosq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyuiq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Main" type="Node2D"]
+
+[node name="Logo" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(960, 632)
+scale = Vector2(0.315715, 0.352294)
+texture = ExtResource("1_a251x")
+
+[node name="MainScreen" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+position = Vector2(960, 504)
+scale = Vector2(0.24, 0.224)
+texture = ExtResource("2_5g4sf")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 832.0
+offset_top = 744.0
+offset_right = 1088.0
+offset_bottom = 808.0
+theme_override_fonts/font = ExtResource("3_6dosq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_wyuiq")
+text = "New gaem"
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 832.0
+offset_top = 824.0
+offset_right = 1088.0
+offset_bottom = 888.0
+theme_override_fonts/font = ExtResource("3_6dosq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_wyuiq")
+text = "New gaem"
+icon_alignment = 1
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 832.0
+offset_top = 904.0
+offset_right = 1088.0
+offset_bottom = 968.0
+theme_override_fonts/font = ExtResource("3_6dosq")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_wyuiq")
+text = "New gaem"
+icon_alignment = 1
