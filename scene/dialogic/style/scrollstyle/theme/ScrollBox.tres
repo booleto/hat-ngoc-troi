@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://djdy8wp7nfu0l"]
+
+[ext_resource type="Texture2D" uid="uid://bcu6d56omohys" path="res://asset/visual/sprite/ui/hộp thoại.png" id="1_ao0o1"]
+
+[resource]
+texture = ExtResource("1_ao0o1")
+texture_margin_left = 1140.0
+texture_margin_top = 326.0
+texture_margin_right = 1154.0
+texture_margin_bottom = 333.0
+axis_stretch_vertical = 2

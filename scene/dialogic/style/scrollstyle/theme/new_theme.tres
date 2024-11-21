@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://20umukorf4kl"]
+
+[ext_resource type="Texture2D" uid="uid://bg4rwyo87c103" path="res://asset/visual/sprite/ui/cuộn tên 2.png" id="1_1kk5c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jrp8q"]
+texture = ExtResource("1_1kk5c")
+texture_margin_left = 95.0
+texture_margin_top = 66.0
+texture_margin_right = 85.0
+texture_margin_bottom = 78.0
+
+[resource]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 128
+Label/styles/normal = SubResource("StyleBoxTexture_jrp8q")

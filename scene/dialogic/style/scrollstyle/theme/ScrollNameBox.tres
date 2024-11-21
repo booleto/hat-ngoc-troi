@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://ct3r0v04887pw"]
+
+[ext_resource type="Texture2D" uid="uid://bg4rwyo87c103" path="res://asset/visual/sprite/ui/cuộn tên 2.png" id="1_x2oio"]
+
+[resource]
+texture = ExtResource("1_x2oio")
+texture_margin_left = 2588.0
+texture_margin_top = 506.0
+texture_margin_bottom = 155.0
+region_rect = Rect2(71, 232, 14, 0)
