@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Hat Ngoc Troi"
+run/main_scene="res://level/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -23,7 +24,17 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
-directories/dtl_directory={}
+directories/dtl_directory={
+"timeline": "res://timeline.dtl"
+}
+layout/style_list=["res://New_File.tres"]
+layout/default_style="res://New_File.tres"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1009
+window/size/mode=2
 
 [editor_plugins]
 
