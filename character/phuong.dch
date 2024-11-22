@@ -1,0 +1,56 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "phuong1",
+"description": "",
+"display_name": "phuong",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"phuong1": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Phuong/Phung_1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"phuong2": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Phuong/Phung_2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"phuong3": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Phuong/Phung_3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"phuong4": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Phuong/Phung_4.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}

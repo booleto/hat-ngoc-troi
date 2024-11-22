@@ -1,0 +1,92 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "trau1",
+"description": "",
+"display_name": "trau",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 0),
+"portraits": {
+"trau1": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau2": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau3": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau4": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_4.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau5": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_5.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau6": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_6.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau7": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_7.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau8": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_8.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}
