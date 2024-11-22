@@ -1,0 +1,92 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+"_translation_id": "",
+"color": Color(1, 1, 1, 1),
+"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+"default_portrait": "trau_binh_thuong",
+"description": "",
+"display_name": "Trâu",
+"mirror": false,
+"nicknames": [""],
+"offset": Vector2(0, 150),
+"portraits": {
+"trau_binh_thuong": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau_co_y_tuong": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_8.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau_gai_dau": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau_giai_thich": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_4.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau_happi": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_3.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau_met_moi": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_7.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau_suy_nghi": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_6.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau_troi_oi": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_5.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+"scale": 1.0
+}
