@@ -8,32 +8,14 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "tn1",
+"default_portrait": "tn_ok",
 "description": "",
-"display_name": "than_nong",
+"display_name": "Thần Nông",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 0),
+"offset": Vector2(0, 150),
 "portraits": {
-"tn1": {
-"export_overrides": {
-"image": "\"res://asset/visual/sprite/character/Than nong/tn_1.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"tn2": {
-"export_overrides": {
-"image": "\"res://asset/visual/sprite/character/Than nong/tn_2.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"tn3": {
+"tn_>_<": {
 "export_overrides": {
 "image": "\"res://asset/visual/sprite/character/Than nong/tn_3.png\""
 },
@@ -42,7 +24,7 @@
 "scale": 1,
 "scene": ""
 },
-"tn4": {
+"tn_buc": {
 "export_overrides": {
 "image": "\"res://asset/visual/sprite/character/Than nong/tn_4.png\""
 },
@@ -51,18 +33,36 @@
 "scale": 1,
 "scene": ""
 },
-"tn5": {
+"tn_gai_dau": {
 "export_overrides": {
-"image": "\"res://asset/visual/sprite/character/Than nong/tn_5.png\""
+"image": "\"res://asset/visual/sprite/character/Than nong/tn_6.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"tn6": {
+"tn_khoanh_tay": {
 "export_overrides": {
-"image": "\"res://asset/visual/sprite/character/Than nong/tn_6.png\""
+"image": "\"res://asset/visual/sprite/character/Than nong/tn_2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"tn_ok": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Than nong/tn_1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"tn_suy_nghi": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Than nong/tn_5.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

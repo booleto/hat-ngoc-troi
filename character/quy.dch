@@ -10,10 +10,10 @@
 },
 "default_portrait": "quy_normal",
 "description": "",
-"display_name": "quy",
+"display_name": "Quy",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 0),
+"offset": Vector2(0, 150),
 "portraits": {
 "quy_normal": {
 "export_overrides": {

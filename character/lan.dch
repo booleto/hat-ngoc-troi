@@ -10,10 +10,10 @@
 },
 "default_portrait": "lan_normal",
 "description": "",
-"display_name": "lan",
+"display_name": "Lân",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 0),
+"offset": Vector2(0, 150),
 "portraits": {
 "lan_normal": {
 "export_overrides": {

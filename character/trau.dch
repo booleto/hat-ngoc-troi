@@ -8,14 +8,14 @@
 "sound_moods": {},
 "style": ""
 },
-"default_portrait": "trau1",
+"default_portrait": "trau_binh_thuong",
 "description": "",
-"display_name": "trau",
+"display_name": "Trâu",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 0),
+"offset": Vector2(0, 150),
 "portraits": {
-"trau1": {
+"trau_binh_thuong": {
 "export_overrides": {
 "image": "\"res://asset/visual/sprite/character/Trau/Trau_1.png\""
 },
@@ -24,7 +24,16 @@
 "scale": 1,
 "scene": ""
 },
-"trau2": {
+"trau_co_y_tuong": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_8.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau_gai_dau": {
 "export_overrides": {
 "image": "\"res://asset/visual/sprite/character/Trau/Trau_2.png\""
 },
@@ -33,16 +42,7 @@
 "scale": 1,
 "scene": ""
 },
-"trau3": {
-"export_overrides": {
-"image": "\"res://asset/visual/sprite/character/Trau/Trau_3.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"trau4": {
+"trau_giai_thich": {
 "export_overrides": {
 "image": "\"res://asset/visual/sprite/character/Trau/Trau_4.png\""
 },
@@ -51,25 +51,16 @@
 "scale": 1,
 "scene": ""
 },
-"trau5": {
+"trau_happi": {
 "export_overrides": {
-"image": "\"res://asset/visual/sprite/character/Trau/Trau_5.png\""
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_3.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"trau6": {
-"export_overrides": {
-"image": "\"res://asset/visual/sprite/character/Trau/Trau_6.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"trau7": {
+"trau_met_moi": {
 "export_overrides": {
 "image": "\"res://asset/visual/sprite/character/Trau/Trau_7.png\""
 },
@@ -78,9 +69,18 @@
 "scale": 1,
 "scene": ""
 },
-"trau8": {
+"trau_suy_nghi": {
 "export_overrides": {
-"image": "\"res://asset/visual/sprite/character/Trau/Trau_8.png\""
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_6.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"trau_troi_oi": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Trau/Trau_5.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
