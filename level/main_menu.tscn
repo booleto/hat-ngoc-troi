@@ -1,11 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bsb25rej8w2hn"]
+[gd_scene load_steps=10 format=3 uid="uid://bsb25rej8w2hn"]
 
 [ext_resource type="Texture2D" uid="uid://b7k0ow0ejpn4w" path="res://asset/visual/sprite/logo/Logo (1).png" id="1_p6ir8"]
 [ext_resource type="Texture2D" uid="uid://c3fbyvbksg6e3" path="res://asset/visual/sprite/background/Main screen.png" id="2_5g4sf"]
 [ext_resource type="FontFile" uid="uid://cqdodb7scm4sn" path="res://asset/font/Montserrat-Bold.otf" id="3_6dosq"]
+[ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="4_bamqk"]
+[ext_resource type="Script" path="res://script/ui/button/action/LoadLevelAction.gd" id="5_rarhj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyuiq"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Resource" id="Resource_e8x7j"]
+script = ExtResource("5_rarhj")
+level_to_load = 1
 
 [sub_resource type="LabelSettings" id="LabelSettings_aifu1"]
 font = ExtResource("3_6dosq")
@@ -15,6 +21,10 @@ outline_color = Color(0.960784, 1, 0.298039, 1)
 shadow_size = 5
 shadow_color = Color(0.960784, 1, 0.298039, 1)
 shadow_offset = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_s66hi"]
+script = ExtResource("5_rarhj")
+level_to_load = 0
 
 [node name="Main" type="Node2D"]
 
@@ -41,6 +51,8 @@ theme_override_fonts/font = ExtResource("3_6dosq")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_wyuiq")
 icon_alignment = 1
+script = ExtResource("4_bamqk")
+action = SubResource("Resource_e8x7j")
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="Button"]
@@ -68,6 +80,8 @@ theme_override_fonts/font = ExtResource("3_6dosq")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_wyuiq")
 icon_alignment = 1
+script = ExtResource("4_bamqk")
+action = SubResource("Resource_s66hi")
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="Button2"]
