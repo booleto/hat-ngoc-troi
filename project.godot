@@ -24,6 +24,11 @@ UiEventBus="*res://script/autoload/UIEventBus.gd"
 [dialogic]
 
 directories/dch_directory={
+"lan": "res://character/lan.dch",
+"phuong": "res://character/phuong.dch",
+"quy": "res://character/quy.dch",
+"than_nong": "res://character/than_nong.dch",
+"trau": "res://character/trau.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
