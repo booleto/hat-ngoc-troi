@@ -25,10 +25,13 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"test": "res://scene/dialogic/timeline/test.dtl",
 "timeline": "res://timeline.dtl"
 }
-layout/style_list=["res://New_File.tres"]
+layout/style_list=["res://New_File.tres", "res://scene/dialogic/style/mainstyle/mainstyle.tres"]
 layout/default_style="res://New_File.tres"
+glossary/default_case_sensitive=true
+variables={}
 
 [display]
 
