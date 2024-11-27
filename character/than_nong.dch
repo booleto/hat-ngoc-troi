@@ -15,15 +15,6 @@
 "nicknames": [""],
 "offset": Vector2(0, 150),
 "portraits": {
-"tn_>_<": {
-"export_overrides": {
-"image": "\"res://asset/visual/sprite/character/Than nong/tn_3.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
 "tn_buc": {
 "export_overrides": {
 "image": "\"res://asset/visual/sprite/character/Than nong/tn_4.png\""
@@ -63,6 +54,15 @@
 "tn_suy_nghi": {
 "export_overrides": {
 "image": "\"res://asset/visual/sprite/character/Than nong/tn_5.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"tn_vui": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Than nong/tn_3.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

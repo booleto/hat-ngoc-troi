@@ -10,7 +10,7 @@
 },
 "default_portrait": "trau_binh_thuong",
 "description": "",
-"display_name": "TRÂU VÀNG",
+"display_name": "{ten_trau}",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 150),

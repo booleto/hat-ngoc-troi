@@ -1,0 +1,34 @@
+[style name="mainstyle"]
+[background arg="res://asset/visual/sprite/background/đồng lúa.png" fade="0.0"]
+Sau Lập Xuân, khi triều đình vừa hoàn tất nghi lễ tiến xuân ngưu thường niên đầy long trọng, làng Trâu lại mắc phải nạn hạn hán khiến cây cối héo khô, lúa giống èo uột, hoa màu chẳng thể nảy nở sinh sôi.
+Hàng tháng liền không có lấy một giọt nước mưa làm ướt đất, chẳng thể gieo trồng bất cứ lại lương thực nào dẫn đến thức ăn trữ trong nhà dần cạn kiệt.
+Như thường ngày, buổi sáng Trâu Vàng vẫn đi thăm ruộng lúa xem còn có thể cứu vãn được gì không.
+join trau (trau_troi_oi) leftmost
+trau (trau_troi_oi): Ôi trời, đất nứt nẻ cả ra thế này mà không có lấy một giọt mưa, chán thế không biết.
+join lao_trau rightmost
+lao_trau: Chào cháu {ten_trau}, hôm nay vẫn khỏe chứ hả?
+trau (trau_happi): Cháu vẫn khỏe ạ! Mà thật cũng không khỏe lắm bác ạ…Mấy hôm rồi cháu cứ lo canh cánh không biết làm sao mới cày cấy lại được, cứ thế đến cái vỏ trấu cũng không có mà ăn mất thôi.
+lao_trau: Năm nay phải cơn hạn hán nặng quá, mọi khi có thế này đâu.
+update lao_trau center
+join lao_trau_2 rightmost
+lao_trau_2: Chết đến nơi mất thôi! Chết cả nhà tôi mất rồi, thằng nào cả gan chọc giận thần thánh để cả làng phải chịu hạn hán thế kia!
+trau (trau_gai_dau): ?
+trau (trau_gai_dau): Bác ấy trông có vẻ hoảng sợ.
+lao_trau: Lão ta bị ngẫn, thỉnh thoảng lại lên cơn đấy, nhất là mấy hôm nay lại nóng bức thế kia mà.
+trau (trau_gai_dau): Cho cháu hỏi với, có gì mà làng ta tụ tập lại thế ạ?
+dam_dong: Lão ta bảo có tên thầy bà nào đấy phán làng ta bị trời phạt nên mới mất mùa, giờ đang gào rú khóc lóc cho mọi người xem kìa.
+trau (trau_suy_nghi): Trời phạt ạ?
+lao_trau_2: Trời ơi chẳng ai tin tôi rồi đợi đến khi cả làng ta chết hết mới biết sợ!
+dam_dong: Thôi giải tán, nhà bao việc. Thánh thần kiểu gì cũng thương cho phận làm nông mà ban cho cơn mưa xuống thôi ấy mà.
+Đám đông tản dần, cho đến khi chỉ còn lại Trâu Vàng và ông hàng xóm trong cơn hoảng sợ vẫn luôn miệng gào rú. Trâu mới lại gần hỏi cho rõ sự tình.
+leave lao_trau
+trau (trau_giai_thich): Bác ơi, có cháu ở với bác đây ạ, xin bác hãy bình tĩnh lại.
+lao_trau_2: Ơ hay cái thằng này lạ, bảo tao bình tĩnh là thế nào? Thầy đã phán là thần thánh trừng phạt làng ta là thần thánh trừng phạt ta, chẳng ai chịu nghe tao thì đến chết mất thôi! Tao phải bỏ xứ trốn trước!
+Vừa dứt lời, ông lão bỏ lại một mình Trâu Vàng ngẩn ngơ rồi chạy mất, để lại cho anh một mớ thắc mắc cần được giải đáp
+leave lao_trau_2
+Buổi tối, sau khi dùng bữa cơm đạm bạc chỉ có rau mắm, Trâu Vàng ngắm nghía toàn cảnh ngôi làng thân thương, ngắm cánh đồng đã từng tươi tốt ngày càng khô cằn cỗi mà không khỏi trăn trở.
+trau (trau_suy_nghi): Chỉ có một mình ta thì thay đổi được gì không nhỉ…
+trau (trau_binh_thuong): Chẳng ai tin chuyện trời phạt, nhưng trông bác ấy lại thành thật lắm…cả cơn hạn hán bất thường này nữa…
+trau (trau_suy_nghi): Khó nghĩ ghê…
+Đêm khuya thanh vắng oi ả, Trâu Vàng trằn trọc nghĩ mãi không biết làm sao để cứu lấy mùa vụ cho anh và dân làng khỏi cảnh chết đói. Nghĩ ngợi mãi cũng mệt, Trâu Vàng thiếp đi.
+leave trau

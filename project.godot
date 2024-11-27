@@ -28,7 +28,10 @@ UiEventBus="*res://script/autoload/UIEventBus.gd"
 [dialogic]
 
 directories/dch_directory={
+"dam_dong": "res://character/dam_dong.dch",
 "lan": "res://character/lan.dch",
+"lao_trau": "res://character/lao_trau.dch",
+"lao_trau_2": "res://character/lao_trau_2.dch",
 "phuong": "res://character/phuong.dch",
 "quy": "res://character/quy.dch",
 "than_nong": "res://character/than_nong.dch",
@@ -36,13 +39,17 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"test": "res://scene/dialogic/timeline/test.dtl",
-"timeline": "res://timeline.dtl"
+"chiem_bao": "res://scene/dialogic/timeline/chiem_bao.dtl",
+"lang_trau": "res://scene/dialogic/timeline/lang_trau.dtl",
+"prologue": "res://scene/dialogic/timeline/prologue.dtl",
+"test": "res://scene/dialogic/timeline/test.dtl"
 }
-layout/style_list=["res://New_File.tres", "res://scene/dialogic/style/mainstyle/mainstyle.tres"]
-layout/default_style="res://New_File.tres"
+layout/style_list=["res://scene/dialogic/style/mainstyle/mainstyle.tres"]
+layout/default_style=""
 glossary/default_case_sensitive=true
-variables={}
+variables={
+"ten_trau": "Trâu"
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
