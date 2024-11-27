@@ -1,12 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxbcgp46o15ya"]
+[gd_scene load_steps=2 format=3 uid="uid://dxbcgp46o15ya"]
 
 [ext_resource type="Script" path="res://level/test_level.gd" id="1_jr01h"]
-[ext_resource type="Texture2D" uid="uid://2oe66a3adha1" path="res://asset/visual/sprite/background/đồng lúa.png" id="1_xv8db"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_jr01h")
-
-[node name="ĐồngLúa" type="Sprite2D" parent="."]
-position = Vector2(960, 504)
-scale = Vector2(0.24, 0.224)
-texture = ExtResource("1_xv8db")
