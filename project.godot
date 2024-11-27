@@ -15,6 +15,10 @@ run/main_scene="res://level/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://data/audiobus/default_bus_layout.tres"
+
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
@@ -67,6 +71,8 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 portraits/position_suggestion_names="leftmost, leftmore, left, center, right, rightmore, rightmost"
+history/simple_history_enabled=false
+audio/type_sound_bus="SFX"
 
 [display]
 
