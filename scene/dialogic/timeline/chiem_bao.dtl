@@ -1,4 +1,5 @@
 [style name="mainstyle"]
+[background arg="res://asset/visual/sprite/background/đền thần nông.png" fade="0.0"]
 Trâu Vàng đi lạc vào nơi mù mịt sương khói, bốn bề trắng toát chẳng thấy đâu là bờ, dưới chân anh cũng bao trùm trong khói, chỉ sợ sơ sẩy một chút là hụt chân ngã sõng soài ngay.
 join trau (trau_met_moi) leftmost
 trau (trau_met_moi): Ta đang ở nơi đâu?
@@ -7,7 +8,7 @@ trau (trau_binh_thuong): Xin cho hỏi người là ai vậy ạ?
 join than_nong (tn_vui) rightmost
 than_nong (tn_vui): Nào, ta và ngươi là bạn đồng hành kia mà, sao lại xa cách thế kia?
 than_nong (tn_vui): Hằng năm các ngươi đều tiến hành lễ tiến xuân ngưu không phải luôn có mặt ta sao?
-trau (trau_binh_thuong):  Vâng, người phải lặn lội đến đây hẳn có đôi lời, đầu trâu con xin được chỉ dạy ạ.
+trau (trau_binh_thuong): Vâng, người phải lặn lội đến đây hẳn có đôi lời, đầu trâu con xin được chỉ dạy ạ.
 than_nong (tn_khoanh_tay): Nể tình ngươi và ta là bạn, ta nhắc nhở đôi điều rằng cơn hạn hán kéo dài năm nay không phải tự nhiên mà có.
 than_nong (tn_buc): Các vị thần bảo hộ đang nổi trận lôi đình với nhân giới mà tước đi bốn bảo vật quan trọng giúp cho mùa màng thuận lợi đi mất rồi, nên các ngươi mới phải mất mùa như thế kia.
 trau (trau_giai_thich): Do đâu vậy ạ?
@@ -17,6 +18,8 @@ trau (trau_giai_thich): Con tự ý mà đến có khiến các thần nổi gi�
 than_nong (tn_khoanh_tay): Dĩ nhiên không dễ dàng gì để ngươi được gặp họ rồi.
 than_nong (tn_khoanh_tay): Mỗi một vị thần đều có bài kiểm tra thử lòng xem ngươi có thật tâm thật dạ cầu xin điềm lành cho nhân gian, hay chỉ muốn trục lợi cho chính ngươi.
 than_nong (tn_khoanh_tay): Thôi, việc của ta đã hết, chúc cho hành trình của ngươi được thuận lợi.
+leave than_nong
+[background arg="res://asset/visual/sprite/background/đồng lúa.png" fade="0.5"]
 Khi thần dứt lời, bóng hình của thần tan đi trong làn khói. Khi khung cảnh xung quanh đã trở nên rõ ràng, Trâu Vàng bừng tỉnh và nhận ra rằng mình vừa chiêm bao. Tuy vậy, cuộn kinh vàng trong tay anh lại là thật. Hiểu rằng thần đã hiển linh báo mộng cho mình, Trâu Vàng tức tốc chuẩn bị lên đường.
 trau (trau_binh_thuong): Thần báo mộng cho ta thật…không thể chậm chân nữa mà phải lên đường ngay!
 Trâu Vàng chuẩn bị một tay nải chứa nước, lương thực đi đường, khi đảm bảo đã đầy đủ thì anh tức tốc hướng về phía cổng làng mà đi thẳng. Sợ nói ra chẳng ai tin, anh cứ thế mà đi không một lời tạm biệt.
