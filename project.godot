@@ -24,6 +24,7 @@ buses/default_bus_layout="res://data/audiobus/default_bus_layout.tres"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 LevelLoader="*res://script/autoload/LevelLoader.gd"
 UiEventBus="*res://script/autoload/UIEventBus.gd"
+GameEventBus="*res://script/autoload/GameEventBus.gd"
 
 [dialogic]
 
@@ -40,8 +41,16 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "chiem_bao": "res://scene/dialogic/timeline/chiem_bao.dtl",
+"chiem_bao_start": "res://scene/dialogic/timeline/chiem_bao/chiem_bao_start.dtl",
+"chiem_bao_walk_finish": "res://scene/dialogic/timeline/chiem_bao/chiem_bao_walk_finish.dtl",
 "lang_trau": "res://scene/dialogic/timeline/lang_trau.dtl",
 "prologue": "res://scene/dialogic/timeline/prologue.dtl",
+"rua_door_1": "res://scene/dialogic/timeline/rua/rua_door_1.dtl",
+"rua_door_2": "res://scene/dialogic/timeline/rua/rua_door_2.dtl",
+"rua_door_3": "res://scene/dialogic/timeline/rua/rua_door_3.dtl",
+"rua_door_open": "res://scene/dialogic/timeline/rua/rua_door_open.dtl",
+"rua_lan_1": "res://scene/dialogic/timeline/rua/rua_lan_1.dtl",
+"rua_start": "res://scene/dialogic/timeline/rua/rua_start.dtl",
 "test": "res://scene/dialogic/timeline/test.dtl"
 }
 layout/style_list=["res://scene/dialogic/style/mainstyle/mainstyle.tres"]

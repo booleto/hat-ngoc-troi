@@ -82,7 +82,7 @@ action_to_do = 0
 script = ExtResource("10_74am2")
 action_to_do = 2
 
-[node name="PauseMenu" type="Control" node_paths=PackedStringArray("pause_panel", "inventory_panel")]
+[node name="PauseMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -91,8 +91,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_sjy2u")
-pause_panel = NodePath("PauseMenuPanel")
-inventory_panel = NodePath("InventoryPanel")
 
 [node name="PauseMenuPanel" type="PanelContainer" parent="."]
 unique_name_in_owner = true
