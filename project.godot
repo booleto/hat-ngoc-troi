@@ -41,6 +41,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "chiem_bao": "res://scene/dialogic/timeline/chiem_bao.dtl",
 "lang_trau": "res://scene/dialogic/timeline/lang_trau.dtl",
+"mieu_phuong_start": "res://scene/dialogic/timeline/mieu_phuong/mieu_phuong_start.dtl",
 "prologue": "res://scene/dialogic/timeline/prologue.dtl",
 "test": "res://scene/dialogic/timeline/test.dtl"
 }
