@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=22 format=3 uid="uid://3btj4q2lr6nw"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=23 format=3 uid="uid://3btj4q2lr6nw"]
 
+[ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_7qm62"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_ysb5a"]
 [ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="2_4iumh"]
 [ext_resource type="PackedScene" uid="uid://bh3kratlwpdrn" path="res://scene/dialogic/style/mainstyle/5Portraits/custom_5_portraits.tscn" id="3_22xv8"]
@@ -14,6 +15,7 @@
 
 [sub_resource type="Resource" id="Resource_3fk2a"]
 script = ExtResource("1_ysb5a")
+scene = ExtResource("1_7qm62")
 overrides = {}
 
 [sub_resource type="Resource" id="Resource_3fwpb"]
@@ -100,4 +102,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_ysb5a")]([])
-metadata/_latest_layer = "17"
+metadata/_latest_layer = "13"
