@@ -2,17 +2,17 @@ extends Node
 
 enum LEVEL {
 	MAIN_MENU,
+	TEST_LEVEL,
 	CHIEM_BAO_MAY,
-	CHIEM_BAO_THAN_NONG,
 	CONG_DEN_TU_LINH,
-	THANH_DIA_TU_LINH,
-	TEST_LEVEL
+	THANH_DIA_TU_LINH
 }
 
 var level_map: Dictionary = {
 	LEVEL.MAIN_MENU : load("res://level/main_menu.tscn"),
 	LEVEL.TEST_LEVEL : load("res://level/test_level.tscn"),
-	LEVEL.CONG_DEN_TU_LINH: load("res://level/cong_den_tu_linh.tscn")
+	LEVEL.CHIEM_BAO_MAY : load("res://level/chiem_bao_may.tscn"),
+	LEVEL.CONG_DEN_TU_LINH : load("res://level/cong_den_tu_linh.tscn")
 }
 
 func load_level(level: LEVEL):

@@ -72,6 +72,7 @@ text = "New game"
 label_settings = SubResource("LabelSettings_aifu1")
 
 [node name="Button2" type="Button" parent="."]
+visible = false
 offset_left = 832.0
 offset_top = 832.0
 offset_right = 1088.0
@@ -101,6 +102,7 @@ text = "New game"
 label_settings = SubResource("LabelSettings_aifu1")
 
 [node name="Button3" type="Button" parent="."]
+visible = false
 offset_left = 832.0
 offset_top = 920.0
 offset_right = 1088.0

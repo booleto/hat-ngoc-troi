@@ -32,3 +32,4 @@ trau (trau_binh_thuong): Chẳng ai tin chuyện trời phạt, nhưng trông b�
 trau (trau_suy_nghi): Khó nghĩ ghê…
 Đêm khuya thanh vắng oi ả, Trâu Vàng trằn trọc nghĩ mãi không biết làm sao để cứu lấy mùa vụ cho anh và dân làng khỏi cảnh chết đói. Nghĩ ngợi mãi cũng mệt, Trâu Vàng thiếp đi.
 leave trau
+do LevelLoader.load_level_from_name("CHIEM_BAO_MAY")
