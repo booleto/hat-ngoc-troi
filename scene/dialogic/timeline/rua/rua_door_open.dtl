@@ -3,10 +3,11 @@ join trau (trau_co_y_tuong) left [animation="Instant In"]
 trau: Ồ! Cửa mở rồi!
 trau: Ra là phải đẩy tượng lân thì cửa mới mở được.
 trau (trau_binh_thuong): Ta vào trong thôi.
+trau: Mà nãy đi cũng mệt rồi, ngồi đây nghỉ chút đã.
+trau (trau_gai_dau): À không được, làng đang khó khăn, mình không thể chậm trễ nữa.
+[end_timeline]
 - Vào đền
 	[end_timeline]
 - Mệt quá, ngồi đây nghỉ chút đã
-	trau: Mà nãy đi cũng mệt rồi, ngồi đây nghỉ chút đã.
-	trau (trau_gai_dau): À không được, làng đang khó khăn, mình không thể chậm trễ nữa.
 	do LevelLoader.load_level("")
 	[end_timeline]

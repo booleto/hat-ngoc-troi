@@ -51,12 +51,16 @@ directories/dtl_directory={
 "rua_door_open": "res://scene/dialogic/timeline/rua/rua_door_open.dtl",
 "rua_lan_1": "res://scene/dialogic/timeline/rua/rua_lan_1.dtl",
 "rua_start": "res://scene/dialogic/timeline/rua/rua_start.dtl",
+"styletest": "res://scene/dialogic/timeline/styletest.dtl",
 "test": "res://scene/dialogic/timeline/test.dtl"
 }
 layout/style_list=["res://scene/dialogic/style/mainstyle/mainstyle.tres"]
 layout/default_style=""
 glossary/default_case_sensitive=true
 variables={
+"Items": {
+"kinh_thu": false
+},
 "ten_trau": "Trâu"
 }
 extensions_folder="res://addons/dialogic_additions"

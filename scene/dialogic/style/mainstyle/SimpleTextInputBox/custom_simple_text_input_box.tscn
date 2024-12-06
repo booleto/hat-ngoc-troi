@@ -1,0 +1,167 @@
+[gd_scene load_steps=22 format=3 uid="uid://d2y2b07jiplj"]
+
+[ext_resource type="Script" path="res://scene/dialogic/style/mainstyle/SimpleTextInputBox/text_input_layer.gd" id="1_7ahrn"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/TextInput/node_text_input.gd" id="1_mxdep"]
+[ext_resource type="Texture2D" uid="uid://bxmunc2fdd7i6" path="res://asset/visual/sprite/ui/tên.png" id="3_lamt6"]
+[ext_resource type="FontFile" uid="uid://bekgjs330omnq" path="res://asset/font/DFVNWornout/OpenType-PS/DFVN Wornout.otf" id="4_1udom"]
+[ext_resource type="FontFile" uid="uid://cqdodb7scm4sn" path="res://asset/font/Montserrat-Bold.otf" id="5_y07ra"]
+[ext_resource type="Texture2D" uid="uid://u5stb3wx2fgk" path="res://asset/visual/sprite/ui/option -yes,no-.png" id="6_ni5y4"]
+
+[sub_resource type="Theme" id="Theme_8xwp1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2hh0w"]
+font = ExtResource("4_1udom")
+font_size = 32
+font_color = Color(0.4, 0.203922, 0.105882, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wo1hh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c5ruf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gow68"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tldxm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ol3w7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vu2hs"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Theme" id="Theme_ssupd"]
+default_font = ExtResource("4_1udom")
+default_font_size = 24
+LineEdit/colors/caret_color = Color(0.337255, 0.133333, 0.0509804, 1)
+LineEdit/colors/font_color = Color(0.337255, 0.133333, 0.0509804, 1)
+LineEdit/constants/caret_width = 5
+LineEdit/font_sizes/font_size = 32
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_wo1hh")
+LineEdit/styles/normal = SubResource("StyleBoxEmpty_c5ruf")
+LineEdit/styles/read_only = SubResource("StyleBoxEmpty_gow68")
+TextEdit/styles/focus = SubResource("StyleBoxFlat_tldxm")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_ol3w7")
+TextEdit/styles/read_only = SubResource("StyleBoxFlat_vu2hs")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xfdyx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p24p4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l0lt6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u78m2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_68ddw"]
+
+[sub_resource type="Theme" id="Theme_1k0fa"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_xfdyx")
+Button/styles/focus = SubResource("StyleBoxEmpty_p24p4")
+Button/styles/hover = SubResource("StyleBoxEmpty_l0lt6")
+Button/styles/normal = SubResource("StyleBoxEmpty_u78m2")
+Button/styles/pressed = SubResource("StyleBoxEmpty_68ddw")
+
+[node name="TextInputLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_7ahrn")
+
+[node name="DialogicNode_TextInput" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -210.0
+offset_top = -50.0
+offset_right = 210.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_mxdep")
+input_line_edit = NodePath("TextInputPanel/Control/InputField")
+text_label = NodePath("TextInputPanel/Control/CenterContainer/TextLabel")
+confirmation_button = NodePath("TextInputPanel/Control/ConfirmationButton")
+metadata/_edit_layout_mode = 1
+
+[node name="TextInputPanel" type="PanelContainer" parent="DialogicNode_TextInput"]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 450.0
+offset_top = -150.0
+offset_right = 450.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="DialogicNode_TextInput/TextInputPanel"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="DialogicNode_TextInput/TextInputPanel/Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -89.0
+offset_top = -246.0
+offset_right = 949.0
+offset_bottom = 1235.0
+grow_horizontal = 2
+scale = Vector2(0.41, 0.41)
+mouse_filter = 2
+texture = ExtResource("3_lamt6")
+
+[node name="CenterContainer" type="CenterContainer" parent="DialogicNode_TextInput/TextInputPanel/Control"]
+layout_mode = 0
+offset_left = 33.38
+offset_top = -174.0
+offset_right = 383.38
+offset_bottom = -78.0
+mouse_filter = 2
+
+[node name="TextLabel" type="Label" parent="DialogicNode_TextInput/TextInputPanel/Control/CenterContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme = SubResource("Theme_8xwp1")
+text = "Please enter some text:"
+label_settings = SubResource("LabelSettings_2hh0w")
+autowrap_mode = 3
+
+[node name="InputField" type="LineEdit" parent="DialogicNode_TextInput/TextInputPanel/Control"]
+layout_mode = 2
+offset_left = 17.0
+offset_top = -9.0
+offset_right = 388.0
+offset_bottom = 66.0
+theme = SubResource("Theme_ssupd")
+
+[node name="ConfirmationButton" type="Button" parent="DialogicNode_TextInput/TextInputPanel/Control"]
+layout_mode = 2
+offset_left = 126.0
+offset_top = 149.0
+offset_right = 1370.0
+offset_bottom = 604.0
+scale = Vector2(0.115, 0.115)
+size_flags_horizontal = 8
+theme = SubResource("Theme_1k0fa")
+theme_override_colors/font_color = Color(0.670588, 0.494118, 0.360784, 1)
+theme_override_fonts/font = ExtResource("5_y07ra")
+theme_override_font_sizes/font_size = 256
+text = "OK"
+icon = ExtResource("6_ni5y4")
+icon_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogicNode_TextInput/TextInputPanel"]
+visible = false
+z_index = 1
+layout_mode = 2
