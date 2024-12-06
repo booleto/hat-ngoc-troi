@@ -44,6 +44,7 @@ directories/dtl_directory={
 "chiem_bao_start": "res://scene/dialogic/timeline/chiem_bao/chiem_bao_start.dtl",
 "chiem_bao_walk_finish": "res://scene/dialogic/timeline/chiem_bao/chiem_bao_walk_finish.dtl",
 "lang_trau": "res://scene/dialogic/timeline/lang_trau.dtl",
+"mieu_phuong_start": "res://scene/dialogic/timeline/mieu_phuong/mieu_phuong_start.dtl",
 "prologue": "res://scene/dialogic/timeline/prologue.dtl",
 "rua_door_1": "res://scene/dialogic/timeline/rua/rua_door_1.dtl",
 "rua_door_2": "res://scene/dialogic/timeline/rua/rua_door_2.dtl",

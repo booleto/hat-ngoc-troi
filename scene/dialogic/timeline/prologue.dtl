@@ -1,3 +1,4 @@
+[background arg="res://asset/visual/sprite/background/đồng lúa.png" fade="0.0"]
 [style name="mainstyle"]
 [background arg="res://asset/visual/sprite/cg/prologue1.png" fade="0.0"]
 [wait time="1.0" skippable="true"]
