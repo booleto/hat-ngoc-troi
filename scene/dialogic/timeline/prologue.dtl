@@ -1,9 +1,25 @@
 [style name="mainstyle"]
-join trau (trau_binh_thuong) left
-[text_input text="Nhập tên:" var="ten_trau" placeholder="Trâu" default="Trâu"]
-trau (trau_binh_thuong): Xin chào, tên tôi là {ten_trau}, đang sinh sống ở làng Trâu ngày ngày cần cù cày cuốc kiếm sống.
-trau (trau_gai_dau): Hiện tại có một vấn đề khiến tôi đau hết cả đầu.
-trau (trau_giai_thich): Năm nay làng tôi bị mất mùa cùng hạn hán kéo dài, hình như là sau Lập Xuân, khi triều đình vừa mới thực hiện lễ Tiến Xuân Ngưu, là nắng nóng kéo dài cho tới bây giờ chẳng thể trồng trọt được gì.
-trau (trau_giai_thich): Ở nơi mà phải cày cuốc mới có ăn như làng tôi thì cơn hạn hán kéo dài này chẳng khác gì thảm hoạ, lương thực dự trữ trong nhà cũng sắp cạn hết cả rồi.
-trau (trau_binh_thuong): Không biết có nên nói là may mắn hay không vì tôi chỉ sống có một mình thôi nên cũng không ăn nhiều mấy, nhưng các nhà khác có con cháu thì lại khó khăn hơn hẳn.
-trau (trau_gai_dau): Chà, có lẽ tôi nên kiểm tra lại xem có thể cứu vãn được gì nữa không, chứ đề cả làng cùng chết đói thì gay go lắm đây.
+[background arg="res://asset/visual/sprite/cg/prologue1.png" fade="0.0"]
+[wait time="1.0"]
+[background arg="res://asset/visual/sprite/cg/prologue2.png" fade="0.0"]
+Kì lạ thật đấy...Sao đất đai dạo này khô cằn thế nhỉ?
+[background arg="res://asset/visual/sprite/cg/prologue3.png" fade="0.0"]
+[wait time="1.0"]
+[background arg="res://asset/visual/sprite/cg/prologue4.png" fade="0.0"]
+[wait time="1.0"]
+[background arg="res://asset/visual/sprite/cg/prologue5.png" fade="0.0"]
+[wait time="1.0"]
+[background arg="res://asset/visual/sprite/cg/prologue6.png" fade="0.0"]
+[wait time="1.0"]
+[background arg="res://asset/visual/sprite/cg/prologue7.png" fade="0.0"]
+[wait time="1.0"]
+[background arg="res://asset/visual/sprite/cg/prologue8.png" fade="0.0"]
+[wait time="1.0"]
+[background arg="res://asset/visual/sprite/cg/b3.png" fade="0.0"]
+[wait time="1.0"]
+[background arg="res://asset/visual/sprite/cg/b4.png" fade="0.0"]
+[wait time="1.0"]
+[background arg="res://asset/visual/sprite/cg/b5.png" fade="0.0"]
+[wait time="1.0"]
+[background arg="res://asset/visual/sprite/cg/b6.png" fade="0.0"]
+[wait time="1.0"]
