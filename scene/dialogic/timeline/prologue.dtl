@@ -1,6 +1,6 @@
 [style name="mainstyle"]
 [background arg="res://asset/visual/sprite/cg/prologue1.png" fade="0.0"]
-[wait time="1.0"]
+[wait time="1.0" skippable="true"]
 [background arg="res://asset/visual/sprite/cg/prologue2.png" fade="0.0"]
 Kì lạ thật đấy...Sao đất đai dạo này khô cằn thế nhỉ?
 [background arg="res://asset/visual/sprite/cg/prologue3.png" fade="0.0"]
@@ -23,3 +23,4 @@ Kì lạ thật đấy...Sao đất đai dạo này khô cằn thế nhỉ?
 [wait time="1.0"]
 [background arg="res://asset/visual/sprite/cg/b6.png" fade="0.0"]
 [wait time="1.0"]
+do LevelLoader.load_level_from_name("CHIEM_BAO_MAY")
