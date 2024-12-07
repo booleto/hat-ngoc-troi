@@ -3,7 +3,8 @@ class_name PauseMenu
 
 @onready var pause_panel: Container = %PauseMenuPanel
 @onready var inventory_panel: Container = %InventoryPanel
-
+@export var pausable: bool = true
+@export var inventory_openable: bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,9 +15,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_released("ui_cancel"):
+	if Input.is_action_just_released("ui_cancel") and pausable:
 		UiEventBus.toggle_pause.emit()
-	if Input.is_action_just_released("ui_focus_next"):
+	if Input.is_action_just_released("ui_focus_next") and inventory_openable:
 		UiEventBus.toggle_inventory.emit()
 
 

@@ -99,6 +99,7 @@ jump quiz2
 label right2
 update trau (trau_happi)
 phuong (phuong_normal): Cũng khá hơn ta nghĩ đấy.
+update trau (trau_binh_thuong)
 phuong (phuong_suy_nghi): Tốt, đằng nào cũng nghĩ ngươi đã không quản đường xa lặn lội đến đây một mình thưa chuyện cũng khiến ta động lòng.
 phuong (phuong_suy_nghi): Để không mang tiếng ức hiếp lũ phàm nhân mắt thịt các ngươi, ta có bồ lúa vàng đang phơi nắng ngoài sân. Nếu như ngươi có thể vượt qua được bài kiểm tra của ta thì ta sẽ ban cho món báu vật ẩn sâu bên trong bồ lúa ấy.
 leave --All--

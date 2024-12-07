@@ -1,0 +1,171 @@
+[gd_scene load_steps=18 format=3 uid="uid://dtw7wu10r7kbk"]
+
+[ext_resource type="Texture2D" uid="uid://2eynch24d576" path="res://asset/visual/sprite/minigame/bg.png" id="1_06gx8"]
+[ext_resource type="Script" path="res://script/minigame/drum/DrumMinigame.gd" id="1_cdk5x"]
+[ext_resource type="FontFile" uid="uid://ckewprv66gyir" path="res://asset/font/MontserratAlternates-ExtraBold.otf" id="2_5q00m"]
+[ext_resource type="PackedScene" uid="uid://bcvytkjbnw1dt" path="res://scene/minigame/drum/Arrow.tscn" id="2_phryr"]
+[ext_resource type="AudioStream" uid="uid://dmgd1gx0wf6kw" path="res://asset/sound/bgm/hòa-tấu-nhạc-cụ-dân-tộc-việt-nam--sài-gòn-ơi--band--mv-4k.mp3" id="3_m1vvr"]
+[ext_resource type="FontFile" uid="uid://cqdodb7scm4sn" path="res://asset/font/Montserrat-Bold.otf" id="3_xew8q"]
+[ext_resource type="FontFile" uid="uid://32f22jx82rbv" path="res://asset/font/Montserrat-SemiBold.otf" id="4_pcj17"]
+[ext_resource type="PackedScene" uid="uid://yvssq8ew27vg" path="res://scene/dialogic/style/mainstyle/PauseMenu/PauseMenu.tscn" id="5_flhgq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vs22p"]
+font = ExtResource("2_5q00m")
+font_size = 48
+font_color = Color(0.372549, 0.243137, 0.0862745, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5lkac"]
+font = ExtResource("2_5q00m")
+font_size = 128
+font_color = Color(0.431373, 0.247059, 0.0509804, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yn3lx"]
+font = ExtResource("3_xew8q")
+font_size = 48
+font_color = Color(0.372549, 0.243137, 0.0862745, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wmnsp"]
+font = ExtResource("3_xew8q")
+font_size = 96
+font_color = Color(0.411765, 0.219608, 0.0156863, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_f77gr"]
+font = ExtResource("4_pcj17")
+font_size = 32
+font_color = Color(0.372549, 0.243137, 0.0862745, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyxpg"]
+size = Vector2(150, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0ck7"]
+size = Vector2(90, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jpbhf"]
+size = Vector2(40, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hudub"]
+size = Vector2(50, 200)
+
+[node name="DrumMinigame" type="Node2D"]
+script = ExtResource("1_cdk5x")
+arrow_packed = ExtResource("2_phryr")
+travel_time = 6.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_m1vvr")
+bus = &"Music"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("1_06gx8")
+
+[node name="ArrowSpawn" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1138, 49)
+
+[node name="UI" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PanelContainer" type="PanelContainer" parent="UI"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ComboCounter" type="Control" parent="UI/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/PanelContainer/ComboCounter"]
+layout_mode = 2
+offset_left = 13.0
+offset_top = 505.0
+offset_right = 224.0
+offset_bottom = 584.0
+text = "COMBO"
+label_settings = SubResource("LabelSettings_vs22p")
+
+[node name="ComboNum" type="Label" parent="UI/PanelContainer/ComboCounter"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 15.0
+offset_top = 549.0
+offset_right = 226.0
+offset_bottom = 706.0
+text = "0"
+label_settings = SubResource("LabelSettings_5lkac")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Scoreboard" type="Control" parent="UI/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/PanelContainer/Scoreboard"]
+layout_mode = 0
+offset_left = 1004.0
+offset_top = 95.0
+offset_right = 1139.0
+offset_bottom = 155.0
+text = "Điểm"
+label_settings = SubResource("LabelSettings_yn3lx")
+
+[node name="ScoreNum" type="Label" parent="UI/PanelContainer/Scoreboard"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 998.0
+offset_top = 144.0
+offset_right = 1277.0
+offset_bottom = 262.0
+text = "0 / 30"
+label_settings = SubResource("LabelSettings_wmnsp")
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/PanelContainer/Scoreboard"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1271.0
+offset_top = 89.0
+offset_right = 1717.0
+offset_bottom = 158.0
+
+[node name="PlayerName" type="Label" parent="UI/PanelContainer/Scoreboard/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Trâu Vàng "
+label_settings = SubResource("LabelSettings_f77gr")
+horizontal_alignment = 2
+
+[node name="PauseMenu" parent="UI/PanelContainer" instance=ExtResource("5_flhgq")]
+layout_mode = 2
+inventory_openable = false
+
+[node name="ArrowEnd" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-500, 47)
+
+[node name="BadArea" type="Area2D" parent="ArrowEnd"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowEnd/BadArea"]
+shape = SubResource("RectangleShape2D_jyxpg")
+
+[node name="OkayArea" type="Area2D" parent="ArrowEnd"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowEnd/OkayArea"]
+shape = SubResource("RectangleShape2D_m0ck7")
+
+[node name="PerfectArea" type="Area2D" parent="ArrowEnd"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowEnd/PerfectArea"]
+shape = SubResource("RectangleShape2D_jpbhf")
+
+[node name="DeletionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeletionArea"]
+position = Vector2(-651, 45)
+shape = SubResource("RectangleShape2D_hudub")

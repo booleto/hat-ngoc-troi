@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcvytkjbnw1dt"]
+
+[ext_resource type="Texture2D" uid="uid://hi1vnk1r30jq" path="res://asset/visual/sprite/minigame/tren.png" id="1_34j05"]
+[ext_resource type="Script" path="res://script/minigame/drum/Arrow.gd" id="1_ew6au"]
+[ext_resource type="Texture2D" uid="uid://coclii7w1tn8m" path="res://asset/visual/sprite/minigame/duoi.png" id="2_0u08v"]
+[ext_resource type="Texture2D" uid="uid://cghqgeygjdnyo" path="res://asset/visual/sprite/minigame/trai.png" id="3_m4vti"]
+[ext_resource type="Texture2D" uid="uid://lympltdhbbf0" path="res://asset/visual/sprite/minigame/phai.png" id="4_n7ltp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7mtp6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_34j05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0u08v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m4vti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n7ltp")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y6kfk"]
+a = Vector2(0, -70)
+b = Vector2(0, 70)
+
+[node name="Arrow" type="CharacterBody2D"]
+script = ExtResource("1_ew6au")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.28, 0.28)
+sprite_frames = SubResource("SpriteFrames_7mtp6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_y6kfk")
