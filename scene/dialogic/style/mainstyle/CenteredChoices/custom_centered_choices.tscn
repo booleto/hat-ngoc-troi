@@ -1,0 +1,190 @@
+[gd_scene load_steps=20 format=3 uid="uid://cowqavxagppf5"]
+
+[ext_resource type="Script" path="res://scene/dialogic/style/mainstyle/CenteredChoices/vn_choice_layer.gd" id="1_kurgw"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="1_w632k"]
+[ext_resource type="Theme" uid="uid://82hirphjurdy" path="res://scene/theme/choice_box.tres" id="2_eemwc"]
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="2_mgko6"]
+[ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="3_mql8i"]
+[ext_resource type="AudioStream" uid="uid://c2viukvbub6v6" path="res://addons/dialogic/Example Assets/sound-effects/typing4.wav" id="4_420fr"]
+[ext_resource type="Texture2D" uid="uid://ctsvvpfhdxpa1" path="res://asset/visual/sprite/ui/option -long answer-.png" id="7_an7w0"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_4a6nk"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_hwi2y"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_gu11t"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_66f3r"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_q5mal"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_6xoxq"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_800gf"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_t8kgm"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_v0j20"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wqer2"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_coyfs"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="AudioStream" id="AudioStream_pe27w"]
+
+[node name="VN_ChoiceLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_kurgw")
+
+[node name="Choices" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = -47.0
+offset_right = 42.0
+offset_bottom = 47.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+metadata/_edit_layout_mode = 1
+
+[node name="DialogicNode_ChoiceButton1" type="Button" parent="Choices"]
+layout_mode = 2
+theme = ExtResource("2_eemwc")
+text = "Some text"
+icon = SubResource("ViewportTexture_4a6nk")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton2" type="Button" parent="Choices"]
+layout_mode = 2
+theme = ExtResource("2_eemwc")
+text = "Some text"
+icon = SubResource("ViewportTexture_hwi2y")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton3" type="Button" parent="Choices"]
+layout_mode = 2
+theme = ExtResource("2_eemwc")
+text = "Some text"
+icon = SubResource("ViewportTexture_gu11t")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton4" type="Button" parent="Choices"]
+layout_mode = 2
+theme = ExtResource("2_eemwc")
+text = "Some text"
+icon = SubResource("ViewportTexture_66f3r")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton5" type="Button" parent="Choices"]
+layout_mode = 2
+theme = ExtResource("2_eemwc")
+text = "Some text"
+icon = SubResource("ViewportTexture_q5mal")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton6" type="Button" parent="Choices"]
+layout_mode = 2
+theme = ExtResource("2_eemwc")
+text = "Some text"
+icon = SubResource("ViewportTexture_6xoxq")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton7" type="Button" parent="Choices"]
+layout_mode = 2
+theme = ExtResource("2_eemwc")
+text = "Some text"
+icon = SubResource("ViewportTexture_800gf")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton8" type="Button" parent="Choices"]
+layout_mode = 2
+theme = ExtResource("2_eemwc")
+text = "Some text"
+icon = SubResource("ViewportTexture_t8kgm")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton9" type="Button" parent="Choices"]
+layout_mode = 2
+theme = ExtResource("2_eemwc")
+text = "Some text"
+icon = SubResource("ViewportTexture_v0j20")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton10" type="Button" parent="Choices"]
+layout_mode = 2
+theme = ExtResource("2_eemwc")
+text = "Some text"
+icon = SubResource("ViewportTexture_wqer2")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ChoiceButton11" type="Button" parent="Choices"]
+layout_mode = 2
+theme = ExtResource("2_eemwc")
+text = "Some text"
+icon = SubResource("ViewportTexture_coyfs")
+flat = true
+icon_alignment = 1
+script = ExtResource("1_w632k")
+
+[node name="DialogicNode_ButtonSound" type="AudioStreamPlayer" parent="Choices"]
+unique_name_in_owner = true
+script = ExtResource("2_mgko6")
+sound_pressed = ExtResource("3_mql8i")
+sound_hover = ExtResource("4_420fr")
+sound_focus = SubResource("AudioStream_pe27w")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(825, 90)
+
+[node name="CenterContainer" type="CenterContainer" parent="SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.2, 0.2)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("7_an7w0")

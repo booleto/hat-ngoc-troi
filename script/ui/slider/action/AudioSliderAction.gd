@@ -9,3 +9,10 @@ func execute(val: float) -> void:
 		linear_to_db(val)
 	)
 	print("Bus: ", audio_bus, " with new val: ", str(val))
+
+func get_initial() -> float:
+	return db_to_linear(
+		AudioServer.get_bus_volume_db(
+			AudioServer.get_bus_index(audio_bus)
+		)
+	)

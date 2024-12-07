@@ -40,6 +40,9 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"cards_done": "res://scene/dialogic/timeline/mieu_phuong/cards_done.dtl",
+"cards_sort_fail": "res://scene/dialogic/timeline/mieu_phuong/cards_sort_fail.dtl",
+"cards_sorted": "res://scene/dialogic/timeline/mieu_phuong/cards_sorted.dtl",
 "chiem_bao": "res://scene/dialogic/timeline/chiem_bao.dtl",
 "chiem_bao_start": "res://scene/dialogic/timeline/chiem_bao/chiem_bao_start.dtl",
 "chiem_bao_walk_finish": "res://scene/dialogic/timeline/chiem_bao/chiem_bao_walk_finish.dtl",
@@ -53,7 +56,13 @@ directories/dtl_directory={
 "rua_lan_1": "res://scene/dialogic/timeline/rua/rua_lan_1.dtl",
 "rua_start": "res://scene/dialogic/timeline/rua/rua_start.dtl",
 "styletest": "res://scene/dialogic/timeline/styletest.dtl",
-"test": "res://scene/dialogic/timeline/test.dtl"
+"test": "res://scene/dialogic/timeline/test.dtl",
+"the_ai_oi": "res://scene/dialogic/timeline/mieu_phuong/the_ai_oi.dtl",
+"the_cho_troi": "res://scene/dialogic/timeline/mieu_phuong/the_cho_troi.dtl",
+"the_con_lau": "res://scene/dialogic/timeline/mieu_phuong/the_con_lau.dtl",
+"the_nuoc_can": "res://scene/dialogic/timeline/mieu_phuong/the_nuoc_can.dtl",
+"the_ru_nhau": "res://scene/dialogic/timeline/mieu_phuong/the_ru_nhau.dtl",
+"the_tat_nuoc": "res://scene/dialogic/timeline/mieu_phuong/the_tat_nuoc.dtl"
 }
 layout/style_list=["res://scene/dialogic/style/mainstyle/mainstyle.tres"]
 layout/default_style=""
@@ -62,6 +71,7 @@ variables={
 "Items": {
 "kinh_thu": false
 },
+"card_count": 0,
 "ten_trau": "Trâu Vàng"
 }
 extensions_folder="res://addons/dialogic_additions"
@@ -98,7 +108,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/ReorderableContainer/plugin.cfg", "res://addons/dialogic/plugin.cfg")
 
 [input]
 

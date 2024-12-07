@@ -1,0 +1,6 @@
+[background scene="res://scene/dialogic/background/TheTatNuoc.tscn" fade="1.0"]
+[wait time="1.0"]
+set {card_count} += 1
+[wait_input]
+if {card_count} == 6:
+	jump cards_done/

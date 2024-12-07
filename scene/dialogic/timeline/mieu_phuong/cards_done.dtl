@@ -1,0 +1,4 @@
+[style name="mainstyle"]
+join trau left
+trau: Chắc là hết rồi nhỉ, để xem ta có gì nào.
+[signal arg="sort_start"]
