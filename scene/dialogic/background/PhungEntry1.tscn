@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://2mqy0delq5be"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_8cnlg"]
+[ext_resource type="Texture2D" uid="uid://dpl5w06ndrfjk" path="res://asset/visual/sprite/cloud/L1.png" id="1_v7fdn"]
+[ext_resource type="Texture2D" uid="uid://cv7xdrc5myht6" path="res://asset/visual/sprite/cloud/L5.png" id="2_ujm2s"]
+
+[node name="PhungEntry1" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8cnlg")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+self_modulate = Color(1, 1, 1, 0.617)
+layout_mode = 0
+offset_left = -293.0
+offset_top = 669.0
+offset_right = 7707.0
+offset_bottom = 2854.0
+scale = Vector2(0.27669, 0.27669)
+texture = ExtResource("1_v7fdn")
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+self_modulate = Color(1, 1, 1, 0.357)
+layout_mode = 0
+offset_left = 909.0
+offset_top = 635.0
+offset_right = 8909.0
+offset_bottom = 4105.0
+scale = Vector2(0.215007, 0.215007)
+texture = ExtResource("2_ujm2s")
+flip_h = true

@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://srsiqy3jybq1"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_4ypmb"]
+[ext_resource type="Texture2D" uid="uid://c68emcdpq3spu" path="res://asset/visual/sprite/item/Thẻ 6.png" id="2_gdw61"]
+
+[node name="The" type="PanelContainer"]
+z_index = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ypmb")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="CenterContainer"]
+layout_mode = 2
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/AspectRatioContainer"]
+z_index = 1
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+texture = ExtResource("2_gdw61")
+expand_mode = 3
+stretch_mode = 5

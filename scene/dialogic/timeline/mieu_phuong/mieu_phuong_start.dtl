@@ -1,0 +1,10 @@
+[style name="mainstyle"]
+join trau (trau_binh_thuong) leftmore
+trau: Woa, trong này rộng thật.
+trau: Mà sao không thấy ai ở đây nhỉ? Chắc mình đi ngó qua nơi này một chút.
+trau (trau_gai_dau): Hửm? Hình như có gì đó rớt ở đây.
+leave trau
+[background scene="res://scene/dialogic/background/TheLuaKho.tscn" fade="0.0"]
+[wait_input]
+trau: Một cái quẻ? Trên này ghi chữ “Lúa khô” nữa.
+trau: Có khi nào còn mấy cái nữa chăng? Thử đi tìm xem sao.

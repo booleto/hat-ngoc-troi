@@ -24,6 +24,7 @@ buses/default_bus_layout="res://data/audiobus/default_bus_layout.tres"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 LevelLoader="*res://script/autoload/LevelLoader.gd"
 UiEventBus="*res://script/autoload/UIEventBus.gd"
+GameEventBus="*res://script/autoload/GameEventBus.gd"
 
 [dialogic]
 
@@ -36,18 +37,42 @@ directories/dch_directory={
 "quy": "res://character/quy.dch",
 "than_nong": "res://character/than_nong.dch",
 "trau": "res://character/trau.dch",
-"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch",
+"unknown": "res://scene/dialogic/character/unknown.dch"
 }
 directories/dtl_directory={
+"cards_done": "res://scene/dialogic/timeline/mieu_phuong/cards_done.dtl",
+"cards_sort_fail": "res://scene/dialogic/timeline/mieu_phuong/cards_sort_fail.dtl",
+"cards_sorted": "res://scene/dialogic/timeline/mieu_phuong/cards_sorted.dtl",
 "chiem_bao": "res://scene/dialogic/timeline/chiem_bao.dtl",
+"chiem_bao_start": "res://scene/dialogic/timeline/chiem_bao/chiem_bao_start.dtl",
+"chiem_bao_walk_finish": "res://scene/dialogic/timeline/chiem_bao/chiem_bao_walk_finish.dtl",
 "lang_trau": "res://scene/dialogic/timeline/lang_trau.dtl",
+"mieu_phuong_start": "res://scene/dialogic/timeline/mieu_phuong/mieu_phuong_start.dtl",
 "prologue": "res://scene/dialogic/timeline/prologue.dtl",
-"test": "res://scene/dialogic/timeline/test.dtl"
+"rua_door_1": "res://scene/dialogic/timeline/rua/rua_door_1.dtl",
+"rua_door_2": "res://scene/dialogic/timeline/rua/rua_door_2.dtl",
+"rua_door_3": "res://scene/dialogic/timeline/rua/rua_door_3.dtl",
+"rua_door_open": "res://scene/dialogic/timeline/rua/rua_door_open.dtl",
+"rua_lan_1": "res://scene/dialogic/timeline/rua/rua_lan_1.dtl",
+"rua_start": "res://scene/dialogic/timeline/rua/rua_start.dtl",
+"styletest": "res://scene/dialogic/timeline/styletest.dtl",
+"test": "res://scene/dialogic/timeline/test.dtl",
+"the_ai_oi": "res://scene/dialogic/timeline/mieu_phuong/the_ai_oi.dtl",
+"the_cho_troi": "res://scene/dialogic/timeline/mieu_phuong/the_cho_troi.dtl",
+"the_con_lau": "res://scene/dialogic/timeline/mieu_phuong/the_con_lau.dtl",
+"the_nuoc_can": "res://scene/dialogic/timeline/mieu_phuong/the_nuoc_can.dtl",
+"the_ru_nhau": "res://scene/dialogic/timeline/mieu_phuong/the_ru_nhau.dtl",
+"the_tat_nuoc": "res://scene/dialogic/timeline/mieu_phuong/the_tat_nuoc.dtl"
 }
 layout/style_list=["res://scene/dialogic/style/mainstyle/mainstyle.tres"]
 layout/default_style=""
 glossary/default_case_sensitive=true
 variables={
+"Items": {
+"kinh_thu": false
+},
+"card_count": 0,
 "ten_trau": "Trâu Vàng"
 }
 extensions_folder="res://addons/dialogic_additions"
@@ -84,7 +109,7 @@ window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/ReorderableContainer/plugin.cfg", "res://addons/dialogic/plugin.cfg")
 
 [input]
 

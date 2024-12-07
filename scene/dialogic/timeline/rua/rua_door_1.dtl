@@ -1,0 +1,4 @@
+[style name="mainstyle"]
+join trau (trau_gai_dau) left [animation="Instant In"]
+trau: Ủa?
+[end_timeline]

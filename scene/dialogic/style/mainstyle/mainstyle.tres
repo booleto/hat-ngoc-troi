@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="4_fn6aw"]
 [ext_resource type="PackedScene" uid="uid://cca2u2ntxtb3y" path="res://scene/dialogic/style/mainstyle/VisualNovelTextbox/custom_visual_novel_textbox.tscn" id="5_m5dhc"]
 [ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="6_utcrh"]
-[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="7_015q1"]
-[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="8_sd7um"]
+[ext_resource type="PackedScene" uid="uid://cowqavxagppf5" path="res://scene/dialogic/style/mainstyle/CenteredChoices/custom_centered_choices.tscn" id="8_1wmqb"]
+[ext_resource type="PackedScene" uid="uid://d2y2b07jiplj" path="res://scene/dialogic/style/mainstyle/SimpleTextInputBox/custom_simple_text_input_box.tscn" id="8_gb5lx"]
 [ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="9_usp7x"]
 [ext_resource type="PackedScene" uid="uid://yvssq8ew27vg" path="res://scene/dialogic/style/mainstyle/PauseMenu/PauseMenu.tscn" id="10_34ny5"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_xmshk"]
@@ -53,7 +53,7 @@ overrides = {
 "name_label_use_global_font": "false",
 "name_label_use_global_font_size": "false",
 "normal_font": "\"res://asset/font/Montserrat-SemiBold.otf\"",
-"text_custom_color": "Color(0.411765, 0.219608, 0.0156863, 1)",
+"text_custom_color": "Color(0.992157, 0.992157, 0.992157, 1)",
 "text_size": "28.0",
 "text_use_global_color": "false",
 "text_use_global_size": "false"
@@ -66,18 +66,22 @@ overrides = {}
 
 [sub_resource type="Resource" id="Resource_y54ca"]
 script = ExtResource("1_ysb5a")
-scene = ExtResource("7_015q1")
-overrides = {}
+scene = ExtResource("8_1wmqb")
+overrides = {
+"boxes_stylebox_focused": "\"res://scene/style/new_style_box_empty.tres\""
+}
 
 [sub_resource type="Resource" id="Resource_yrjbb"]
 script = ExtResource("1_ysb5a")
-scene = ExtResource("8_sd7um")
+scene = ExtResource("8_gb5lx")
 overrides = {}
 
 [sub_resource type="Resource" id="Resource_1fvfq"]
 script = ExtResource("1_ysb5a")
 scene = ExtResource("9_usp7x")
-overrides = {}
+overrides = {
+"disabled": "true"
+}
 
 [sub_resource type="Resource" id="Resource_n0qkq"]
 script = ExtResource("1_ysb5a")
@@ -102,4 +106,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_ysb5a")]([])
-metadata/_latest_layer = "13"
+metadata/_latest_layer = "17"

@@ -1,8 +1,8 @@
 extends DialogicLayoutLayer
 class_name PauseMenu
 
-@export var pause_panel: Container
-@export var inventory_panel: Container
+@onready var pause_panel: Container = %PauseMenuPanel
+@onready var inventory_panel: Container = %InventoryPanel
 
 
 # Called when the node enters the scene tree for the first time.

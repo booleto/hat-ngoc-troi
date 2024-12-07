@@ -1,0 +1,291 @@
+[gd_scene load_steps=24 format=3 uid="uid://cgtirnuuycc84"]
+
+[ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="1_20boj"]
+[ext_resource type="Script" path="res://script/level_manager/CongDenTuLinh.gd" id="1_bspnt"]
+[ext_resource type="Texture2D" uid="uid://ral2kh3ewcxg" path="res://asset/visual/sprite/background/BG.png" id="1_rbqhj"]
+[ext_resource type="Texture2D" uid="uid://8a7s2652gnix" path="res://asset/visual/sprite/foreground/layer 1.png" id="2_l5sd6"]
+[ext_resource type="Texture2D" uid="uid://bkxmxlqf1delf" path="res://asset/visual/sprite/foreground/layer 3.png" id="3_7s4x8"]
+[ext_resource type="Texture2D" uid="uid://blns6uk2xoj5b" path="res://asset/visual/sprite/foreground/layer 2.png" id="3_opnfr"]
+[ext_resource type="Texture2D" uid="uid://biu836f8gx3d4" path="res://asset/visual/sprite/foreground/tượng lân.png" id="4_8j0fk"]
+[ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="5_sgh6v"]
+[ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="6_v62vp"]
+
+[sub_resource type="Animation" id="Animation_3v6yp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Lan2/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1211, 795)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Lan1/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(563, 796)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GateSprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_opnfr")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GateSprite:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rq06o"]
+resource_name = "move_lan_left"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Lan1/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.189464, 1),
+"update": 0,
+"values": [Vector2(563, 796), Vector2(463, 796)]
+}
+
+[sub_resource type="Animation" id="Animation_a2335"]
+resource_name = "move_left"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Lan2/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.19484, 2.92817),
+"update": 0,
+"values": [Vector2(1211, 795), Vector2(1311, 795)]
+}
+
+[sub_resource type="Animation" id="Animation_d4tp0"]
+resource_name = "door_open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GateSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("3_opnfr"), ExtResource("3_7s4x8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GateSprite:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.188235), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xf0w1"]
+_data = {
+"RESET": SubResource("Animation_3v6yp"),
+"move_lan_left": SubResource("Animation_rq06o"),
+"move_lan_right": SubResource("Animation_a2335"),
+"open_door": SubResource("Animation_d4tp0")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_myapm"]
+texture = ExtResource("1_rbqhj")
+
+[sub_resource type="Resource" id="Resource_y54ax"]
+script = ExtResource("6_v62vp")
+event_name = "rua_door"
+event_type = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fllsb"]
+texture = ExtResource("2_l5sd6")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_okbmt"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Resource" id="Resource_afm3b"]
+script = ExtResource("6_v62vp")
+event_name = "rua_lan_right"
+event_type = 1
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pvvwd"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Theme" id="Theme_8rj8s"]
+
+[sub_resource type="Resource" id="Resource_54gl0"]
+script = ExtResource("6_v62vp")
+event_name = "rua_lan_left"
+event_type = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpgjl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="CongDenTuLinh" type="Node2D"]
+script = ExtResource("1_bspnt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="SceneAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+root_node = NodePath("../Background/Gate")
+libraries = {
+"": SubResource("AnimationLibrary_xf0w1")
+}
+script = ExtResource("1_20boj")
+
+[node name="Background" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Sky" type="Panel" parent="CanvasLayer/Background"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_myapm")
+
+[node name="Gate" type="Control" parent="CanvasLayer/Background"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="GateSprite" type="TextureRect" parent="CanvasLayer/Background/Gate"]
+layout_mode = 0
+offset_left = 695.0
+offset_top = 470.0
+offset_right = 2920.0
+offset_bottom = 2654.0
+scale = Vector2(0.238, 0.238)
+mouse_filter = 2
+texture = ExtResource("3_opnfr")
+
+[node name="Button" type="Button" parent="CanvasLayer/Background/Gate/GateSprite"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_sgh6v")
+action = SubResource("Resource_y54ax")
+
+[node name="Building" type="Panel" parent="CanvasLayer/Background"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fllsb")
+
+[node name="Lan2" type="Control" parent="CanvasLayer/Background"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer/Background/Lan2"]
+layout_mode = 0
+offset_left = 1211.0
+offset_top = 795.0
+offset_right = 1641.0
+offset_bottom = 1475.0
+scale = Vector2(0.375, 0.375)
+mouse_filter = 2
+texture = SubResource("ViewportTexture_okbmt")
+flip_h = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Background/Lan2/Sprite2D"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_sgh6v")
+action = SubResource("Resource_afm3b")
+
+[node name="Lan1" type="Control" parent="CanvasLayer/Background"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer/Background/Lan1"]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 796.0
+offset_right = 993.0
+offset_bottom = 1476.0
+scale = Vector2(0.375, 0.375)
+mouse_filter = 2
+texture = SubResource("ViewportTexture_pvvwd")
+
+[node name="Button" type="Button" parent="CanvasLayer/Background/Lan1/Sprite2D"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_8rj8s")
+script = ExtResource("5_sgh6v")
+action = SubResource("Resource_54gl0")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(430, 680)
+
+[node name="PanelContainer" type="PanelContainer" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpgjl")
+
+[node name="MarginContainer" type="MarginContainer" parent="SubViewport/PanelContainer"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="SubViewport/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport/PanelContainer/MarginContainer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("4_8j0fk")

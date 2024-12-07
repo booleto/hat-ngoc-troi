@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://bsb25rej8w2hn"]
+[gd_scene load_steps=13 format=3 uid="uid://bsb25rej8w2hn"]
 
 [ext_resource type="Texture2D" uid="uid://b7k0ow0ejpn4w" path="res://asset/visual/sprite/logo/Logo (1).png" id="1_p6ir8"]
 [ext_resource type="Texture2D" uid="uid://brnq68ckv6yby" path="res://asset/visual/sprite/cg/Main screen.png" id="2_cq6rd"]
 [ext_resource type="FontFile" uid="uid://cqdodb7scm4sn" path="res://asset/font/Montserrat-Bold.otf" id="3_6dosq"]
 [ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="4_bamqk"]
 [ext_resource type="Script" path="res://script/ui/button/action/LoadLevelAction.gd" id="5_rarhj"]
+[ext_resource type="Script" path="res://script/ui/button/action/UIAction.gd" id="6_2sy1i"]
+[ext_resource type="PackedScene" uid="uid://busbr02uxdgor" path="res://scene/dialogic/style/mainstyle/PauseMenu/MainMenuSettings.tscn" id="7_cio03"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyuiq"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -25,6 +27,10 @@ shadow_offset = Vector2(0, 0)
 [sub_resource type="Resource" id="Resource_s66hi"]
 script = ExtResource("5_rarhj")
 level_to_load = 0
+
+[sub_resource type="Resource" id="Resource_vwmbv"]
+script = ExtResource("6_2sy1i")
+action_to_do = 0
 
 [node name="Main" type="Node2D"]
 
@@ -113,6 +119,8 @@ theme_override_fonts/font = ExtResource("3_6dosq")
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_wyuiq")
 icon_alignment = 1
+script = ExtResource("4_bamqk")
+action = SubResource("Resource_vwmbv")
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="Button3"]
@@ -132,3 +140,7 @@ text = "Cài đặt"
 label_settings = SubResource("LabelSettings_aifu1")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_cio03")]
