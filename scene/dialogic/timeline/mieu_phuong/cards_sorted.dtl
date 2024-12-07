@@ -17,7 +17,7 @@ phuong (phuong_normal): Chậc- Tên nào giờ này đến phá giấc ngủ c�
 update trau [animation="Bounce"]
 trau (trau_giai_thich): D-Dạ……
 trau: (Bộ cánh to quá…. Lông vũ thì vàng óng, thật sặc sỡ….)
-phuong: Ngươi là kẻ dám quấy rối giấc ngủ của ta à?....Chỉ là một con trâu mà tự mò đến thánh địa của ta làm gì? 
+phuong: Ngươi là kẻ dám quấy rối giấc ngủ của ta à?....Chỉ là một con trâu mà tự mò đến thánh địa của ta làm gì?
 phuong: Tên nhóc nhà ngươi là ai, mau xưng tên! Sao có thể bén mảng tới đây quấy phá được?
 trau (trau_troi_oi): T-Thưa bà….
 phuong: Nói nhanh gọn, đừng phí thời gian của ta.
@@ -26,7 +26,7 @@ phuong: Ồ, ra là chuyện này hả?
 phuong: ....
 phuong (phuong_normal): Haha, tưởng cái gì cơ chứ.
 trau (trau_giai_thich): ….T-Thưa bà, bà sẽ tha thứ cho chúng con c-
-phuong (phuong_normal): Mơ đi! Các ngươi tuy không năm nào quên dâng hương quả, nhưng có phải đã quá phụ thuộc vào chúng ta và tham lam không? 
+phuong (phuong_normal): Mơ đi! Các ngươi tuy không năm nào quên dâng hương quả, nhưng có phải đã quá phụ thuộc vào chúng ta và tham lam không?
 phuong: Lúa tốt thì cầu cho lúa tốt hơn, tham ăn lười làm để sâu hại quấy phá thì lại chê trách thần thánh không có mắt, hỏi xem thần thánh phương nào có thể nhịn nhục tất thảy những điều sai quấy của nhân giới?
 trau (trau_giai_thich): Thưa bà, con đã được nghe rằng nông dân chúng con đã khiến các thần nổi giận, vậy nên con đã một mình tìm đến để chịu sự trừng phạt thích đáng, chỉ mong cứu lấy được mùa vụ cho quê hương con không lâm vào cảnh đói khổ.
 phuong: Chỉ có ngươi?
@@ -42,16 +42,16 @@ phuong: Dạ thưa, con nào dám….
 trau: Con nhất định sẽ nói với bọn họ, để bọn họ sẽ phải suy nghĩ lại mà bỏ tính tham lam ấy, chúng con xin nhận lỗi lầm này và chấp nhận mọi sự trừng phạt của Bà, chỉ mong bà giúp cuộc sống của chúng con được bình an trở lại…
 phuong: Ngươi sẽ làm gì để nói với đám người đó được?
 trau: Con….
-phuong: Thế chẳng phải những điều ngươi vừa hứa hẹn chỉ là nói suông thôi sao? Ta không rảnh rỗi nghe ngươi tán dóc. 
+phuong: Thế chẳng phải những điều ngươi vừa hứa hẹn chỉ là nói suông thôi sao? Ta không rảnh rỗi nghe ngươi tán dóc.
 phuong: Ngươi xem, từ khi bước vào đây đến giờ cũng chỉ toàn là những lời nói suông.  Thôi ta không có thừa thãi thời gian đâu.
 trau: ….
 - Con nhất định sẽ không làm bà thất vọng!
 - Chỉ một chút thôi ạ!
 - Bà ơi hãy nghe con nói!
-trau: Con xin bà! Bà có đánh chết con cũng được, nhưng con phải cứu lấy cánh đồng lúa của quê hương con… Xin bà hãy rủ lòng thương! 
+trau: Con xin bà! Bà có đánh chết con cũng được, nhưng con phải cứu lấy cánh đồng lúa của quê hương con… Xin bà hãy rủ lòng thương!
 phuong: Ngươi phiền phức thật đấy.
 unknown: (Thôi nào, thằng bé trông có vẻ thành khẩn đó, sao không cho nó chút cơ hội nhỉ?)
-phuong: (….?) 
+phuong: (….?)
 phuong (phuong_suy_nghi): (Hôm nay ông cũng rảnh nhỉ, ông già?)
 phuong: (Tôi cũng cần được nghỉ ngơi chứ, hơi đâu mà ông bày cho thằng nhóc này tới phá ta vậy?)
 unknown: (Haha, lỗi ta, lỗi ta.)
@@ -66,8 +66,9 @@ update trau (trau_happi) [animation="Tada"]
 trau (trau_happi): Ôi, thật ạ? Con đội ơn bà nhiều lắm!
 phuong: Giờ thì trả lời những gì ta hỏi sau đây.
 trau (trau_binh_thuong): Con xin nghe ạ.
-phuong (phuong_giai_thich): Ta đây vốn chuộng văn chương, để xem ngươi có thể khiến ta hài lòng không nào. Nói cho ta nghe\: 
+phuong (phuong_giai_thich): Ta đây vốn chuộng văn chương, để xem ngươi có thể khiến ta hài lòng không nào. Nói cho ta nghe\:
 label quiz1
+update trau (trau_gai_dau)
 phuong (phuong_giai_thich): [center][i][b][Thân em như ___,[/b][/i]\
 [i][b]Xanh cây tốt rễ, phởn phơ phơi màu.][/b][/i][/center]
 - Lúa nếp tơ
@@ -84,6 +85,7 @@ jump quiz1
 label right
 phuong (phuong_normal): Hừm, mới có một câu thôi.
 label quiz2
+update trau (trau_gai_dau)
 phuong (phuong_giai_thich): Nghi lễ nào đòi hỏi Thiên Tử tức Hoàng Thượng của các ngươi phải đích thân đi cày?
 - Lễ Tịch Điền
 	jump right2
@@ -95,8 +97,9 @@ label wrong2
 phuong (phuong_tay_sau_lung): Ngươi thật sự là nông dân đấy à….?
 jump quiz2
 label right2
+update trau (trau_happi)
 phuong (phuong_normal): Cũng khá hơn ta nghĩ đấy.
-phuong (phuong_suy_nghi): Tốt, đằng nào cũng nghĩ ngươi đã không quản đường xa lặn lội đến đây một mình thưa chuyện cũng khiến ta động lòng. 
+phuong (phuong_suy_nghi): Tốt, đằng nào cũng nghĩ ngươi đã không quản đường xa lặn lội đến đây một mình thưa chuyện cũng khiến ta động lòng.
 phuong (phuong_suy_nghi): Để không mang tiếng ức hiếp lũ phàm nhân mắt thịt các ngươi, ta có bồ lúa vàng đang phơi nắng ngoài sân. Nếu như ngươi có thể vượt qua được bài kiểm tra của ta thì ta sẽ ban cho món báu vật ẩn sâu bên trong bồ lúa ấy.
 leave --All--
 phuong: Nhìn ra ngoài kia đi.

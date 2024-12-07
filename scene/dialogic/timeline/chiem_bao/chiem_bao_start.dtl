@@ -1,3 +1,6 @@
+[background arg="res://asset/visual/sprite/cg/b6.png" fade="0.0"]
+[background fade="5.0"]
+[wait time="5.0"]
 [style name="mainstyle"]
 ……
 Đây là nơi nào vậy….?

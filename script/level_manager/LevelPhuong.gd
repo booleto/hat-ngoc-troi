@@ -17,7 +17,7 @@ const correct_order: Array[String] = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Dialogic.start("cards_done")
+	Dialogic.start("mieu_phuong_start")
 	GameEventBus.game_event.connect(_on_game_event)
 	Dialogic.signal_event.connect(_on_game_event)
 

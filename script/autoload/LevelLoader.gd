@@ -14,7 +14,7 @@ var level_map: Dictionary = {
 	LEVEL.TEST_LEVEL : load("res://level/test_level.tscn"),
 	LEVEL.CHIEM_BAO_MAY : load("res://level/chiem_bao_may.tscn"),
 	LEVEL.CONG_DEN_TU_LINH : load("res://level/cong_den_tu_linh.tscn"),
-	LEVEL.DEN_PHUONG : load("res://script/level_manager/LevelPhuong.gd")
+	LEVEL.DEN_PHUONG : load("res://level/level_phuong.tscn")
 }
 
 func load_level(level: LEVEL):
@@ -22,5 +22,7 @@ func load_level(level: LEVEL):
 
 func load_level_from_name(level_name: String):
 	var next_level: LEVEL = LEVEL.get(level_name)
-	load_level(next_level)
-	
+	if next_level != null:
+		load_level(next_level)
+	else:
+		print("Level not found")
