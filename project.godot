@@ -37,7 +37,8 @@ directories/dch_directory={
 "quy": "res://character/quy.dch",
 "than_nong": "res://character/than_nong.dch",
 "trau": "res://character/trau.dch",
-"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch",
+"unknown": "res://scene/dialogic/character/unknown.dch"
 }
 directories/dtl_directory={
 "cards_done": "res://scene/dialogic/timeline/mieu_phuong/cards_done.dtl",

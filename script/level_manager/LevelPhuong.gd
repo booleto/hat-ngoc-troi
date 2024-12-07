@@ -32,7 +32,7 @@ func _on_game_event(event: String) -> void:
 			end_sort_game()
 		else:
 			print("not sorted")
-			Dialogic.start("cards_sort_fail")
+			end_sort_game_fail()
 
 
 func start_sort_game() -> void:
@@ -41,7 +41,16 @@ func start_sort_game() -> void:
 	card_panel.show()
 	card_list = card_panel.get_card_list()
 	pass
-	
+
+
+func end_sort_game_fail() -> void:
+	card_list = null
+	card_panel.queue_free()
+	await card_panel.tree_exited
+	card_panel = null
+	Dialogic.start("cards_sort_fail")
+
+
 func end_sort_game() -> void:
 	card_list = null
 	card_panel.queue_free()
@@ -49,6 +58,7 @@ func end_sort_game() -> void:
 	card_panel = null
 	Dialogic.start("cards_sorted")
 	pass
+
 
 func is_cards_sorted() -> bool:
 	for i in range(correct_order.size()):

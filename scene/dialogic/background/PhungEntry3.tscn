@@ -1,0 +1,129 @@
+[gd_scene load_steps=9 format=3 uid="uid://cwlf2efcgeu1w"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_rgsdk"]
+[ext_resource type="Texture2D" uid="uid://dpl5w06ndrfjk" path="res://asset/visual/sprite/cloud/L1.png" id="2_vhc4j"]
+[ext_resource type="Texture2D" uid="uid://cv7xdrc5myht6" path="res://asset/visual/sprite/cloud/L5.png" id="3_edsel"]
+[ext_resource type="Texture2D" uid="uid://bcpeh5kiwtsrk" path="res://asset/visual/sprite/cg/phung/c1.png" id="4_ddtlk"]
+[ext_resource type="Texture2D" uid="uid://bbgmmn8sfwm2u" path="res://scene/dialogic/style/mainstyle/transparent-text-box-black-and-white-speech-bubble-with-talk-inside65a4be01dbde76.3646245417052953619006.png" id="5_60kcq"]
+[ext_resource type="FontFile" uid="uid://32f22jx82rbv" path="res://asset/font/Montserrat-SemiBold.otf" id="6_pw2t4"]
+[ext_resource type="Texture2D" uid="uid://b5h17q1q42oki" path="res://asset/visual/sprite/cg/phung/c2.png" id="7_7jcng"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5dr6i"]
+font = ExtResource("6_pw2t4")
+font_size = 26
+font_color = Color(0, 0, 0, 1)
+
+[node name="PhungEntry1" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rgsdk")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+self_modulate = Color(1, 1, 1, 0.617)
+layout_mode = 0
+offset_left = -293.0
+offset_top = 669.0
+offset_right = 7707.0
+offset_bottom = 2854.0
+scale = Vector2(0.27669, 0.27669)
+texture = ExtResource("2_vhc4j")
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+self_modulate = Color(1, 1, 1, 0.357)
+layout_mode = 0
+offset_left = 909.0
+offset_top = 635.0
+offset_right = 8909.0
+offset_bottom = 4105.0
+scale = Vector2(0.215007, 0.215007)
+texture = ExtResource("3_edsel")
+flip_h = true
+
+[node name="Frame1" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 175.0
+offset_right = 1377.0
+offset_bottom = 737.0
+scale = Vector2(0.601193, 0.601193)
+texture = ExtResource("4_ddtlk")
+
+[node name="Bubble1" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 118.0
+offset_right = 2156.0
+offset_bottom = 2210.0
+scale = Vector2(0.0987247, 0.0987247)
+texture = ExtResource("5_60kcq")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 164.0
+offset_top = 189.0
+offset_right = 251.0
+offset_bottom = 258.0
+text = "Sương
+...?"
+label_settings = SubResource("LabelSettings_5dr6i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 554.0
+offset_right = 1382.0
+offset_bottom = 1152.0
+scale = Vector2(0.60126, 0.60126)
+texture = ExtResource("7_7jcng")
+
+[node name="Bubble2" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 975.0
+offset_top = 535.0
+offset_right = 3023.0
+offset_bottom = 2627.0
+rotation = 2.94933
+scale = Vector2(0.144772, 0.0939253)
+texture = ExtResource("5_60kcq")
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 416.0
+offset_right = 855.0
+offset_bottom = 521.0
+text = "Nó ở
+đâu ra 
+vậy...?"
+label_settings = SubResource("LabelSettings_5dr6i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bubble3" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 984.0
+offset_top = 831.0
+offset_right = 3032.0
+offset_bottom = 2923.0
+rotation = 3.12502
+scale = Vector2(0.0987247, 0.0987247)
+texture = ExtResource("5_60kcq")
+
+[node name="Label3" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 702.0
+offset_right = 927.0
+offset_bottom = 771.0
+text = "!!?"
+label_settings = SubResource("LabelSettings_5dr6i")
+horizontal_alignment = 1
+vertical_alignment = 1
