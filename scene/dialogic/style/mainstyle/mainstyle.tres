@@ -46,8 +46,8 @@ overrides = {
 "name_label_box_offset": "Vector2(-385, -195)",
 "name_label_box_use_global_color": "false",
 "name_label_custom_color": "Color(0.423529, 0.227451, 0.0235294, 1)",
-"name_label_custom_font_size": "42.0",
-"name_label_font": "\"res://asset/font/DFVNWornout/OpenType-PS/DFVN Wornout.otf\"",
+"name_label_custom_font_size": "40.0",
+"name_label_font": "\"res://asset/font/Merriweather-Bold.otf\"",
 "name_label_use_character_color": "false",
 "name_label_use_global_color": "false",
 "name_label_use_global_font": "false",
@@ -106,4 +106,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_ysb5a")]([])
-metadata/_latest_layer = "17"
+metadata/_latest_layer = "13"
