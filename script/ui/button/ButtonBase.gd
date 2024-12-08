@@ -13,3 +13,11 @@ func _on_trigger() -> void:
 	action.execute()
 	if delete_on_use:
 		queue_free()
+
+
+func _on_mouse_entered():
+	$Label.label_settings.font_color = Color.SADDLE_BROWN
+
+
+func _on_mouse_exited():
+	$Label.label_settings.font_color = Color.WHITE
