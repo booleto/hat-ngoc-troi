@@ -47,6 +47,7 @@ directories/dtl_directory={
 "chiem_bao": "res://scene/dialogic/timeline/chiem_bao.dtl",
 "chiem_bao_start": "res://scene/dialogic/timeline/chiem_bao/chiem_bao_start.dtl",
 "chiem_bao_walk_finish": "res://scene/dialogic/timeline/chiem_bao/chiem_bao_walk_finish.dtl",
+"drum_done": "res://scene/dialogic/timeline/mieu_phuong/drum_done.dtl",
 "lang_trau": "res://scene/dialogic/timeline/lang_trau.dtl",
 "mieu_phuong_start": "res://scene/dialogic/timeline/mieu_phuong/mieu_phuong_start.dtl",
 "prologue": "res://scene/dialogic/timeline/prologue.dtl",
@@ -122,6 +123,10 @@ dialogic_default_action={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
+
+[physics]
+
+common/physics_ticks_per_second=83
 
 [rendering]
 

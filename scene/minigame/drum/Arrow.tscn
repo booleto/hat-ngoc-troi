@@ -1,0 +1,156 @@
+[gd_scene load_steps=12 format=3 uid="uid://bcvytkjbnw1dt"]
+
+[ext_resource type="Texture2D" uid="uid://hi1vnk1r30jq" path="res://asset/visual/sprite/minigame/tren.png" id="1_34j05"]
+[ext_resource type="Script" path="res://script/minigame/drum/Arrow.gd" id="1_ew6au"]
+[ext_resource type="Texture2D" uid="uid://coclii7w1tn8m" path="res://asset/visual/sprite/minigame/duoi.png" id="2_0u08v"]
+[ext_resource type="Texture2D" uid="uid://cghqgeygjdnyo" path="res://asset/visual/sprite/minigame/trai.png" id="3_m4vti"]
+[ext_resource type="Texture2D" uid="uid://lympltdhbbf0" path="res://asset/visual/sprite/minigame/phai.png" id="4_n7ltp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7mtp6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_34j05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0u08v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_m4vti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n7ltp")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y6kfk"]
+a = Vector2(0, -70)
+b = Vector2(0, 70)
+
+[sub_resource type="Animation" id="Animation_0xj1j"]
+resource_name = "finish"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.95, 1.95)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_jhotv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0nrnr"]
+_data = {
+"RESET": SubResource("Animation_jhotv"),
+"finish": SubResource("Animation_0xj1j")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_nd28l"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="Arrow" type="CharacterBody2D"]
+script = ExtResource("1_ew6au")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.28, 0.28)
+sprite_frames = SubResource("SpriteFrames_7mtp6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_y6kfk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_0nrnr")
+}
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_nd28l")
