@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://vb34t2ug4qbd"]
+[gd_scene load_steps=19 format=3 uid="uid://vb34t2ug4qbd"]
 
 [ext_resource type="Texture2D" uid="uid://cqnlhuehk3hnn" path="res://asset/visual/sprite/ui/bàn bày thẻ.png" id="1_2ov34"]
 [ext_resource type="Script" path="res://script/minigame/sort_cards/CardPanel.gd" id="1_vvf80"]
@@ -13,7 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://dk7chlin6n7pp" path="res://asset/visual/sprite/item/Thẻ 4.png" id="10_ibrt8"]
 [ext_resource type="Texture2D" uid="uid://n7mquty25lv4" path="res://asset/visual/sprite/item/Thẻ 5.png" id="11_2l4yx"]
 [ext_resource type="Texture2D" uid="uid://c68emcdpq3spu" path="res://asset/visual/sprite/item/Thẻ 6.png" id="12_naah7"]
+[ext_resource type="Script" path="res://script/minigame/sort_cards/GlowOnHover.gd" id="12_ux1y5"]
 [ext_resource type="Texture2D" uid="uid://cis80puv10bpl" path="res://asset/visual/sprite/item/Thẻ 7.png" id="13_h87l8"]
+[ext_resource type="Material" uid="uid://uwig1b03itn3" path="res://scene/vfx/shader_material/card_sort.tres" id="17_ls3qp"]
 
 [sub_resource type="Theme" id="Theme_8orn0"]
 Button/colors/font_color = Color(0.352941, 0.172549, 0, 1)
@@ -64,6 +66,7 @@ texture = ExtResource("1_2ov34")
 stretch_mode = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer2/CenterContainer/Control"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -81,6 +84,7 @@ mouse_filter = 2
 metadata/_edit_group_ = true
 
 [node name="Button" type="Button" parent="MarginContainer2/CenterContainer/Control/CenterContainer"]
+visible = false
 layout_mode = 2
 theme = SubResource("Theme_8orn0")
 text = "Hoàn thành"
@@ -109,7 +113,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("6_pj12t")
-hold_duration = 0.3
+hold_duration = 0.2
 separation = 30
 
 [node name="LuaKho" type="TextureRect" parent="MarginContainer/CenterContainer/CardList"]
@@ -117,41 +121,240 @@ custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 texture = ExtResource("7_6fxyg")
 expand_mode = 5
+script = ExtResource("12_ux1y5")
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/CardList/LuaKho"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -540.0
+offset_right = 450.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/CenterContainer/CardList/LuaKho/CenterContainer"]
+material = ExtResource("17_ls3qp")
+custom_minimum_size = Vector2(900, 1080)
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.7235, 0.21, 1)
 
 [node name="RuNhau" type="TextureRect" parent="MarginContainer/CenterContainer/CardList"]
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 texture = ExtResource("10_ibrt8")
 expand_mode = 5
+script = ExtResource("12_ux1y5")
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/CardList/RuNhau"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -540.0
+offset_right = 450.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/CenterContainer/CardList/RuNhau/CenterContainer"]
+material = ExtResource("17_ls3qp")
+custom_minimum_size = Vector2(900, 1080)
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.7235, 0.21, 1)
 
 [node name="NuocCan" type="TextureRect" parent="MarginContainer/CenterContainer/CardList"]
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 texture = ExtResource("8_4sbwj")
 expand_mode = 5
+script = ExtResource("12_ux1y5")
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/CardList/NuocCan"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -540.0
+offset_right = 450.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/CenterContainer/CardList/NuocCan/CenterContainer"]
+material = ExtResource("17_ls3qp")
+custom_minimum_size = Vector2(900, 1080)
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.7235, 0.21, 1)
 
 [node name="ConLau" type="TextureRect" parent="MarginContainer/CenterContainer/CardList"]
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 texture = ExtResource("13_h87l8")
 expand_mode = 5
+script = ExtResource("12_ux1y5")
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/CardList/ConLau"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -540.0
+offset_right = 450.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/CenterContainer/CardList/ConLau/CenterContainer"]
+material = ExtResource("17_ls3qp")
+custom_minimum_size = Vector2(900, 1080)
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.7235, 0.21, 1)
 
 [node name="ChoTroi" type="TextureRect" parent="MarginContainer/CenterContainer/CardList"]
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 texture = ExtResource("12_naah7")
 expand_mode = 5
+script = ExtResource("12_ux1y5")
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/CardList/ChoTroi"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -540.0
+offset_right = 450.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/CenterContainer/CardList/ChoTroi/CenterContainer"]
+material = ExtResource("17_ls3qp")
+custom_minimum_size = Vector2(900, 1080)
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.7235, 0.21, 1)
 
 [node name="AiOi" type="TextureRect" parent="MarginContainer/CenterContainer/CardList"]
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 texture = ExtResource("9_tkjsg")
 expand_mode = 5
+script = ExtResource("12_ux1y5")
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/CardList/AiOi"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -540.0
+offset_right = 450.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/CenterContainer/CardList/AiOi/CenterContainer"]
+material = ExtResource("17_ls3qp")
+custom_minimum_size = Vector2(900, 1080)
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.7235, 0.21, 1)
 
 [node name="TatNuoc" type="TextureRect" parent="MarginContainer/CenterContainer/CardList"]
 custom_minimum_size = Vector2(90, 0)
 layout_mode = 2
 texture = ExtResource("11_2l4yx")
 expand_mode = 5
+script = ExtResource("12_ux1y5")
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/CardList/TatNuoc"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -540.0
+offset_right = 450.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/CenterContainer/CardList/TatNuoc/CenterContainer"]
+material = ExtResource("17_ls3qp")
+custom_minimum_size = Vector2(900, 1080)
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.7235, 0.21, 1)
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.0
+offset_top = 504.0
+offset_right = 1010.0
+offset_bottom = 959.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.295, 0.295)
+mouse_filter = 2
+metadata/_edit_group_ = true
+
+[node name="Button" type="Button" parent="MarginContainer/Control/CenterContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_8orn0")
+text = "Hoàn thành"
+icon = ExtResource("3_2lhud")
+flat = true
+icon_alignment = 1
+script = ExtResource("4_oge1y")
+action = SubResource("Resource_hmofu")
 
 [connection signal="sort_children" from="MarginContainer/CenterContainer/CardList" to="MarginContainer/CenterContainer/CardList" method="_on_sort_children"]

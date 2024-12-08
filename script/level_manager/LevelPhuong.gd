@@ -52,6 +52,8 @@ func end_sort_game_fail() -> void:
 
 
 func end_sort_game() -> void:
+	GameEventBus.play_animation.emit("mission_completed")
+	await get_tree().create_timer(2.0).timeout
 	card_list = null
 	card_panel.queue_free()
 	await card_panel.tree_exited

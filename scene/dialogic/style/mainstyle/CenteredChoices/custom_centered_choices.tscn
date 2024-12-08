@@ -188,3 +188,16 @@ scale = Vector2(0.2, 0.2)
 [node name="TextureRect" type="TextureRect" parent="SubViewport/CenterContainer"]
 layout_mode = 2
 texture = ExtResource("7_an7w0")
+
+[node name="SubViewport2" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(825, 90)
+
+[node name="CenterContainer" type="CenterContainer" parent="SubViewport2"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.2, 0.2)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport2/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("7_an7w0")
