@@ -104,9 +104,12 @@ phuong (phuong_suy_nghi): Tốt, đằng nào cũng nghĩ ngươi đã không qu
 phuong (phuong_suy_nghi): Để không mang tiếng ức hiếp lũ phàm nhân mắt thịt các ngươi, ta có bồ lúa vàng đang phơi nắng ngoài sân. Nếu như ngươi có thể vượt qua được bài kiểm tra của ta thì ta sẽ ban cho món báu vật ẩn sâu bên trong bồ lúa ấy.
 leave --All--
 phuong: Nhìn ra ngoài kia đi.
+[background scene="res://scene/dialogic/background/DrumOutside.tscn" fade="0.5"]
 trau: Kia là… một cái trống? Ban nãy mình đâu thấy nó ở đây?
 phuong: Chắc hẳn ngươi đã thấy thửa ruộng phía ngoài kia? Nếu ngươi đánh chiếc trống này bằng cả con tim thì thửa ruộng đó mới dần xanh tốt trở lại. Chừng nào cây lúa trổ bông trên mảnh đất đó, làng ngươi sẽ thoát cảnh mất mùa.
+[background scene="res://scene/dialogic/background/PhungEntry1.tscn" fade="0.5"]
 join trau left
 join phuong right
 trau (trau_binh_thuong): …Tuy con không hiểu lắm nhưng con sẽ cố gắng hết sức!
 [signal arg="start_minigame"]
+do LevelLoader.load_level_from_name("DRUM_MINIGAME")

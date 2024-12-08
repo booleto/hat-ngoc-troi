@@ -1,33 +1,33 @@
-[gd_scene load_steps=43 format=3 uid="uid://chaexbpx6j6eg"]
+[gd_scene load_steps=43 format=3 uid="uid://ct7ljit1phuvo"]
 
-[ext_resource type="Script" path="res://script/level_manager/LevelPhuong.gd" id="1_1n0ju"]
-[ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="1_l1res"]
-[ext_resource type="Texture2D" uid="uid://di1swrrtqo84b" path="res://asset/visual/sprite/foreground/layer1.png" id="1_snjlt"]
-[ext_resource type="Texture2D" uid="uid://b3a6v73dm2ijr" path="res://asset/visual/sprite/foreground/layer2.png" id="2_5og6q"]
-[ext_resource type="Texture2D" uid="uid://b5fv01vci3tv4" path="res://asset/visual/sprite/foreground/layer3.png" id="3_8eq6d"]
-[ext_resource type="Texture2D" uid="uid://yexnoreyv1s1" path="res://asset/visual/sprite/foreground/phụng vàng.png" id="4_iawql"]
-[ext_resource type="Texture2D" uid="uid://oaihk8fcsv8v" path="res://asset/visual/sprite/foreground/lọ hoa.png" id="5_4tpmh"]
-[ext_resource type="Texture2D" uid="uid://56ulwslsd2v3" path="res://asset/visual/sprite/foreground/ly vàng 1.png" id="5_78ybh"]
-[ext_resource type="Texture2D" uid="uid://dolerunkbb6xt" path="res://asset/visual/sprite/foreground/ly vàng 2.png" id="6_7li64"]
-[ext_resource type="Texture2D" uid="uid://c4vboqsl2qyps" path="res://asset/visual/sprite/foreground/bình nhang.png" id="7_ib3cb"]
-[ext_resource type="Texture2D" uid="uid://ct8t1pqep3h03" path="res://asset/visual/sprite/foreground/mâm ngũ quả.png" id="7_m4t35"]
-[ext_resource type="Texture2D" uid="uid://272eutjyvus7" path="res://asset/visual/sprite/foreground/bàn thờ.png" id="8_hkdjp"]
-[ext_resource type="Texture2D" uid="uid://8cy3fro33agc" path="res://asset/visual/sprite/foreground/bình tro.png" id="9_3gi32"]
-[ext_resource type="Texture2D" uid="uid://bb5mhswb6kvd5" path="res://asset/visual/sprite/item/Thẻ.png" id="11_fvxhd"]
-[ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="12_g1r5f"]
-[ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="13_40fku"]
-[ext_resource type="Script" path="res://script/ui/button/action/ButtonAction.gd" id="15_xxfuc"]
-[ext_resource type="Script" path="res://script/ui/button/action/PlayTimelineAction.gd" id="17_2txnx"]
-[ext_resource type="Script" path="res://script/ui/button/action/MultiAction.gd" id="18_y8akg"]
+[ext_resource type="Script" path="res://script/level_manager/LevelPhuongAfterMinigame.gd" id="1_vus1l"]
+[ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="2_caw1p"]
+[ext_resource type="Texture2D" uid="uid://di1swrrtqo84b" path="res://asset/visual/sprite/foreground/layer1.png" id="3_txt4l"]
+[ext_resource type="Texture2D" uid="uid://b3a6v73dm2ijr" path="res://asset/visual/sprite/foreground/layer2.png" id="4_m00st"]
+[ext_resource type="Texture2D" uid="uid://b5fv01vci3tv4" path="res://asset/visual/sprite/foreground/layer3.png" id="5_20l6u"]
+[ext_resource type="Texture2D" uid="uid://56ulwslsd2v3" path="res://asset/visual/sprite/foreground/ly vàng 1.png" id="6_rqciw"]
+[ext_resource type="Texture2D" uid="uid://dolerunkbb6xt" path="res://asset/visual/sprite/foreground/ly vàng 2.png" id="7_mjji5"]
+[ext_resource type="Texture2D" uid="uid://yexnoreyv1s1" path="res://asset/visual/sprite/foreground/phụng vàng.png" id="8_3pbph"]
+[ext_resource type="Texture2D" uid="uid://oaihk8fcsv8v" path="res://asset/visual/sprite/foreground/lọ hoa.png" id="9_ey8ms"]
+[ext_resource type="Texture2D" uid="uid://ct8t1pqep3h03" path="res://asset/visual/sprite/foreground/mâm ngũ quả.png" id="10_1ddjf"]
+[ext_resource type="Texture2D" uid="uid://c4vboqsl2qyps" path="res://asset/visual/sprite/foreground/bình nhang.png" id="11_2vtuq"]
+[ext_resource type="Texture2D" uid="uid://272eutjyvus7" path="res://asset/visual/sprite/foreground/bàn thờ.png" id="12_jxmak"]
+[ext_resource type="Texture2D" uid="uid://8cy3fro33agc" path="res://asset/visual/sprite/foreground/bình tro.png" id="13_qd2al"]
+[ext_resource type="Texture2D" uid="uid://bb5mhswb6kvd5" path="res://asset/visual/sprite/item/Thẻ.png" id="14_sp0no"]
+[ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="15_546dg"]
+[ext_resource type="Script" path="res://script/ui/button/action/ButtonAction.gd" id="16_qj58r"]
+[ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="17_jdh30"]
+[ext_resource type="Script" path="res://script/ui/button/action/PlayTimelineAction.gd" id="18_msbc8"]
+[ext_resource type="Script" path="res://script/ui/button/action/MultiAction.gd" id="19_p8h3j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_naprw"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yifoo"]
-texture = ExtResource("1_snjlt")
+texture = ExtResource("3_txt4l")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dl3j2"]
-texture = ExtResource("2_5og6q")
+texture = ExtResource("4_m00st")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blmdm"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -39,90 +39,90 @@ shadow_size = 15
 Button/styles/hover = SubResource("StyleBoxFlat_blmdm")
 
 [sub_resource type="Resource" id="Resource_40vy0"]
-script = ExtResource("13_40fku")
+script = ExtResource("17_jdh30")
 event_name = "card_gain"
 event_type = 1
 
 [sub_resource type="Resource" id="Resource_yipdr"]
-script = ExtResource("17_2txnx")
+script = ExtResource("18_msbc8")
 timeline = "the_ai_oi"
 
 [sub_resource type="Resource" id="Resource_hajxm"]
-script = ExtResource("18_y8akg")
-actions = Array[ExtResource("15_xxfuc")]([SubResource("Resource_40vy0"), SubResource("Resource_yipdr")])
+script = ExtResource("19_p8h3j")
+actions = Array[ExtResource("16_qj58r")]([SubResource("Resource_40vy0"), SubResource("Resource_yipdr")])
 
 [sub_resource type="Resource" id="Resource_4novq"]
-script = ExtResource("13_40fku")
+script = ExtResource("17_jdh30")
 event_name = "card_gain"
 event_type = 1
 
 [sub_resource type="Resource" id="Resource_5fnaa"]
-script = ExtResource("17_2txnx")
+script = ExtResource("18_msbc8")
 timeline = "the_cho_troi"
 
 [sub_resource type="Resource" id="Resource_yeq4k"]
-script = ExtResource("18_y8akg")
-actions = Array[ExtResource("15_xxfuc")]([SubResource("Resource_4novq"), SubResource("Resource_5fnaa")])
+script = ExtResource("19_p8h3j")
+actions = Array[ExtResource("16_qj58r")]([SubResource("Resource_4novq"), SubResource("Resource_5fnaa")])
 
 [sub_resource type="Resource" id="Resource_8xf15"]
-script = ExtResource("13_40fku")
+script = ExtResource("17_jdh30")
 event_name = "card_gain"
 event_type = 1
 
 [sub_resource type="Resource" id="Resource_v5hkt"]
-script = ExtResource("17_2txnx")
+script = ExtResource("18_msbc8")
 timeline = "the_nuoc_can"
 
 [sub_resource type="Resource" id="Resource_i8chh"]
-script = ExtResource("18_y8akg")
-actions = Array[ExtResource("15_xxfuc")]([SubResource("Resource_8xf15"), SubResource("Resource_v5hkt")])
+script = ExtResource("19_p8h3j")
+actions = Array[ExtResource("16_qj58r")]([SubResource("Resource_8xf15"), SubResource("Resource_v5hkt")])
 
 [sub_resource type="Resource" id="Resource_772cx"]
-script = ExtResource("13_40fku")
+script = ExtResource("17_jdh30")
 event_name = "card_gain"
 event_type = 1
 
 [sub_resource type="Resource" id="Resource_vf7sk"]
-script = ExtResource("17_2txnx")
+script = ExtResource("18_msbc8")
 timeline = "the_ru_nhau"
 
 [sub_resource type="Resource" id="Resource_gcw7x"]
-script = ExtResource("18_y8akg")
-actions = Array[ExtResource("15_xxfuc")]([SubResource("Resource_772cx"), SubResource("Resource_vf7sk")])
+script = ExtResource("19_p8h3j")
+actions = Array[ExtResource("16_qj58r")]([SubResource("Resource_772cx"), SubResource("Resource_vf7sk")])
 
 [sub_resource type="Resource" id="Resource_cwmbc"]
-script = ExtResource("13_40fku")
+script = ExtResource("17_jdh30")
 event_name = "card_gain"
 event_type = 1
 
 [sub_resource type="Resource" id="Resource_obb7b"]
-script = ExtResource("17_2txnx")
+script = ExtResource("18_msbc8")
 timeline = "the_con_lau"
 
 [sub_resource type="Resource" id="Resource_l3f4n"]
-script = ExtResource("18_y8akg")
-actions = Array[ExtResource("15_xxfuc")]([SubResource("Resource_cwmbc"), SubResource("Resource_obb7b")])
+script = ExtResource("19_p8h3j")
+actions = Array[ExtResource("16_qj58r")]([SubResource("Resource_cwmbc"), SubResource("Resource_obb7b")])
 
 [sub_resource type="Resource" id="Resource_hi5ip"]
-script = ExtResource("13_40fku")
+script = ExtResource("17_jdh30")
 event_name = "card_gain"
 event_type = 1
 
 [sub_resource type="Resource" id="Resource_2875c"]
-script = ExtResource("17_2txnx")
+script = ExtResource("18_msbc8")
 timeline = "the_tat_nuoc"
 
 [sub_resource type="Resource" id="Resource_npuso"]
-script = ExtResource("18_y8akg")
-actions = Array[ExtResource("15_xxfuc")]([SubResource("Resource_hi5ip"), SubResource("Resource_2875c")])
+script = ExtResource("19_p8h3j")
+actions = Array[ExtResource("16_qj58r")]([SubResource("Resource_hi5ip"), SubResource("Resource_2875c")])
 
 [node name="LevelPhuong" type="Node2D"]
-script = ExtResource("1_1n0ju")
+script = ExtResource("1_vus1l")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="SceneAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
-script = ExtResource("1_l1res")
+script = ExtResource("2_caw1p")
 
 [node name="MainPanel" type="PanelContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
@@ -167,7 +167,7 @@ offset_right = 3074.0
 offset_bottom = 1862.0
 scale = Vector2(0.235, 0.235)
 mouse_filter = 2
-texture = ExtResource("3_8eq6d")
+texture = ExtResource("5_20l6u")
 
 [node name="GoldVaseLeft" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -181,7 +181,7 @@ offset_right = 1016.59
 offset_bottom = 897.38
 scale = Vector2(0.26, 0.26)
 mouse_filter = 2
-texture = ExtResource("5_78ybh")
+texture = ExtResource("6_rqciw")
 
 [node name="GoldVaseRight" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -195,7 +195,7 @@ offset_right = 1146.14
 offset_bottom = 880.775
 scale = Vector2(0.26, 0.26)
 mouse_filter = 2
-texture = ExtResource("6_7li64")
+texture = ExtResource("7_mjji5")
 
 [node name="StatueRight" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -210,7 +210,7 @@ offset_bottom = 1900.0
 scale = Vector2(0.33, 0.33)
 mouse_filter = 2
 theme = SubResource("Theme_b162p")
-texture = ExtResource("4_iawql")
+texture = ExtResource("8_3pbph")
 
 [node name="StatueLeft" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -224,7 +224,7 @@ offset_right = 2135.0
 offset_bottom = 1900.0
 scale = Vector2(0.33, 0.33)
 mouse_filter = 2
-texture = ExtResource("4_iawql")
+texture = ExtResource("8_3pbph")
 flip_h = true
 
 [node name="VaseLeft" type="Control" parent="CanvasLayer/MainPanel"]
@@ -239,7 +239,7 @@ offset_right = 1155.26
 offset_bottom = 1096.51
 scale = Vector2(0.4, 0.4)
 mouse_filter = 2
-texture = ExtResource("5_4tpmh")
+texture = ExtResource("9_ey8ms")
 
 [node name="VaseRight" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -253,7 +253,7 @@ offset_right = 1394.97
 offset_bottom = 1098.02
 scale = Vector2(0.4, 0.4)
 mouse_filter = 2
-texture = ExtResource("5_4tpmh")
+texture = ExtResource("9_ey8ms")
 
 [node name="FruitsDisplay" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -267,7 +267,7 @@ offset_right = 1359.38
 offset_bottom = 1020.23
 scale = Vector2(0.31, 0.31)
 mouse_filter = 2
-texture = ExtResource("7_m4t35")
+texture = ExtResource("10_1ddjf")
 
 [node name="IncencePot" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -281,7 +281,7 @@ offset_right = 1261.82
 offset_bottom = 999.11
 scale = Vector2(0.215, 0.215)
 mouse_filter = 2
-texture = ExtResource("7_ib3cb")
+texture = ExtResource("11_2vtuq")
 
 [node name="Altar" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -295,7 +295,7 @@ offset_right = 2385.0
 offset_bottom = 2050.0
 scale = Vector2(0.245, 0.245)
 mouse_filter = 2
-texture = ExtResource("8_hkdjp")
+texture = ExtResource("12_jxmak")
 
 [node name="AshPot" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -309,9 +309,10 @@ offset_right = 2134.0
 offset_bottom = 2213.0
 scale = Vector2(0.24, 0.24)
 mouse_filter = 2
-texture = ExtResource("9_3gi32")
+texture = ExtResource("13_qd2al")
 
 [node name="Cards" type="Control" parent="CanvasLayer/MainPanel"]
+visible = false
 layout_mode = 2
 mouse_filter = 2
 
@@ -324,9 +325,9 @@ offset_right = 1064.0
 offset_bottom = 1139.0
 rotation = -0.106018
 scale = Vector2(0.09, 0.09)
-icon = ExtResource("11_fvxhd")
+icon = ExtResource("14_sp0no")
 flat = true
-script = ExtResource("12_g1r5f")
+script = ExtResource("15_546dg")
 action = SubResource("Resource_hajxm")
 delete_on_use = true
 
@@ -339,9 +340,9 @@ offset_right = 1006.0
 offset_bottom = 947.0
 rotation = -0.869344
 scale = Vector2(0.09, 0.09)
-icon = ExtResource("11_fvxhd")
+icon = ExtResource("14_sp0no")
 flat = true
-script = ExtResource("12_g1r5f")
+script = ExtResource("15_546dg")
 action = SubResource("Resource_yeq4k")
 delete_on_use = true
 
@@ -354,9 +355,9 @@ offset_right = 974.0
 offset_bottom = 1290.0
 rotation = -1.55259
 scale = Vector2(0.09, 0.09)
-icon = ExtResource("11_fvxhd")
+icon = ExtResource("14_sp0no")
 flat = true
-script = ExtResource("12_g1r5f")
+script = ExtResource("15_546dg")
 action = SubResource("Resource_i8chh")
 delete_on_use = true
 
@@ -369,9 +370,9 @@ offset_right = 1163.0
 offset_bottom = 1236.0
 rotation = 0.0944734
 scale = Vector2(0.09, 0.09)
-icon = ExtResource("11_fvxhd")
+icon = ExtResource("14_sp0no")
 flat = true
-script = ExtResource("12_g1r5f")
+script = ExtResource("15_546dg")
 action = SubResource("Resource_gcw7x")
 delete_on_use = true
 
@@ -384,9 +385,9 @@ offset_right = 1189.0
 offset_bottom = 1133.0
 rotation = -0.130047
 scale = Vector2(0.09, 0.09)
-icon = ExtResource("11_fvxhd")
+icon = ExtResource("14_sp0no")
 flat = true
-script = ExtResource("12_g1r5f")
+script = ExtResource("15_546dg")
 action = SubResource("Resource_l3f4n")
 delete_on_use = true
 
@@ -399,23 +400,8 @@ offset_right = 1255.0
 offset_bottom = 1513.0
 rotation = 1.52796
 scale = Vector2(0.09, 0.09)
-icon = ExtResource("11_fvxhd")
+icon = ExtResource("14_sp0no")
 flat = true
-script = ExtResource("12_g1r5f")
+script = ExtResource("15_546dg")
 action = SubResource("Resource_npuso")
 delete_on_use = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainPanel"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2
-
-[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2

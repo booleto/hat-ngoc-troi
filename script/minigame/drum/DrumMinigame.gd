@@ -32,8 +32,8 @@ enum RATING {
 
 
 func _ready() -> void:
-	#game_started = true
-	#spawn_arrow(Note.new(0, Arrow.DIR.RIGHT))
+	GameEventBus.play_animation.emit("grass_sway")
+	GameEventBus.play_animation.emit("grass_growth")
 	GameEventBus.game_event.connect(_on_game_event)
 	start_minigame()
 
@@ -62,6 +62,7 @@ func start_minigame():
 	misses = 0
 	combo = 0
 	music_player.play()
+	
 
 
 func _process_song(delta: float) -> void:
@@ -90,7 +91,8 @@ func _process_rhythm_input(delta: float) -> void:
 		key = Arrow.DIR.RIGHT
 	if key == Arrow.DIR.NIL:
 		return
-		
+	
+	GameEventBus.play_animation.emit("drum_hit")
 	var arrow: Arrow = get_latest_arrow()
 	if arrow == null:
 		_on_miss()

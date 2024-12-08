@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://drrwie15jh387"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_u2byr"]
+[ext_resource type="Texture2D" uid="uid://dpl5w06ndrfjk" path="res://asset/visual/sprite/cloud/L1.png" id="2_vxahi"]
+[ext_resource type="Texture2D" uid="uid://cv7xdrc5myht6" path="res://asset/visual/sprite/cloud/L5.png" id="3_6xgih"]
+[ext_resource type="Texture2D" uid="uid://d0jghb2np3m1b" path="res://asset/visual/sprite/cg/phung/c4.png" id="4_5hhsq"]
+
+[node name="PhungEntry1" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u2byr")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+self_modulate = Color(1, 1, 1, 0.617)
+layout_mode = 0
+offset_left = -293.0
+offset_top = 669.0
+offset_right = 7707.0
+offset_bottom = 2854.0
+scale = Vector2(0.27669, 0.27669)
+texture = ExtResource("2_vxahi")
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+self_modulate = Color(1, 1, 1, 0.357)
+layout_mode = 0
+offset_left = 909.0
+offset_top = 635.0
+offset_right = 8909.0
+offset_bottom = 4105.0
+scale = Vector2(0.215007, 0.215007)
+texture = ExtResource("3_6xgih")
+flip_h = true
+
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 104.0
+offset_right = 1939.0
+offset_bottom = 1160.0
+scale = Vector2(0.57, 0.57)
+texture = ExtResource("4_5hhsq")

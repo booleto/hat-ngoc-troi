@@ -6,7 +6,8 @@ enum LEVEL {
 	CHIEM_BAO_MAY,
 	CONG_DEN_TU_LINH,
 	THANH_DIA_TU_LINH,
-	DEN_PHUONG
+	DEN_PHUONG,
+	DRUM_MINIGAME
 }
 
 var level_map: Dictionary = {
@@ -14,7 +15,8 @@ var level_map: Dictionary = {
 	LEVEL.TEST_LEVEL : load("res://level/test_level.tscn"),
 	LEVEL.CHIEM_BAO_MAY : load("res://level/chiem_bao_may.tscn"),
 	LEVEL.CONG_DEN_TU_LINH : load("res://level/cong_den_tu_linh.tscn"),
-	LEVEL.DEN_PHUONG : load("res://level/level_phuong.tscn")
+	LEVEL.DEN_PHUONG : load("res://level/level_phuong.tscn"),
+	LEVEL.DRUM_MINIGAME : load("res://level/drum_minigame.tscn")
 }
 
 func load_level(level: LEVEL):

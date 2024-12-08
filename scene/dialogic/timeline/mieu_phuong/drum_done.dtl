@@ -1,0 +1,18 @@
+[background scene="res://scene/dialogic/background/PhungEntry1.tscn" fade="0.0"]
+[style name="mainstyle"]
+join trau (trau_binh_thuong) leftmore
+join phuong (phuong_suy_nghi) rightmore
+trau: Thưa bà, vậy là làng con được cứu rồi đúng không ạ?
+phuong: Ai nói ngươi vậy?
+update trau (trau_giai_thich) [animation="Bounce"]
+trau (trau_giai_thich): Dạ….? Nhưng không phải bà mới nói là….
+phuong (phuong_suy_nghi):  Nhìn ra ngoài đi.
+trau (trau_gai_dau): Sao vẫn chưa có gì xảy ra….?
+phuong (phuong_tay_sau_lung): Nói gì vậy? Không phải mảnh đất kia đã trở nên màu mỡ hơn nhiều rồi hả?
+update trau (trau_co_y_tuong) [animation="Tada"]
+trau (trau_co_y_tuong): A! Đúng vậy thật.
+phuong (phuong_tay_sau_lung): Ngươi không thể làm nó ra lúa một cách dễ dàng vậy đâu, đây mới chỉ là một phần nhiệm vụ của ngươi thôi. Để có được cánh đồng lúa tươi tốt thì cũng cần cả một quá trình chứ.
+phuong (phuong_normal): Nhưng ta phải công nhận, nhà ngươi được việc lắm.
+trau (trau_binh_thuong): Con sẽ cố gắng hơn nữa ạ, Bà sai con gấp trăm, gấp nghìn lần con cũng làm!
+phuong: Thôi được rồi. Giờ tới 3 cánh cổng tiếp theo đi, phần ta đã xong, ta sẽ để cho ba lão kia lo liệu nốt. Mau mau đón lấy bảo vật thần thánh đầu tiên của ngươi!
+[ Từ trên đài cao, vật thể tỏa ra tia rực rỡ hoàng kim chậm rãi đáp xuống lòng bàn tay lật ngửa của Trâu Vàng. Khi ánh sáng tắt hẳn, anh nhận ra đó là một hạt lúa bằng vàng ròng. Ngay lúc Trâu vừa bỏ hạt lúa vào tay nải thì trong chớp mắt, anh đã bị thổi ra giữ thánh Địa Tứ Linh, trở về vị trí ban đầu. Cuộn kinh trong tay Trâu Vàng nóng lên, anh giở ra xem thì thấy một chỗ trống đã hiện rõ chữ. ]
