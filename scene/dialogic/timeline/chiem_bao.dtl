@@ -8,7 +8,6 @@ trau: ….
 trau: Mình đang ở đâu nữa vậy??
 trau: Một ngôi đền…. trên mây sao?
 join than_nong (tn_vui) rightmore [animation="Fade In"]
-update trau (trau_troi_oi) [fade="Fade Cross" fade_length="2.0"]
 than_nong (tn_vui): Hô hô, chào mừng tới đền của ta, nhóc đầu trâu.
 trau (trau_troi_oi): …..?
 Giọng nói này… ai vậy?
