@@ -57,6 +57,7 @@ directories/dtl_directory={
 "rua_door_open": "res://scene/dialogic/timeline/rua/rua_door_open.dtl",
 "rua_lan_1": "res://scene/dialogic/timeline/rua/rua_lan_1.dtl",
 "rua_start": "res://scene/dialogic/timeline/rua/rua_start.dtl",
+"sega_logo": "res://scene/dialogic/timeline/sega_logo.dtl",
 "styletest": "res://scene/dialogic/timeline/styletest.dtl",
 "test": "res://scene/dialogic/timeline/test.dtl",
 "the_ai_oi": "res://scene/dialogic/timeline/mieu_phuong/the_ai_oi.dtl",

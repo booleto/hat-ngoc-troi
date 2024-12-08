@@ -1,0 +1,6 @@
+[background arg="res://asset/visual/sprite/logo/segaydaden.png" fade="0.0"]
+[wait time="0.5"]
+[background arg="res://asset/visual/sprite/logo/segay.png" fade="1.0"]
+[wait time="2.0"]
+[background arg="res://asset/visual/sprite/logo/segaydaden.png" fade="1.0"]
+[wait time="2.0"]

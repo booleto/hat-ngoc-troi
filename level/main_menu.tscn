@@ -1,62 +1,71 @@
-[gd_scene load_steps=13 format=3 uid="uid://bsb25rej8w2hn"]
+[gd_scene load_steps=18 format=3 uid="uid://bsb25rej8w2hn"]
 
-[ext_resource type="Texture2D" uid="uid://b7k0ow0ejpn4w" path="res://asset/visual/sprite/logo/Logo (1).png" id="1_p6ir8"]
-[ext_resource type="Texture2D" uid="uid://brnq68ckv6yby" path="res://asset/visual/sprite/cg/Main screen.png" id="2_cq6rd"]
-[ext_resource type="FontFile" uid="uid://cqdodb7scm4sn" path="res://asset/font/Montserrat-Bold.otf" id="3_6dosq"]
+[ext_resource type="Texture2D" uid="uid://biule84r2yuks" path="res://asset/visual/sprite/logo/Logo (2).png" id="1_6716l"]
+[ext_resource type="Script" path="res://script/level_manager/MainMenu.gd" id="1_t2rss"]
+[ext_resource type="Texture2D" uid="uid://bwjfsrjygefc4" path="res://asset/visual/sprite/background/Main screen (1).png" id="2_0lwkw"]
+[ext_resource type="Texture2D" uid="uid://mn4gsve2vptx" path="res://asset/visual/sprite/ui/Button 2.png" id="3_5mni0"]
 [ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="4_bamqk"]
+[ext_resource type="Texture2D" uid="uid://dvcqgfm57jhri" path="res://asset/visual/sprite/ui/Button 1.png" id="4_sv6fn"]
 [ext_resource type="Script" path="res://script/ui/button/action/LoadLevelAction.gd" id="5_rarhj"]
 [ext_resource type="Script" path="res://script/ui/button/action/UIAction.gd" id="6_2sy1i"]
 [ext_resource type="PackedScene" uid="uid://busbr02uxdgor" path="res://scene/dialogic/style/mainstyle/PauseMenu/MainMenuSettings.tscn" id="7_cio03"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyuiq"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[ext_resource type="FontFile" uid="uid://b0j1noaxjt1dr" path="res://asset/font/Merriweather-Bold.otf" id="7_slk2d"]
 
 [sub_resource type="Resource" id="Resource_e8x7j"]
 script = ExtResource("5_rarhj")
 level_to_load = 1
 
+[sub_resource type="Theme" id="Theme_5ikjx"]
+Label/colors/font_color = Color(0.411765, 0.219608, 0.0156863, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_aifu1"]
-font = ExtResource("3_6dosq")
+font = ExtResource("7_slk2d")
 font_size = 40
-outline_size = 5
-outline_color = Color(0.960784, 0.752941, 0.298039, 1)
-shadow_size = 5
-shadow_color = Color(0.960784, 0.752941, 0.298039, 1)
+shadow_size = 0
 shadow_offset = Vector2(0, 0)
 
 [sub_resource type="Resource" id="Resource_s66hi"]
 script = ExtResource("5_rarhj")
 level_to_load = 0
 
+[sub_resource type="LabelSettings" id="LabelSettings_7ip31"]
+font = ExtResource("7_slk2d")
+font_size = 40
+
 [sub_resource type="Resource" id="Resource_vwmbv"]
 script = ExtResource("6_2sy1i")
 action_to_do = 0
 
+[sub_resource type="LabelSettings" id="LabelSettings_kqx3v"]
+font = ExtResource("7_slk2d")
+font_size = 40
+
 [node name="Main" type="Node2D"]
+position = Vector2(0, -1)
+script = ExtResource("1_t2rss")
 
 [node name="Logo" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(960, 632)
+position = Vector2(960, 574)
 scale = Vector2(0.315715, 0.352294)
-texture = ExtResource("1_p6ir8")
+texture = ExtResource("1_6716l")
 
 [node name="MainScreen" type="Sprite2D" parent="."]
 z_index = -1
 texture_filter = 1
-position = Vector2(960, 504)
-scale = Vector2(0.24, 0.224)
-texture = ExtResource("2_cq6rd")
+position = Vector2(960, 540.5)
+scale = Vector2(0.24, 0.240222)
+texture = ExtResource("2_0lwkw")
 
-[node name="Button" type="Button" parent="."]
-offset_left = 832.0
-offset_top = 744.0
-offset_right = 1088.0
-offset_bottom = 808.0
-theme_override_fonts/font = ExtResource("3_6dosq")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_wyuiq")
-icon_alignment = 1
+[node name="Button" type="TextureButton" parent="."]
+z_index = 1
+offset_left = 704.0
+offset_top = 729.0
+offset_right = 1216.0
+offset_bottom = 841.0
+texture_normal = ExtResource("3_5mni0")
+texture_hover = ExtResource("4_sv6fn")
 script = ExtResource("4_bamqk")
 action = SubResource("Resource_e8x7j")
 metadata/_edit_group_ = true
@@ -69,78 +78,74 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -113.0
-offset_top = -25.0
+offset_top = -25.5
 offset_right = 113.0
-offset_bottom = 25.0
+offset_bottom = 25.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_5ikjx")
 text = "Game mới"
 label_settings = SubResource("LabelSettings_aifu1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button2" type="Button" parent="."]
-offset_left = 832.0
-offset_top = 832.0
-offset_right = 1088.0
-offset_bottom = 896.0
-theme_override_fonts/font = ExtResource("3_6dosq")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_wyuiq")
-icon_alignment = 1
+[node name="Button2" type="TextureButton" parent="."]
+offset_left = 704.0
+offset_top = 848.0
+offset_right = 1216.0
+offset_bottom = 960.0
+texture_normal = ExtResource("3_5mni0")
+texture_hover = ExtResource("4_sv6fn")
 script = ExtResource("4_bamqk")
 action = SubResource("Resource_s66hi")
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="Button2"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -113.0
-offset_top = -25.0
-offset_right = 113.0
-offset_bottom = 25.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_left = 143.0
+offset_top = 30.5
+offset_right = 369.0
+offset_bottom = 81.5
 text = "Tiếp tục"
-label_settings = SubResource("LabelSettings_aifu1")
+label_settings = SubResource("LabelSettings_7ip31")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button3" type="Button" parent="."]
-offset_left = 832.0
-offset_top = 920.0
-offset_right = 1088.0
-offset_bottom = 984.0
-theme_override_fonts/font = ExtResource("3_6dosq")
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_wyuiq")
-icon_alignment = 1
+[node name="Button3" type="TextureButton" parent="."]
+offset_left = 704.0
+offset_top = 967.0
+offset_right = 1216.0
+offset_bottom = 1079.0
+texture_normal = ExtResource("3_5mni0")
+texture_hover = ExtResource("4_sv6fn")
 script = ExtResource("4_bamqk")
 action = SubResource("Resource_vwmbv")
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="Button3"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -113.0
-offset_top = -25.0
-offset_right = 113.0
-offset_bottom = 25.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_left = 143.0
+offset_top = 30.5
+offset_right = 369.0
+offset_bottom = 81.5
 text = "Cài đặt"
-label_settings = SubResource("LabelSettings_aifu1")
+label_settings = SubResource("LabelSettings_kqx3v")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_cio03")]
+offset_left = -8.0
+offset_top = -16.0
+offset_right = -8.0
+offset_bottom = -16.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="Button" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Button2" to="Button2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button2" to="Button2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Button3" to="Button3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button3" to="Button3" method="_on_mouse_exited"]
