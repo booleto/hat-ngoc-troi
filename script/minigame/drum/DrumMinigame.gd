@@ -5,6 +5,7 @@ class_name DrumMinigame
 @export var arrow_packed: PackedScene
 @export var travel_time: float
 @export var music_sheet: MusicSheet
+@export var min_score: int = 50
 
 @onready var spawn_point: Marker2D = %ArrowSpawn
 @onready var end_point: Marker2D = %ArrowEnd
@@ -34,6 +35,7 @@ enum RATING {
 func _ready() -> void:
 	GameEventBus.play_animation.emit("grass_sway")
 	GameEventBus.play_animation.emit("grass_growth")
+	GameEventBus.play_animation.emit("start_stage")
 	GameEventBus.game_event.connect(_on_game_event)
 	start_minigame()
 
@@ -61,13 +63,35 @@ func start_minigame():
 	bads = 0
 	misses = 0
 	combo = 0
+	update_score()
 	music_player.play()
 	
 
+func end_minigame():
+	game_started = false
+	if evaluate_result():
+		GameEventBus.play_animation.emit("mission_completed")
+		await get_tree().create_timer(3.0).timeout
+		LevelLoader.load_level(LevelLoader.LEVEL.DEN_PHUONG_SAU_MINIGAME)
+	else:
+		GameEventBus.play_animation.emit("mission_failed")
+		await get_tree().create_timer(3.0).timeout
+		LevelLoader.load_level(LevelLoader.LEVEL.DRUM_MINIGAME)
+		
+
+func evaluate_result() -> bool:
+	if okays + perfects + bads > min_score:
+		return true
+	else:
+		return false
 
 func _process_song(delta: float) -> void:
 	var time: float = music_player.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
 	var beat: float = (time - music_sheet.offset - travel_time) * music_sheet.bpm * music_sheet.bar_beats / 60.0
+	if song_position >= music_sheet.sheet.size():
+		await get_tree().create_timer(travel_time + 3.0).timeout
+		end_minigame()
+		
 	for i in range(song_position, music_sheet.sheet.size()):
 		var note: Note = music_sheet.sheet[i]
 		if note.timestamp <= beat:
@@ -175,23 +199,29 @@ func update_combo(rating: RATING) -> void:
 		combo += 1
 	combo_num.text = str(combo)
 
+func update_score() -> void:
+	score_num.text = str(bads + okays + perfects) + " / " + str(min_score)
 
 func _on_miss() -> void:
 	print("Miss")
 	misses += 1
+	update_score()
 	update_combo(RATING.MISS)
 
 func _on_bad() -> void:
 	print("Bad")
 	okays += 1
+	update_score()
 	update_combo(RATING.BAD)
 	
 func _on_okay() -> void:
 	print("Okay")
 	okays += 1
+	update_score()
 	update_combo(RATING.OK)
 
 func _on_perfect() -> void:
 	print("Perfect")
 	perfects += 1
+	update_score()
 	update_combo(RATING.PERFECT)

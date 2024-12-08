@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://chaexbpx6j6eg"]
+[gd_scene load_steps=48 format=3 uid="uid://chaexbpx6j6eg"]
 
 [ext_resource type="Script" path="res://script/level_manager/LevelPhuong.gd" id="1_1n0ju"]
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="1_l1res"]
@@ -19,6 +19,8 @@
 [ext_resource type="Script" path="res://script/ui/button/action/ButtonAction.gd" id="15_xxfuc"]
 [ext_resource type="Script" path="res://script/ui/button/action/PlayTimelineAction.gd" id="17_2txnx"]
 [ext_resource type="Script" path="res://script/ui/button/action/MultiAction.gd" id="18_y8akg"]
+[ext_resource type="Texture2D" uid="uid://dl5d532qa1cdt" path="res://asset/visual/sprite/minigame/blackbar.png" id="20_hitqb"]
+[ext_resource type="Texture2D" uid="uid://fc68hy1jined" path="res://asset/visual/sprite/minigame/complete.png" id="21_rg56b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_naprw"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -116,13 +118,119 @@ timeline = "the_tat_nuoc"
 script = ExtResource("18_y8akg")
 actions = Array[ExtResource("15_xxfuc")]([SubResource("Resource_hi5ip"), SubResource("Resource_2875c")])
 
+[sub_resource type="Animation" id="Animation_lr3b7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MissionResultPanel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MissionResultPanel/CenterContainer/TextureRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MissionResultPanel/CenterContainer/WinText/Control/TextureRect:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1262.5, -200.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MissionResultPanel:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_caurn"]
+resource_name = "mission_completed"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MissionResultPanel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MissionResultPanel/CenterContainer/TextureRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.633333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MissionResultPanel/CenterContainer/WinText/Control/TextureRect:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.267943, 0.0312501),
+"update": 0,
+"values": [Vector2(-4500, -200.5), Vector2(-1262.5, -200.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MissionResultPanel:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.7, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hd7qh"]
+_data = {
+"RESET": SubResource("Animation_lr3b7"),
+"mission_completed": SubResource("Animation_caurn")
+}
+
 [node name="LevelPhuong" type="Node2D"]
 script = ExtResource("1_1n0ju")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="SceneAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
-script = ExtResource("1_l1res")
 
 [node name="MainPanel" type="PanelContainer" parent="CanvasLayer"]
 unique_name_in_owner = true
@@ -407,15 +515,76 @@ delete_on_use = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="TextureRect4" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
+
+[node name="MissionResultPanel" type="PanelContainer" parent="CanvasLayer"]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/MissionResultPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MissionResultPanel/CenterContainer"]
+custom_minimum_size = Vector2(10000, 300)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("20_hitqb")
+expand_mode = 2
+
+[node name="WinText" type="Control" parent="CanvasLayer/MissionResultPanel/CenterContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="CanvasLayer/MissionResultPanel/CenterContainer/WinText"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.555, 0.555)
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MissionResultPanel/CenterContainer/WinText/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1282.5
+offset_top = -220.5
+offset_right = 1242.5
+offset_bottom = 180.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("21_rg56b")
+
+[node name="SceneAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/MissionResultPanel"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_hd7qh")
+}
+script = ExtResource("1_l1res")

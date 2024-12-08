@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://uwig1b03itn3"]
+
+[ext_resource type="Shader" path="res://scene/vfx/shader/rect_glow.gdshader" id="1_ne76y"]
+
+[resource]
+shader = ExtResource("1_ne76y")
+shader_parameter/rect_size = Vector2(0.001, 0.15)
+shader_parameter/bness = 0.25
+shader_parameter/fall_off_scale = 3.0
+shader_parameter/b_offset = 0.0

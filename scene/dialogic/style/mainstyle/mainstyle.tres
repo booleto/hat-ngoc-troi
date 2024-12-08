@@ -68,7 +68,9 @@ overrides = {}
 script = ExtResource("1_ysb5a")
 scene = ExtResource("8_1wmqb")
 overrides = {
-"boxes_stylebox_focused": "\"res://scene/style/new_style_box_empty.tres\""
+"boxes_stylebox_focused": "\"res://scene/style/new_style_box_empty.tres\"",
+"boxes_stylebox_hovered": "\"choice_panel_hover.tres\"",
+"boxes_stylebox_normal": "\"choice_panel_normal.tres\""
 }
 
 [sub_resource type="Resource" id="Resource_yrjbb"]
@@ -106,4 +108,4 @@ layer_info = {
 }
 base_overrides = {}
 layers = Array[ExtResource("1_ysb5a")]([])
-metadata/_latest_layer = "13"
+metadata/_latest_layer = "15"

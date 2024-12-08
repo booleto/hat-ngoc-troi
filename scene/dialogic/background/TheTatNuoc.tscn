@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://binpy4wjlitno"]
+[gd_scene load_steps=4 format=3 uid="uid://binpy4wjlitno"]
 
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_rjx33"]
 [ext_resource type="Texture2D" uid="uid://n7mquty25lv4" path="res://asset/visual/sprite/item/Thẻ 5.png" id="2_nupun"]
+[ext_resource type="Material" uid="uid://dcs0hwwigbctq" path="res://scene/vfx/shader_material/card_phung.tres" id="3_vonvy"]
 
 [node name="The" type="PanelContainer"]
 z_index = -1
@@ -26,3 +27,9 @@ layout_mode = 2
 texture = ExtResource("2_nupun")
 expand_mode = 3
 stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="CenterContainer"]
+material = ExtResource("3_vonvy")
+custom_minimum_size = Vector2(900, 1080)
+layout_mode = 2
+color = Color(1, 0.7235, 0.21, 1)
