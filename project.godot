@@ -123,6 +123,10 @@ dialogic_default_action={
 ]
 }
 
+[physics]
+
+common/physics_ticks_per_second=83
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

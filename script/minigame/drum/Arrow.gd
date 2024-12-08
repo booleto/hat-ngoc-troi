@@ -6,15 +6,17 @@ enum DIR {
 }
 
 @onready var sprite: AnimatedSprite2D = %AnimatedSprite2D
+@onready var animation: AnimationPlayer = %AnimationPlayer
 var target: Vector2
 var time_left: float
 var dir: DIR
 var speed: Vector2
 
+
 func set_direction(direction: DIR):
 	self.dir = direction
 	sprite.frame = dir
-
+	
 
 func set_target(start: Vector2, target: Vector2, travel_time: float):
 	self.position = start
@@ -25,3 +27,6 @@ func set_target(start: Vector2, target: Vector2, travel_time: float):
 func _physics_process(delta: float) -> void:
 	self.position += speed * delta
 	time_left -= delta
+
+func finish(rating: DrumMinigame.RATING):
+	animation.play("finish")
