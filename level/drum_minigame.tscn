@@ -908,7 +908,6 @@ animations = [{
 
 [node name="DrumMinigame" type="Node2D"]
 script = ExtResource("1_cdk5x")
-DEBUG = true
 arrow_packed = ExtResource("2_phryr")
 travel_time = 6.0
 music_sheet = ExtResource("3_ngr75")
