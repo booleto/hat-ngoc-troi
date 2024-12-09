@@ -1,0 +1,199 @@
+[gd_scene load_steps=13 format=3 uid="uid://64vew7imfjyg"]
+
+[ext_resource type="Script" path="res://script/level_manager/Cg6.gd" id="1_i7kra"]
+[ext_resource type="Texture2D" uid="uid://cb1tgm7uke6b0" path="res://asset/visual/sprite/logo/segaydaden.png" id="2_55fua"]
+[ext_resource type="Texture2D" uid="uid://bkwqeonokp3lg" path="res://asset/visual/sprite/cg/Scaled/a8-scaled.png" id="3_ni4of"]
+[ext_resource type="Texture2D" uid="uid://l3wf7hmm7cx5" path="res://asset/visual/sprite/cg/Scaled/a9-scaled.png" id="4_3uyix"]
+[ext_resource type="Texture2D" uid="uid://bdr47taxgjuev" path="res://asset/visual/sprite/speech bubble/bb-14.png" id="5_hnvav"]
+[ext_resource type="Texture2D" uid="uid://btjv7e64esjdb" path="res://asset/visual/sprite/speech bubble/bb-15.png" id="6_cwjpb"]
+
+[sub_resource type="Animation" id="Animation_ym6os"]
+resource_name = "A8"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/A8-scaled:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tvkyx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/A8-scaled:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Segaydaden/A9-scaled:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Segaydaden/Bb-14:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Segaydaden/Bb-15:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Segaydaden/Bb-15:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_yvkiy"]
+resource_name = "A9"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/A9-scaled:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_j2vpi"]
+resource_name = "Bb-14"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/Bb-14:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ukm3h"]
+resource_name = "Bb-15"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/Bb-15:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Segaydaden/Bb-15:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.8, 0.8), Vector2(0.4, 0.4), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fxe3"]
+_data = {
+"A8": SubResource("Animation_ym6os"),
+"A9": SubResource("Animation_yvkiy"),
+"Bb-14": SubResource("Animation_j2vpi"),
+"Bb-15": SubResource("Animation_ukm3h"),
+"RESET": SubResource("Animation_tvkyx")
+}
+
+[node name="Cg6" type="Node2D"]
+script = ExtResource("1_i7kra")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4fxe3")
+}
+
+[node name="Segaydaden" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1, 1)
+texture = ExtResource("2_55fua")
+
+[node name="A8-scaled" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+position = Vector2(-376, -268)
+scale = Vector2(1, 1)
+texture = ExtResource("3_ni4of")
+
+[node name="A9-scaled" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+position = Vector2(304, 244)
+scale = Vector2(1.00266, 0.934952)
+texture = ExtResource("4_3uyix")
+
+[node name="Bb-14" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-576, -43.9999)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_hnvav")
+
+[node name="Bb-15" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(400, -132)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_cwjpb")
