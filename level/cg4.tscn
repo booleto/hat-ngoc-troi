@@ -1,0 +1,158 @@
+[gd_scene load_steps=11 format=3 uid="uid://dph0y6uumk3hx"]
+
+[ext_resource type="Script" path="res://script/level_manager/Cg4.gd" id="1_2k85p"]
+[ext_resource type="Texture2D" uid="uid://cb1tgm7uke6b0" path="res://asset/visual/sprite/logo/segaydaden.png" id="1_fgn6a"]
+[ext_resource type="Texture2D" uid="uid://dkl86r6bpn4m0" path="res://asset/visual/sprite/cg/Scaled/a6-scaled.png" id="2_6o1p6"]
+[ext_resource type="Texture2D" uid="uid://dq4mapw6uxdnj" path="res://asset/visual/sprite/speech bubble/bb-07.png" id="3_j5ip7"]
+[ext_resource type="Texture2D" uid="uid://b2r1b6kwvtmil" path="res://asset/visual/sprite/speech bubble/bb-08.png" id="4_qlcgi"]
+
+[sub_resource type="Animation" id="Animation_q0g7y"]
+resource_name = "A6"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/A6-scaled:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_caraw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/A6-scaled:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Segaydaden/Bb-07:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Segaydaden/Bb-08:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Segaydaden/Bb-08:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_krfr7"]
+resource_name = "Bb-07"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/Bb-07:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3rqju"]
+resource_name = "Bb-08"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/Bb-08:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Segaydaden/Bb-08:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.8, 0.8), Vector2(0.4, 0.4), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vdsov"]
+_data = {
+"A6": SubResource("Animation_q0g7y"),
+"Bb-07": SubResource("Animation_krfr7"),
+"Bb-08": SubResource("Animation_3rqju"),
+"RESET": SubResource("Animation_caraw")
+}
+
+[node name="Cg4" type="Node2D"]
+script = ExtResource("1_2k85p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vdsov")
+}
+
+[node name="Segaydaden" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_fgn6a")
+
+[node name="A6-scaled" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+texture = ExtResource("2_6o1p6")
+
+[node name="Bb-07" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(632, 244)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_j5ip7")
+
+[node name="Bb-08" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(360, -316)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_qlcgi")

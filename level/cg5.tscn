@@ -1,0 +1,295 @@
+[gd_scene load_steps=17 format=3 uid="uid://dgmg6wnhwiofu"]
+
+[ext_resource type="Script" path="res://script/level_manager/Cg5.gd" id="1_001i8"]
+[ext_resource type="Texture2D" uid="uid://cb1tgm7uke6b0" path="res://asset/visual/sprite/logo/segaydaden.png" id="2_j1no5"]
+[ext_resource type="Texture2D" uid="uid://c5r58385aaq4q" path="res://asset/visual/sprite/cg/Scaled/a7-scaled.png" id="3_divps"]
+[ext_resource type="Texture2D" uid="uid://dhpki4aqawa73" path="res://asset/visual/sprite/speech bubble/bb-09.png" id="4_dv56s"]
+[ext_resource type="Texture2D" uid="uid://02deg6actc3v" path="res://asset/visual/sprite/speech bubble/bb-10.png" id="5_eku0j"]
+[ext_resource type="Texture2D" uid="uid://bn68rof7cyav0" path="res://asset/visual/sprite/speech bubble/bb-11.png" id="6_l4u4f"]
+[ext_resource type="Texture2D" uid="uid://b4ku0m14pvfla" path="res://asset/visual/sprite/speech bubble/bb-12.png" id="7_l3bqk"]
+[ext_resource type="Texture2D" uid="uid://cmel3fnjc48el" path="res://asset/visual/sprite/speech bubble/bb-13.png" id="8_a82vw"]
+
+[sub_resource type="Animation" id="Animation_xu8jt"]
+resource_name = "A7"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/A7-scaled:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_knspk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/A7-scaled:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Segaydaden/Bb-09:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Segaydaden/Bb-10:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Segaydaden/Bb-11:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Segaydaden/Bb-12:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Segaydaden/Bb-13:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Segaydaden/Bb-09:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Segaydaden/Bb-11:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_q2vjn"]
+resource_name = "Bb-09"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/Bb-09:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Segaydaden/Bb-09:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.8, 0.8), Vector2(0.4, 0.4), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_ltggm"]
+resource_name = "Bb-10"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/Bb-10:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_08lls"]
+resource_name = "Bb-11"
+length = 0.2
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/Bb-11:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Segaydaden/Bb-11:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.8, 0.8), Vector2(0.4, 0.4), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_155ic"]
+resource_name = "Bb-12"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/Bb-12:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_obslq"]
+resource_name = "Bb-13"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/Bb-13:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tqr8y"]
+_data = {
+"A7": SubResource("Animation_xu8jt"),
+"Bb-09": SubResource("Animation_q2vjn"),
+"Bb-10": SubResource("Animation_ltggm"),
+"Bb-11": SubResource("Animation_08lls"),
+"Bb-12": SubResource("Animation_155ic"),
+"Bb-13": SubResource("Animation_obslq"),
+"RESET": SubResource("Animation_knspk")
+}
+
+[node name="Cg5" type="Node2D"]
+script = ExtResource("1_001i8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tqr8y")
+}
+
+[node name="Segaydaden" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1, 1)
+texture = ExtResource("2_j1no5")
+
+[node name="A7-scaled" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+scale = Vector2(1, 1)
+texture = ExtResource("3_divps")
+
+[node name="Bb-09" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-744, -284)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_dv56s")
+
+[node name="Bb-10" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(816, -124)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_eku0j")
+
+[node name="Bb-11" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-664, 148)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_l4u4f")
+
+[node name="Bb-12" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(728, 292)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_l3bqk")
+
+[node name="Bb-13" type="Sprite2D" parent="Segaydaden"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(448, -100)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_a82vw")
