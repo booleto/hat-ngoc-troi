@@ -1,5 +1,6 @@
 extends Node
 
+@onready var item_panel: PanelContainer = %ItemPanel
 var walked: bool = false
 
 func _ready() -> void:
@@ -22,3 +23,9 @@ func _on_game_event(event: String):
 		Dialogic.start("chiem_bao_walk_finish")
 	if event == "touch_statue":
 			Dialogic.start("chiem_bao")
+			
+	if event == "show_scroll":
+		item_panel.show()
+	
+	if event == "hide_scroll":
+		item_panel.hide()

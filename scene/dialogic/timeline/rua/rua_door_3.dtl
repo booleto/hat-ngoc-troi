@@ -1,6 +1,8 @@
 [style name="mainstyle"]
 join trau (trau_gai_dau) left [animation="Instant In"]
+[signal arg="darken_bg"]
 trau: ...
 trau: Đúng là không đẩy tay không như này được rồi… Phải có cách nào chứ nhỉ?
 trau: ….
+[signal arg="lighten_bg"]
 [end_timeline]

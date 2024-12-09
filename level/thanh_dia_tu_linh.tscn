@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://dfs7tage6ng5e"]
+
+[ext_resource type="Script" path="res://script/level_manager/ThanhDiaTuLinh.gd" id="1_dk4yk"]
+[ext_resource type="Texture2D" uid="uid://cfhquscqbxm3y" path="res://asset/visual/sprite/background/layer 1.png" id="2_i4b4t"]
+[ext_resource type="Texture2D" uid="uid://co8jpjhxjqsgn" path="res://asset/visual/sprite/background/layer 4.png" id="3_3fwuc"]
+[ext_resource type="Texture2D" uid="uid://8435kv3tfqbx" path="res://asset/visual/sprite/foreground/cửa 1.png" id="3_xtybj"]
+[ext_resource type="Texture2D" uid="uid://rk7ietxqxqev" path="res://asset/visual/sprite/foreground/cửa 2.png" id="4_23xow"]
+[ext_resource type="Texture2D" uid="uid://mskmayrqox3d" path="res://asset/visual/sprite/foreground/cửa 3.png" id="5_d2adl"]
+[ext_resource type="Texture2D" uid="uid://02nkp28uywx4" path="res://asset/visual/sprite/foreground/cửa 4.png" id="6_su2pn"]
+[ext_resource type="Texture2D" uid="uid://b0fyhj1sugjxt" path="res://asset/visual/sprite/foreground/layer 2 (1).png" id="7_3e1hl"]
+[ext_resource type="Texture2D" uid="uid://86tfj55hppcq" path="res://asset/visual/sprite/background/layer 3.png" id="8_6ivcd"]
+
+[node name="ThanhDiaTuLinh" type="Node2D"]
+script = ExtResource("1_dk4yk")
+
+[node name="Sky" type="Sprite2D" parent="."]
+texture = ExtResource("2_i4b4t")
+
+[node name="Door1" type="Sprite2D" parent="."]
+position = Vector2(-1037, 24)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("3_xtybj")
+
+[node name="Door2" type="Sprite2D" parent="."]
+position = Vector2(-546, -90)
+scale = Vector2(0.49, 0.49)
+texture = ExtResource("4_23xow")
+
+[node name="Door3" type="Sprite2D" parent="."]
+position = Vector2(503, -75)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("5_d2adl")
+
+[node name="Door4" type="Sprite2D" parent="."]
+position = Vector2(1016, 24)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("6_su2pn")
+
+[node name="Field" type="Sprite2D" parent="."]
+position = Vector2(-21, 207)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("7_3e1hl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(647, 216)
+scale = Vector2(0.41, 0.41)
+texture = ExtResource("8_6ivcd")
+
+[node name="Cloud" type="Sprite2D" parent="."]
+position = Vector2(0, 240)
+scale = Vector2(0.46, 0.46)
+texture = ExtResource("3_3fwuc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

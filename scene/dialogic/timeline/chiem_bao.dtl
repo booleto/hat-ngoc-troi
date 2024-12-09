@@ -1,9 +1,11 @@
 [style name="mainstyle"]
 [background arg="res://asset/visual/sprite/background/flashbang.png" fade="0.0"]
+[music path="res://asset/sound/bgm/Thần nông.mp3" fade="0.0" volume="0.0"]
 Á- Chói quá!
-[background arg="res://asset/visual/sprite/background/đền thần nông.png" fade="8.0"]
+[background arg="res://asset/visual/sprite/background/02. Đền thần nông.png" fade="8.0"]
 [wait time="8.0"]
 join trau (trau_troi_oi) leftmore [animation="Bounce In"]
+[signal arg="darken_bg"]
 trau: ….
 trau: Mình đang ở đâu nữa vậy??
 trau: Một ngôi đền…. trên mây sao?
@@ -17,7 +19,7 @@ than_nong (tn_vui): Nào, ta và ngươi là bạn đồng hành kia mà, sao l�
 than_nong (tn_vui): Ta chính là Thần Câu Mang, hằng năm các ngươi đều tiến hành lễ Tiến Xuân Ngưu không phải luôn có mặt ta sao?
 trau (trau_giai_thich): Nh- nhưng chúng con đâu thể nhìn thấy ngài…?
 than_nong (tn_gai_dau): À… Phải nhỉ.
-join trau leftmore [animation="Fade In"]
+join trau (trau_met_moi) leftmore [animation="Fade In"]
 (Ổng có phải Thần Câu Mang thật không hay mình đang sảng vậy?)
 than_nong (tn_buc): Này, đừng nghĩ ta không biết ngươi nghĩ gì chứ! Ta là thần linh thứ thiệt đấy nhé! Và ta đang hiển linh trong giấc mơ của ngươi để báo cho ngươi một chuyện quan trọng đấy.
 than_nong (tn_buc): Thôi, việc của ta đã hết, chúc cho hành trình của ngươi được thuận lợi.
@@ -41,9 +43,11 @@ than_nong (tn_ok): Dĩ nhiên không dễ dàng gì để ngươi được gặp
 than_nong (tn_suy_nghi): Mỗi một vị thần đều có bài kiểm tra thử lòng xem ngươi có thật tâm thật dạ cầu xin điềm lành cho nhân gian, hay chỉ muốn trục lợi cho chính ngươi.
 trau (trau_gai_dau): Bài kiểm tra sao….
 than_nong (tn_ok): Thôi, nếu ngươi không còn gì để hỏi nữa thì việc của ta đã hết.
+[signal arg="show_scroll"]
 than_nong: Trước khi đi thì cầm lấy cái này, nó sẽ chỉ dẫn cho ngươi phải làm gì.
-(Nhận được vật phẩm mới\: Cuộn kinh thư)
+[signal arg="hide_scroll"]
 than_nong (tn_ok): Chúc ngươi lên đường bình an, ta sẽ gặp lại ngươi sau.
+[signal arg="lighten_bg"]
 leave than_nong [animation="Fade Out"]
 leave trau [animation="Fade Out"]
 [background arg="res://asset/visual/sprite/background/01. đồng lúa.png" fade="4.0"]

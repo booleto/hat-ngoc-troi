@@ -84,6 +84,7 @@ var ignore_resize := false
 
 
 func _ready() -> void:
+	DialogicUtil.autoload().Text.speaker_updated.connect(_on_speaker_updated)
 	match mode:
 		PositionModes.POSITION:
 			add_to_group('dialogic_portrait_con_position')
@@ -256,3 +257,12 @@ func _get_debug_character() -> DialogicCharacter:
 	return debug_character if debug_character != null else default_debug_character
 
 #endregion
+
+func _on_speaker_updated(character:DialogicCharacter):
+	if character == null:
+		return
+	if(get_child_count()>0):
+		if(get_child(0).get_meta('character').display_name!=character.display_name):
+			modulate = Color(0.5,0.5,0.5,1)
+		else:
+			modulate = Color(1,1,1,1)

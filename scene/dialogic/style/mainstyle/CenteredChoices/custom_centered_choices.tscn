@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cowqavxagppf5"]
+[gd_scene load_steps=12 format=3 uid="uid://cowqavxagppf5"]
 
 [ext_resource type="Script" path="res://scene/dialogic/style/mainstyle/CenteredChoices/vn_choice_layer.gd" id="1_kurgw"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="1_w632k"]
@@ -7,38 +7,12 @@
 [ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="3_mql8i"]
 [ext_resource type="AudioStream" uid="uid://c2viukvbub6v6" path="res://addons/dialogic/Example Assets/sound-effects/typing4.wav" id="4_420fr"]
 [ext_resource type="Texture2D" uid="uid://ctsvvpfhdxpa1" path="res://asset/visual/sprite/ui/option -long answer-.png" id="7_an7w0"]
+[ext_resource type="Texture2D" uid="uid://0dys1q8nagvu" path="res://asset/visual/sprite/ui/option-02.png" id="9_22vox"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_4a6nk"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_1lsrj"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_hwi2y"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_gu11t"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_66f3r"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_q5mal"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_6xoxq"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_800gf"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_t8kgm"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_v0j20"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_wqer2"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_coyfs"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_jp08a"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="AudioStream" id="AudioStream_pe27w"]
@@ -74,7 +48,7 @@ metadata/_edit_layout_mode = 1
 layout_mode = 2
 theme = ExtResource("2_eemwc")
 text = "Some text"
-icon = SubResource("ViewportTexture_4a6nk")
+icon = SubResource("ViewportTexture_1lsrj")
 flat = true
 icon_alignment = 1
 script = ExtResource("1_w632k")
@@ -83,7 +57,7 @@ script = ExtResource("1_w632k")
 layout_mode = 2
 theme = ExtResource("2_eemwc")
 text = "Some text"
-icon = SubResource("ViewportTexture_hwi2y")
+icon = SubResource("ViewportTexture_jp08a")
 flat = true
 icon_alignment = 1
 script = ExtResource("1_w632k")
@@ -92,7 +66,7 @@ script = ExtResource("1_w632k")
 layout_mode = 2
 theme = ExtResource("2_eemwc")
 text = "Some text"
-icon = SubResource("ViewportTexture_gu11t")
+icon = SubResource("ViewportTexture_jp08a")
 flat = true
 icon_alignment = 1
 script = ExtResource("1_w632k")
@@ -101,7 +75,7 @@ script = ExtResource("1_w632k")
 layout_mode = 2
 theme = ExtResource("2_eemwc")
 text = "Some text"
-icon = SubResource("ViewportTexture_66f3r")
+icon = SubResource("ViewportTexture_jp08a")
 flat = true
 icon_alignment = 1
 script = ExtResource("1_w632k")
@@ -110,7 +84,7 @@ script = ExtResource("1_w632k")
 layout_mode = 2
 theme = ExtResource("2_eemwc")
 text = "Some text"
-icon = SubResource("ViewportTexture_q5mal")
+icon = SubResource("ViewportTexture_jp08a")
 flat = true
 icon_alignment = 1
 script = ExtResource("1_w632k")
@@ -119,7 +93,7 @@ script = ExtResource("1_w632k")
 layout_mode = 2
 theme = ExtResource("2_eemwc")
 text = "Some text"
-icon = SubResource("ViewportTexture_6xoxq")
+icon = SubResource("ViewportTexture_jp08a")
 flat = true
 icon_alignment = 1
 script = ExtResource("1_w632k")
@@ -128,7 +102,7 @@ script = ExtResource("1_w632k")
 layout_mode = 2
 theme = ExtResource("2_eemwc")
 text = "Some text"
-icon = SubResource("ViewportTexture_800gf")
+icon = SubResource("ViewportTexture_jp08a")
 flat = true
 icon_alignment = 1
 script = ExtResource("1_w632k")
@@ -137,7 +111,7 @@ script = ExtResource("1_w632k")
 layout_mode = 2
 theme = ExtResource("2_eemwc")
 text = "Some text"
-icon = SubResource("ViewportTexture_t8kgm")
+icon = SubResource("ViewportTexture_jp08a")
 flat = true
 icon_alignment = 1
 script = ExtResource("1_w632k")
@@ -146,7 +120,7 @@ script = ExtResource("1_w632k")
 layout_mode = 2
 theme = ExtResource("2_eemwc")
 text = "Some text"
-icon = SubResource("ViewportTexture_v0j20")
+icon = SubResource("ViewportTexture_jp08a")
 flat = true
 icon_alignment = 1
 script = ExtResource("1_w632k")
@@ -155,7 +129,7 @@ script = ExtResource("1_w632k")
 layout_mode = 2
 theme = ExtResource("2_eemwc")
 text = "Some text"
-icon = SubResource("ViewportTexture_wqer2")
+icon = SubResource("ViewportTexture_jp08a")
 flat = true
 icon_alignment = 1
 script = ExtResource("1_w632k")
@@ -164,7 +138,7 @@ script = ExtResource("1_w632k")
 layout_mode = 2
 theme = ExtResource("2_eemwc")
 text = "Some text"
-icon = SubResource("ViewportTexture_coyfs")
+icon = SubResource("ViewportTexture_jp08a")
 flat = true
 icon_alignment = 1
 script = ExtResource("1_w632k")
@@ -191,13 +165,15 @@ texture = ExtResource("7_an7w0")
 
 [node name="SubViewport2" type="SubViewport" parent="."]
 transparent_bg = true
-size = Vector2i(825, 90)
+size = Vector2i(825, 95)
 
 [node name="CenterContainer" type="CenterContainer" parent="SubViewport2"]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.2, 0.2)
+offset_left = -35.0
+offset_top = -35.0
+offset_right = 2666.0
+offset_bottom = 499.0
+scale = Vector2(0.33, 0.33)
 
 [node name="TextureRect" type="TextureRect" parent="SubViewport2/CenterContainer"]
 layout_mode = 2
-texture = ExtResource("7_an7w0")
+texture = ExtResource("9_22vox")

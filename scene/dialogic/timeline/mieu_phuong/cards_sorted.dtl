@@ -1,6 +1,8 @@
 [style name="mainstyle"]
 join trau left
+[signal arg="darken_bg"]
 trau: Chắc ổn rồi đó.
+[signal arg="lighten_bg"]
 leave trau
 [background scene="res://scene/dialogic/background/PhungEntry1.tscn" fade="3.0"]
 [wait_input]

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=23 format=3 uid="uid://3btj4q2lr6nw"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=27 format=3 uid="uid://3btj4q2lr6nw"]
 
 [ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_7qm62"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_ysb5a"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="9_usp7x"]
 [ext_resource type="PackedScene" uid="uid://yvssq8ew27vg" path="res://scene/dialogic/style/mainstyle/PauseMenu/PauseMenu.tscn" id="10_34ny5"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_xmshk"]
+[ext_resource type="PackedScene" uid="uid://bmdy2m7eoqy8y" path="res://scene/dialogic/style/mainstyle/BackgroundDarken/BackgroundDarken.tscn" id="12_bgcej"]
+[ext_resource type="PackedScene" uid="uid://du06j6hmkg4n" path="res://scene/dialogic/style/temp_scroll_style/item_panel.tscn" id="13_kdong"]
 
 [sub_resource type="Resource" id="Resource_3fk2a"]
 script = ExtResource("1_ysb5a")
@@ -40,21 +42,21 @@ overrides = {
 "box_color_custom": "Color(0, 0, 0, 0)",
 "box_color_use_global": "false",
 "box_margin_bottom": "100.0",
-"box_size": "Vector2(1200, 210)",
+"box_size": "Vector2(1150, 195)",
 "name_label_alignment": "1",
 "name_label_box_modulate": "Color(0, 0, 0, 0)",
-"name_label_box_offset": "Vector2(-385, -195)",
+"name_label_box_offset": "Vector2(-385, -200)",
 "name_label_box_use_global_color": "false",
 "name_label_custom_color": "Color(0.423529, 0.227451, 0.0235294, 1)",
-"name_label_custom_font_size": "40.0",
-"name_label_font": "\"res://asset/font/Merriweather-Bold.otf\"",
+"name_label_custom_font_size": "36.0",
+"name_label_font": "\"res://asset/font/Merriweather-Black.otf\"",
 "name_label_use_character_color": "false",
 "name_label_use_global_color": "false",
 "name_label_use_global_font": "false",
 "name_label_use_global_font_size": "false",
-"normal_font": "\"res://asset/font/Montserrat-SemiBold.otf\"",
+"normal_font": "\"res://asset/font/Montserrat-Medium.otf\"",
 "text_custom_color": "Color(0.992157, 0.992157, 0.992157, 1)",
-"text_size": "28.0",
+"text_size": "32.0",
 "text_use_global_color": "false",
 "text_use_global_size": "false"
 }
@@ -70,7 +72,9 @@ scene = ExtResource("8_1wmqb")
 overrides = {
 "boxes_stylebox_focused": "\"res://scene/style/new_style_box_empty.tres\"",
 "boxes_stylebox_hovered": "\"choice_panel_hover.tres\"",
-"boxes_stylebox_normal": "\"choice_panel_normal.tres\""
+"boxes_stylebox_normal": "\"choice_panel_normal.tres\"",
+"font_size_custom": "24.0",
+"font_size_use_global": "false"
 }
 
 [sub_resource type="Resource" id="Resource_yrjbb"]
@@ -90,10 +94,20 @@ script = ExtResource("1_ysb5a")
 scene = ExtResource("10_34ny5")
 overrides = {}
 
+[sub_resource type="Resource" id="Resource_ipct3"]
+script = ExtResource("1_ysb5a")
+scene = ExtResource("12_bgcej")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_grrk4"]
+script = ExtResource("1_ysb5a")
+scene = ExtResource("13_kdong")
+overrides = {}
+
 [resource]
 script = ExtResource("10_xmshk")
 name = "mainstyle"
-layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "18", "17"])
+layer_list = Array[String](["10", "19", "11", "12", "13", "14", "1a", "15", "16", "18", "17"])
 layer_info = {
 "": SubResource("Resource_3fk2a"),
 "10": SubResource("Resource_3fwpb"),
@@ -104,8 +118,10 @@ layer_info = {
 "15": SubResource("Resource_y54ca"),
 "16": SubResource("Resource_yrjbb"),
 "17": SubResource("Resource_1fvfq"),
-"18": SubResource("Resource_n0qkq")
+"18": SubResource("Resource_n0qkq"),
+"19": SubResource("Resource_ipct3"),
+"1a": SubResource("Resource_grrk4")
 }
 base_overrides = {}
 layers = Array[ExtResource("1_ysb5a")]([])
-metadata/_latest_layer = "15"
+metadata/_latest_layer = "1a"
