@@ -1,6 +1,8 @@
 [style name="mainstyle"]
 join trau (trau_gai_dau) left [animation="Fade In Up"]
+[signal arg="darken_bg"]
 trau: Phù….cuối cùng cũng đến nơi….
 trau: Đây là Đền Tứ Linh sao? Cái cổng trông lớn thật.
 trau (trau_binh_thuong): Thôi được rồi, phải nhanh nhanh vào trong thôi.
+[signal arg="lighten_bg"]
 [end_timeline]

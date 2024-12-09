@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://xnss1wuoer13"]
+[gd_scene load_steps=19 format=3 uid="uid://xnss1wuoer13"]
 
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="1_c5kn3"]
 [ext_resource type="Script" path="res://script/level_manager/ChiemBaoMay.gd" id="1_mvqtl"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cwkmlwnarntb5" path="res://asset/visual/sprite/foreground/tượng mục đồng.png" id="7_mo00w"]
 [ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="9_mq2t7"]
 [ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="10_rtjxl"]
+[ext_resource type="PackedScene" uid="uid://du06j6hmkg4n" path="res://scene/dialogic/style/temp_scroll_style/item_panel.tscn" id="11_hh54m"]
 
 [sub_resource type="Animation" id="Animation_tiqwg"]
 length = 0.001
@@ -357,7 +358,7 @@ z_index = -5
 position = Vector2(0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Statue"]
-scale = Vector2(0.17, 0.17)
+scale = Vector2(0.23, 0.23)
 texture = ExtResource("7_mo00w")
 
 [node name="Button" type="Button" parent="Statue/Sprite2D"]
@@ -376,3 +377,6 @@ script = ExtResource("9_mq2t7")
 action = SubResource("Resource_8v0u5")
 
 [node name="SparseCloud" type="Node2D" parent="."]
+
+[node name="ItemPanel" parent="." instance=ExtResource("11_hh54m")]
+unique_name_in_owner = true

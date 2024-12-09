@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://82hirphjurdy"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://82hirphjurdy"]
 
 [ext_resource type="FontFile" uid="uid://elb0hu23edej" path="res://asset/font/MontserratAlternates-SemiBold.otf" id="1_g5ro6"]
+[ext_resource type="FontFile" uid="uid://cqdodb7scm4sn" path="res://asset/font/Montserrat-Bold.otf" id="1_rxsn5"]
 
 [resource]
 default_font = ExtResource("1_g5ro6")
@@ -9,3 +10,4 @@ Button/colors/font_color = Color(0.411765, 0.219608, 0.0156863, 1)
 Button/colors/font_focus_color = Color(0.411765, 0.219608, 0.0156863, 1)
 Button/colors/font_hover_color = Color(0.411765, 0.219608, 0.0156863, 1)
 Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("1_rxsn5")

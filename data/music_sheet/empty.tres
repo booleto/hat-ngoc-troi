@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicSheet" load_steps=3 format=3 uid="uid://bhojx6tai8feb"]
+
+[ext_resource type="Script" path="res://script/minigame/drum/MusicSheet.gd" id="1_g8nln"]
+[ext_resource type="Script" path="res://script/minigame/drum/Note.gd" id="2_uufks"]
+
+[resource]
+script = ExtResource("1_g8nln")
+sheet = Array[ExtResource("2_uufks")]([])
+bpm = 83.0
+offset = 0.0
+bar_beats = 4

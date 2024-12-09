@@ -1,10 +1,11 @@
-[gd_scene load_steps=43 format=3 uid="uid://ct7ljit1phuvo"]
+[gd_scene load_steps=44 format=3 uid="uid://ct7ljit1phuvo"]
 
 [ext_resource type="Script" path="res://script/level_manager/LevelPhuongAfterMinigame.gd" id="1_vus1l"]
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="2_caw1p"]
 [ext_resource type="Texture2D" uid="uid://di1swrrtqo84b" path="res://asset/visual/sprite/foreground/layer1.png" id="3_txt4l"]
 [ext_resource type="Texture2D" uid="uid://b3a6v73dm2ijr" path="res://asset/visual/sprite/foreground/layer2.png" id="4_m00st"]
 [ext_resource type="Texture2D" uid="uid://b5fv01vci3tv4" path="res://asset/visual/sprite/foreground/layer3.png" id="5_20l6u"]
+[ext_resource type="Texture2D" uid="uid://cp6fianlr35s" path="res://asset/visual/sprite/foreground/tượng bàn thờ 1.png" id="5_uuu31"]
 [ext_resource type="Texture2D" uid="uid://56ulwslsd2v3" path="res://asset/visual/sprite/foreground/ly vàng 1.png" id="6_rqciw"]
 [ext_resource type="Texture2D" uid="uid://dolerunkbb6xt" path="res://asset/visual/sprite/foreground/ly vàng 2.png" id="7_mjji5"]
 [ext_resource type="Texture2D" uid="uid://yexnoreyv1s1" path="res://asset/visual/sprite/foreground/phụng vàng.png" id="8_3pbph"]
@@ -145,15 +146,19 @@ layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_dl3j2")
 
-[node name="StatueMid" type="Control" parent="CanvasLayer/MainPanel"]
+[node name="StatueMid2" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainPanel/StatueMid"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainPanel/StatueMid2"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 800.0
+offset_top = 350.0
+offset_right = 2526.0
+offset_bottom = 2168.0
+scale = Vector2(0.185, 0.185)
 mouse_filter = 2
+texture = ExtResource("5_uuu31")
 
 [node name="Curtain" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2

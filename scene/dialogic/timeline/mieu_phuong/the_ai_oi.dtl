@@ -1,4 +1,4 @@
-[background scene="res://scene/dialogic/background/TheAiOi.tscn" fade="1.0"]
+[background scene="res://scene/dialogic/background/TheAiOi.tscn" fade="1.0" transition="Simple Fade"]
 [wait time="1.0"]
 set {card_count} += 1
 [wait_input]

@@ -1,4 +1,6 @@
-join trau left
+join trau (trau_gai_dau) left
 [style name="mainstyle"]
+[signal arg="darken_bg"]
 trau (trau_gai_dau): Mình không nghĩ như này là đúng….
+[signal arg="lighten_bg"]
 [signal arg="sort_start"]

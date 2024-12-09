@@ -76,7 +76,7 @@ variables={
 "kinh_thu": false
 },
 "card_count": 0,
-"ten_trau": "Trâu Vàng"
+"ten_trau": ""
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

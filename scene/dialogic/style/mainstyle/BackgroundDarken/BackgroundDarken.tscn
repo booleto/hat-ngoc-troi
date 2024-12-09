@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmdy2m7eoqy8y"]
+
+[ext_resource type="Script" path="res://scene/dialogic/style/mainstyle/BackgroundDarken/BackgroundDarken.gd" id="1_3qkxx"]
+
+[node name="BackgroundDarken" type="PanelContainer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_3qkxx")

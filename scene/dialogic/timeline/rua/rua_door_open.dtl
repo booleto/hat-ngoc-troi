@@ -1,10 +1,15 @@
 [style name="mainstyle"]
 join trau (trau_co_y_tuong) left [animation="Instant In"]
+[signal arg="darken_bg"]
 trau: Ồ! Cửa mở rồi!
 trau: Ra là phải đẩy tượng lân thì cửa mới mở được.
+[signal arg="lighten_bg"]
 - Vào đền
+	[signal arg="darken_bg"]
 	trau (trau_binh_thuong): Ta vào trong thôi.
 - Mệt quá, ngồi đây nghỉ chút đã
+	[signal arg="darken_bg"]
 	trau: Mà nãy đi cũng mệt rồi, ngồi đây nghỉ chút đã.
 	trau (trau_gai_dau): À không được, làng đang khó khăn, mình không thể chậm trễ nữa.
+[signal arg="lighten_bg"]
 do LevelLoader.load_level_from_name("DEN_PHUONG")

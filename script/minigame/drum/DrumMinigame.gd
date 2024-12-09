@@ -12,6 +12,8 @@ class_name DrumMinigame
 @onready var bad_area: Area2D = %BadArea
 @onready var okay_area: Area2D = %OkayArea
 @onready var perfect_area: Area2D = %PerfectArea
+@onready var rating_label: RatingLabel = %RatingLabel
+@onready var trau_sprite: AnimatedSprite2D = %TrauSprite
 
 @onready var sfx_player: AudioStreamPlayer = %SFXPlayer
 @onready var music_player: AudioStreamPlayer = %MusicPlayer
@@ -20,6 +22,7 @@ class_name DrumMinigame
 @onready var score_num: Label = %ScoreNum
 
 var game_started: bool = false
+var song_ending: bool = false
 var perfects: int = 0
 var okays: int = 0
 var bads: int = 0
@@ -51,12 +54,13 @@ func _process(delta: float) -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if game_started:
+	if game_started and not song_ending:
 		_process_song(delta)
 
 
 func start_minigame():
 	game_started = true
+	song_ending = false
 	song_position = 0
 	perfects = 0
 	okays = 0
@@ -89,6 +93,7 @@ func _process_song(delta: float) -> void:
 	var time: float = music_player.get_playback_position() + AudioServer.get_time_since_last_mix() - AudioServer.get_output_latency()
 	var beat: float = (time - music_sheet.offset - travel_time) * music_sheet.bpm * music_sheet.bar_beats / 60.0
 	if song_position >= music_sheet.sheet.size():
+		song_ending = true
 		await get_tree().create_timer(travel_time + 3.0).timeout
 		end_minigame()
 		
@@ -117,6 +122,8 @@ func _process_rhythm_input(delta: float) -> void:
 		return
 	
 	GameEventBus.play_animation.emit("drum_hit")
+	sfx_player.play()
+	update_trau_sprite()
 	var arrow: Arrow = get_latest_arrow()
 	if arrow == null:
 		_on_miss()
@@ -193,6 +200,7 @@ func _is_arrow(obj: Node2D) -> bool:
 
 
 func update_combo(rating: RATING) -> void:
+	rating_label.update_rating(rating)
 	if rating == RATING.MISS or rating == RATING.BAD:
 		combo = 0
 	else:
@@ -225,3 +233,11 @@ func _on_perfect() -> void:
 	perfects += 1
 	update_score()
 	update_combo(RATING.PERFECT)
+
+func update_trau_sprite():
+	if trau_sprite.frame == 0:
+		trau_sprite.set_frame_and_progress(1, 0)
+		trau_sprite.queue_redraw()
+	elif trau_sprite.frame == 1:
+		trau_sprite.set_frame_and_progress(0, 0)
+		trau_sprite.queue_redraw()

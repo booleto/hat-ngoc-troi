@@ -1,21 +1,25 @@
-[gd_scene load_steps=52 format=3 uid="uid://dtw7wu10r7kbk"]
+[gd_scene load_steps=64 format=3 uid="uid://dtw7wu10r7kbk"]
 
 [ext_resource type="Texture2D" uid="uid://2eynch24d576" path="res://asset/visual/sprite/minigame/bg.png" id="1_06gx8"]
 [ext_resource type="Script" path="res://script/minigame/drum/DrumMinigame.gd" id="1_cdk5x"]
-[ext_resource type="FontFile" uid="uid://ckewprv66gyir" path="res://asset/font/MontserratAlternates-ExtraBold.otf" id="2_5q00m"]
 [ext_resource type="PackedScene" uid="uid://bcvytkjbnw1dt" path="res://scene/minigame/drum/Arrow.tscn" id="2_phryr"]
 [ext_resource type="AudioStream" uid="uid://dmgd1gx0wf6kw" path="res://asset/sound/bgm/hòa-tấu-nhạc-cụ-dân-tộc-việt-nam--sài-gòn-ơi--band--mv-4k.mp3" id="3_m1vvr"]
-[ext_resource type="Resource" uid="uid://hj8eue1437o" path="res://data/music_sheet/mot_vong_vn_phuong.tres" id="3_ngr75"]
 [ext_resource type="FontFile" uid="uid://cqdodb7scm4sn" path="res://asset/font/Montserrat-Bold.otf" id="3_xew8q"]
-[ext_resource type="FontFile" uid="uid://32f22jx82rbv" path="res://asset/font/Montserrat-SemiBold.otf" id="4_pcj17"]
+[ext_resource type="Resource" uid="uid://hj8eue1437o" path="res://data/music_sheet/mot_vong_vn_phuong.tres" id="3_y4eky"]
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="4_ujshx"]
 [ext_resource type="Texture2D" uid="uid://dl5d532qa1cdt" path="res://asset/visual/sprite/minigame/blackbar.png" id="5_6vc4y"]
+[ext_resource type="AudioStream" uid="uid://cqfnnl837h55j" path="res://asset/sound/sfx/Trống.mp3" id="5_n2brf"]
 [ext_resource type="Texture2D" uid="uid://fc68hy1jined" path="res://asset/visual/sprite/minigame/complete.png" id="6_xkwdx"]
+[ext_resource type="Texture2D" uid="uid://dpf02povs6spk" path="res://asset/visual/sprite/minigame/Mặt trống.png" id="8_2v21l"]
+[ext_resource type="FontFile" uid="uid://qexotyysjoiu" path="res://asset/font/Merriweather-Black.otf" id="8_cw20i"]
+[ext_resource type="Script" path="res://script/minigame/drum/RatingText.gd" id="9_x5bp3"]
 [ext_resource type="Texture2D" uid="uid://dg0mv4ew6qu1n" path="res://asset/visual/sprite/minigame/trau1.png" id="10_n2hhg"]
 [ext_resource type="PackedScene" uid="uid://b3i3dc777cxtd" path="res://scene/dialogic/style/mainstyle/PauseMenu/MinigamePauseMenu.tscn" id="10_snpuc"]
 [ext_resource type="Texture2D" uid="uid://ddtxtfdmub4kq" path="res://asset/visual/sprite/minigame/trau2.png" id="11_7vrsb"]
+[ext_resource type="FontFile" uid="uid://b4i1pjlpwlcmc" path="res://asset/font/Montserrat-ExtraBold.otf" id="11_o6pqa"]
 [ext_resource type="Texture2D" uid="uid://wmhrn3rj1bj3" path="res://asset/visual/sprite/cg/cửa 1.png" id="11_pv1ao"]
 [ext_resource type="Texture2D" uid="uid://br22seq2l3yoq" path="res://asset/visual/sprite/cg/cửa 2.png" id="12_nxd40"]
+[ext_resource type="FontFile" uid="uid://cgr0ende1nca5" path="res://asset/font/Montserrat-Black.otf" id="12_sgfid"]
 [ext_resource type="Texture2D" uid="uid://dg7a8jws8ysmw" path="res://asset/visual/sprite/minigame/trống.png" id="12_uxmxf"]
 [ext_resource type="Texture2D" uid="uid://qq6wqqvkh11v" path="res://asset/visual/sprite/minigame/lua1.png" id="13_4wl8u"]
 [ext_resource type="Texture2D" uid="uid://7nty44lu2s4d" path="res://asset/visual/sprite/minigame/trau4.png" id="13_trjl7"]
@@ -24,6 +28,9 @@
 [ext_resource type="Texture2D" uid="uid://bw73mf3x7x7q8" path="res://asset/visual/sprite/minigame/lua2.png" id="14_ww2ds"]
 [ext_resource type="Texture2D" uid="uid://bj63rjb7nfd7c" path="res://asset/visual/sprite/minigame/Logo & icon-02.png" id="15_46m70"]
 [ext_resource type="Texture2D" uid="uid://djwf7qm2xeflt" path="res://asset/visual/sprite/minigame/Fail.png" id="18_lt645"]
+[ext_resource type="Texture2D" uid="uid://dwbx413rmpatk" path="res://asset/visual/sprite/minigame/batdau.png" id="19_o8qm0"]
+[ext_resource type="Texture2D" uid="uid://cp4vn1fds87m8" path="res://asset/visual/sprite/minigame/trau3.png" id="22_8hl7w"]
+[ext_resource type="Texture2D" uid="uid://ccqhjnbyc2gar" path="res://asset/visual/sprite/minigame/trau0.png" id="26_ree1x"]
 
 [sub_resource type="Animation" id="Animation_lr3b7"]
 length = 0.001
@@ -202,6 +209,30 @@ tracks/14/path = NodePath("UI/PanelContainer/StartScreen/HBoxContainer/CenterCon
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3/Control3/Control:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3/Control3/Control/TextureRect:self_modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -397,7 +428,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0.0333333, 1.36667),
 "transitions": PackedFloat32Array(0.203063, 1),
 "update": 0,
-"values": [Vector2(903, -180), Vector2(-503, -180)]
+"values": [Vector2(903, -180), Vector2(-703, -180)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -409,7 +440,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0.0333333, 1.36667),
 "transitions": PackedFloat32Array(0.225313, 1),
 "update": 0,
-"values": [Vector2(-1490, -180), Vector2(0, -180)]
+"values": [Vector2(-1490, -180), Vector2(100, -180)]
 }
 tracks/8/type = "value"
 tracks/8/imported = false
@@ -435,6 +466,30 @@ tracks/9/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3/Control3/Control:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.852106),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(2.655, 2.655)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3/Control3/Control/TextureRect:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0.4, 0.933333, 2.1, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hd7qh"]
 _data = {
@@ -449,38 +504,38 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Trau/TrauSprite:frame")
+tracks/0/path = NodePath("Trau/TrauSprite:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
+"update": 0,
+"values": [Vector2(0, 0)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Trau/TrauSprite:position")
+tracks/1/path = NodePath("Trau/Sprite2D2:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0)]
+"values": [0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Trau/Sprite2D2:rotation")
+tracks/2/path = NodePath("Trau/Sprite2D2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(666.667, 475.556)]
 }
 
 [sub_resource type="Animation" id="Animation_2tlpq"]
@@ -501,26 +556,55 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Trau/TrauSprite:frame")
+tracks/1/path = NodePath("Trau/Sprite2D2:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.0333333, 0.1),
 "transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.301942, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_w0msi"]
+resource_name = "mission_completed"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Trau/TrauSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667),
+"transitions": PackedFloat32Array(0.466517, 2.37841, 1),
+"update": 0,
+"values": [Vector2(0, 300), Vector2(0, -100), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Trau/TrauSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0, 1, 0]
+"values": [3]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Trau/Sprite2D2:rotation")
+tracks/2/path = NodePath("Trau/Sprite2D2:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.1),
+"times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.0, -0.301942, 0.0]
+"values": [Vector2(666.667, 475.556), Vector2(666.667, 306.644), Vector2(608.889, 519.978)]
 }
 
 [sub_resource type="Animation" id="Animation_q31ad"]
@@ -567,6 +651,7 @@ tracks/2/keys = {
 _data = {
 "RESET": SubResource("Animation_bil8j"),
 "drum_hit": SubResource("Animation_2tlpq"),
+"mission_completed": SubResource("Animation_w0msi"),
 "mission_failed": SubResource("Animation_q31ad")
 }
 
@@ -836,13 +921,107 @@ _data = {
 "grass_sway": SubResource("Animation_wdh0d")
 }
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_02wxr"]
+texture = ExtResource("1_06gx8")
+
+[sub_resource type="LabelSettings" id="LabelSettings_y16va"]
+font = ExtResource("8_cw20i")
+font_size = 64
+shadow_size = 10
+shadow_color = Color(1, 0.7445, 0.27, 1)
+
+[sub_resource type="Animation" id="Animation_iy78q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(33, 497)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8eeii"]
+resource_name = "new_rating"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4, 0.533333, 0.7, 0.9, 1.13333, 1.43333, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(33, 497), Vector2(33, 485), Vector2(33, 497), Vector2(33, 485), Vector2(33, 497), Vector2(33, 485), Vector2(33, 497), Vector2(33, 485), Vector2(33, 497), Vector2(33, 485)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.016574),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.43333, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_384up"]
+_data = {
+"RESET": SubResource("Animation_iy78q"),
+"new_rating": SubResource("Animation_8eeii")
+}
+
 [sub_resource type="LabelSettings" id="LabelSettings_vs22p"]
-font = ExtResource("2_5q00m")
-font_size = 48
+font = ExtResource("11_o6pqa")
+font_size = 36
 font_color = Color(0.372549, 0.243137, 0.0862745, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_5lkac"]
-font = ExtResource("2_5q00m")
+font = ExtResource("12_sgfid")
 font_size = 128
 font_color = Color(0.431373, 0.247059, 0.0509804, 1)
 
@@ -855,11 +1034,6 @@ font_color = Color(0.372549, 0.243137, 0.0862745, 1)
 font = ExtResource("3_xew8q")
 font_size = 96
 font_color = Color(0.411765, 0.219608, 0.0156863, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_f77gr"]
-font = ExtResource("4_pcj17")
-font_size = 32
-font_color = Color(0.372549, 0.243137, 0.0862745, 1)
 
 [sub_resource type="Theme" id="Theme_gi76p"]
 
@@ -874,6 +1048,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_trjl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_8hl7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ree1x")
 }],
 "loop": true,
 "name": &"default",
@@ -910,7 +1090,7 @@ animations = [{
 script = ExtResource("1_cdk5x")
 arrow_packed = ExtResource("2_phryr")
 travel_time = 6.0
-music_sheet = ExtResource("3_ngr75")
+music_sheet = ExtResource("3_y4eky")
 
 [node name="SceneAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -938,6 +1118,8 @@ script = ExtResource("4_ujshx")
 
 [node name="SFXPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
+stream = ExtResource("5_n2brf")
+volume_db = -10.465
 bus = &"SFX"
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
@@ -950,6 +1132,10 @@ bus = &"Music"
 [node name="Background" type="Sprite2D" parent="."]
 scale = Vector2(0.24, 0.24)
 texture = ExtResource("1_06gx8")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+position = Vector2(-3658.33, 187.5)
+texture = ExtResource("8_2v21l")
 
 [node name="ArrowSpawn" type="Marker2D" parent="."]
 unique_name_in_owner = true
@@ -965,27 +1151,53 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_02wxr")
+
+[node name="RatingText" type="Control" parent="UI/PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RatingLabel" type="Label" parent="UI/PanelContainer/RatingText"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 33.0
+offset_top = 497.0
+offset_right = 410.0
+offset_bottom = 662.0
+text = "Tốt
+lắm!"
+label_settings = SubResource("LabelSettings_y16va")
+vertical_alignment = 1
+script = ExtResource("9_x5bp3")
+
+[node name="RatingAnimation" type="AnimationPlayer" parent="UI/PanelContainer/RatingText/RatingLabel"]
+libraries = {
+"": SubResource("AnimationLibrary_384up")
+}
 
 [node name="ComboCounter" type="Control" parent="UI/PanelContainer"]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="UI/PanelContainer/ComboCounter"]
 layout_mode = 2
-offset_left = 13.0
-offset_top = 505.0
-offset_right = 224.0
-offset_bottom = 584.0
+offset_left = 934.0
+offset_top = 77.0
+offset_right = 1145.0
+offset_bottom = 156.0
 text = "COMBO"
 label_settings = SubResource("LabelSettings_vs22p")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ComboNum" type="Label" parent="UI/PanelContainer/ComboCounter"]
 unique_name_in_owner = true
 layout_mode = 2
-offset_left = 15.0
-offset_top = 549.0
-offset_right = 226.0
-offset_bottom = 706.0
-text = "0"
+offset_left = 933.0
+offset_top = 129.0
+offset_right = 1144.0
+offset_bottom = 286.0
+text = "15"
 label_settings = SubResource("LabelSettings_5lkac")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -995,37 +1207,22 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="UI/PanelContainer/Scoreboard"]
 layout_mode = 0
-offset_left = 1004.0
-offset_top = 95.0
-offset_right = 1139.0
-offset_bottom = 155.0
+offset_left = 525.0
+offset_top = 102.0
+offset_right = 660.0
+offset_bottom = 162.0
 text = "Điểm"
 label_settings = SubResource("LabelSettings_yn3lx")
 
 [node name="ScoreNum" type="Label" parent="UI/PanelContainer/Scoreboard"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 998.0
-offset_top = 144.0
-offset_right = 1277.0
-offset_bottom = 262.0
+offset_left = 519.0
+offset_top = 151.0
+offset_right = 798.0
+offset_bottom = 269.0
 text = "0 / 30"
 label_settings = SubResource("LabelSettings_wmnsp")
-
-[node name="PanelContainer" type="PanelContainer" parent="UI/PanelContainer/Scoreboard"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 1271.0
-offset_top = 89.0
-offset_right = 1717.0
-offset_bottom = 158.0
-
-[node name="PlayerName" type="Label" parent="UI/PanelContainer/Scoreboard/PanelContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Trâu Vàng "
-label_settings = SubResource("LabelSettings_f77gr")
-horizontal_alignment = 2
 
 [node name="PauseMenu" parent="UI/PanelContainer" instance=ExtResource("10_snpuc")]
 layout_mode = 2
@@ -1094,6 +1291,7 @@ offset_left = -4034.0
 offset_right = 4034.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="BlackBar" type="TextureRect" parent="UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer2"]
 self_modulate = Color(1, 1, 1, 0)
@@ -1110,37 +1308,69 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Control2" type="Control" parent="UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="CloudRight" type="TextureRect" parent="UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3/Control2"]
 layout_mode = 2
-offset_left = -303.0
+offset_left = -1490.0
 offset_top = -180.0
-offset_right = 303.0
+offset_right = -884.0
 offset_bottom = 179.0
 mouse_filter = 2
 texture = ExtResource("15_46m70")
 
 [node name="Control" type="Control" parent="UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="CloudLeft" type="TextureRect" parent="UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3/Control"]
 layout_mode = 2
-offset_left = -303.0
+offset_left = 903.0
 offset_top = -180.0
-offset_right = 303.0
+offset_right = 1509.0
 offset_bottom = 179.0
 mouse_filter = 2
 texture = ExtResource("15_46m70")
 flip_h = true
 
+[node name="Control3" type="Control" parent="UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3/Control3"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_top = -50.0
+offset_right = 40.0
+offset_bottom = -10.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3/Control3/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.5
+offset_top = -85.0
+offset_right = 96.5
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("19_o8qm0")
+
 [node name="Trau" type="Node2D" parent="."]
-position = Vector2(-614, -327.995)
-scale = Vector2(0.225, 0.225)
+position = Vector2(765, -330)
+scale = Vector2(-0.23, 0.23)
 
 [node name="TrauSprite" type="AnimatedSprite2D" parent="Trau"]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_7u4eb")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Trau"]
