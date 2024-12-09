@@ -2,7 +2,15 @@ extends Node
 
 enum LEVEL {
 	MAIN_MENU,
-	TEST_LEVEL,
+	CG1,
+	CG2,
+	CG3,
+	CG4,
+	CG5,
+	CG6,
+	CG7,
+	CG8,
+	CG9,
 	CHIEM_BAO_MAY,
 	CONG_DEN_TU_LINH,
 	THANH_DIA_TU_LINH,
@@ -13,7 +21,15 @@ enum LEVEL {
 
 var level_map: Dictionary = {
 	LEVEL.MAIN_MENU : load("res://level/main_menu.tscn"),
-	LEVEL.TEST_LEVEL : load("res://level/test_level.tscn"),
+	LEVEL.CG1 : load("res://level/cg1.tscn"),
+	LEVEL.CG2 : load("res://level/cg2.tscn"),
+	LEVEL.CG3 : load("res://level/cg3.tscn"),
+	LEVEL.CG4 : load("res://level/cg4.tscn"),
+	LEVEL.CG5 : load("res://level/cg5.tscn"),
+	LEVEL.CG6 : load("res://level/cg6.tscn"),
+	LEVEL.CG7 : load("res://level/cg7.tscn"),
+	LEVEL.CG8 : load("res://level/cg8.tscn"),
+	LEVEL.CG9 : load("res://level/cg9.tscn"),
 	LEVEL.CHIEM_BAO_MAY : load("res://level/chiem_bao_may.tscn"),
 	LEVEL.CONG_DEN_TU_LINH : load("res://level/cong_den_tu_linh.tscn"),
 	LEVEL.DEN_PHUONG : load("res://level/level_phuong.tscn"),

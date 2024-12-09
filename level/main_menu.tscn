@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bsb25rej8w2hn"]
+[gd_scene load_steps=19 format=3 uid="uid://bsb25rej8w2hn"]
 
 [ext_resource type="Texture2D" uid="uid://biule84r2yuks" path="res://asset/visual/sprite/logo/Logo (2).png" id="1_6716l"]
 [ext_resource type="Script" path="res://script/level_manager/MainMenu.gd" id="1_t2rss"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://script/ui/button/action/UIAction.gd" id="6_2sy1i"]
 [ext_resource type="PackedScene" uid="uid://busbr02uxdgor" path="res://scene/dialogic/style/mainstyle/PauseMenu/MainMenuSettings.tscn" id="7_cio03"]
 [ext_resource type="FontFile" uid="uid://b0j1noaxjt1dr" path="res://asset/font/Merriweather-Bold.otf" id="7_slk2d"]
+[ext_resource type="AudioStream" uid="uid://da7e87cycui7w" path="res://asset/sound/bgm/Main screen.mp3" id="11_gn7vj"]
 
 [sub_resource type="Resource" id="Resource_e8x7j"]
 script = ExtResource("5_rarhj")
@@ -141,7 +142,9 @@ offset_top = -16.0
 offset_right = -8.0
 offset_bottom = -16.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_gn7vj")
+autoplay = true
 
 [connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="Button" method="_on_mouse_exited"]
