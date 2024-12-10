@@ -49,7 +49,7 @@ script = ExtResource("1_t2rss")
 y_sort_enabled = true
 texture_filter = 1
 position = Vector2(960, 574)
-scale = Vector2(0.315715, 0.352294)
+scale = Vector2(0.251, 0.251)
 texture = ExtResource("1_6716l")
 
 [node name="MainScreen" type="Sprite2D" parent="."]

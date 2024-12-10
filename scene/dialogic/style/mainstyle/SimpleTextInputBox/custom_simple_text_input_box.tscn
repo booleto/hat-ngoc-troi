@@ -1,18 +1,17 @@
-[gd_scene load_steps=22 format=3 uid="uid://d2y2b07jiplj"]
+[gd_scene load_steps=21 format=3 uid="uid://d2y2b07jiplj"]
 
 [ext_resource type="Script" path="res://scene/dialogic/style/mainstyle/SimpleTextInputBox/text_input_layer.gd" id="1_7ahrn"]
 [ext_resource type="Script" path="res://addons/dialogic/Modules/TextInput/node_text_input.gd" id="1_mxdep"]
 [ext_resource type="Texture2D" uid="uid://bxmunc2fdd7i6" path="res://asset/visual/sprite/ui/tên.png" id="3_lamt6"]
-[ext_resource type="FontFile" uid="uid://bekgjs330omnq" path="res://asset/font/DFVNWornout/OpenType-PS/DFVN Wornout.otf" id="4_1udom"]
 [ext_resource type="FontFile" uid="uid://cqdodb7scm4sn" path="res://asset/font/Montserrat-Bold.otf" id="5_y07ra"]
 [ext_resource type="Texture2D" uid="uid://u5stb3wx2fgk" path="res://asset/visual/sprite/ui/option -yes,no-.png" id="6_ni5y4"]
 
 [sub_resource type="Theme" id="Theme_8xwp1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2hh0w"]
-font = ExtResource("4_1udom")
-font_size = 32
-font_color = Color(0.4, 0.203922, 0.105882, 1)
+font = ExtResource("5_y07ra")
+font_size = 36
+font_color = Color(0.772549, 0.372549, 0.0235294, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wo1hh"]
 
@@ -30,7 +29,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="Theme" id="Theme_ssupd"]
-default_font = ExtResource("4_1udom")
+default_font = ExtResource("5_y07ra")
 default_font_size = 24
 LineEdit/colors/caret_color = Color(0.337255, 0.133333, 0.0509804, 1)
 LineEdit/colors/font_color = Color(0.337255, 0.133333, 0.0509804, 1)
@@ -97,10 +96,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 450.0
-offset_top = -150.0
-offset_right = 450.0
-offset_bottom = -150.0
+offset_left = 303.0
+offset_top = -152.0
+offset_right = 303.0
+offset_bottom = -152.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -116,17 +115,18 @@ offset_top = -246.0
 offset_right = 949.0
 offset_bottom = 1235.0
 grow_horizontal = 2
-scale = Vector2(0.41, 0.41)
+scale = Vector2(0.45, 0.35)
 mouse_filter = 2
 texture = ExtResource("3_lamt6")
 
 [node name="CenterContainer" type="CenterContainer" parent="DialogicNode_TextInput/TextInputPanel/Control"]
 layout_mode = 0
-offset_left = 33.38
-offset_top = -174.0
-offset_right = 383.38
-offset_bottom = -78.0
+offset_left = 61.0
+offset_top = -193.0
+offset_right = 411.0
+offset_bottom = -97.0
 mouse_filter = 2
+metadata/_edit_group_ = true
 
 [node name="TextLabel" type="Label" parent="DialogicNode_TextInput/TextInputPanel/Control/CenterContainer"]
 unique_name_in_owner = true
@@ -135,23 +135,24 @@ layout_mode = 2
 theme = SubResource("Theme_8xwp1")
 text = "Please enter some text:"
 label_settings = SubResource("LabelSettings_2hh0w")
+horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="InputField" type="LineEdit" parent="DialogicNode_TextInput/TextInputPanel/Control"]
 layout_mode = 2
-offset_left = 17.0
-offset_top = -9.0
-offset_right = 388.0
-offset_bottom = 66.0
+offset_left = 44.0
+offset_top = -69.0
+offset_right = 415.0
+offset_bottom = 6.0
 theme = SubResource("Theme_ssupd")
 
 [node name="ConfirmationButton" type="Button" parent="DialogicNode_TextInput/TextInputPanel/Control"]
 layout_mode = 2
-offset_left = 126.0
-offset_top = 149.0
-offset_right = 1370.0
-offset_bottom = 604.0
-scale = Vector2(0.115, 0.115)
+offset_left = 136.0
+offset_top = 61.0
+offset_right = 1380.0
+offset_bottom = 516.0
+scale = Vector2(0.15, 0.15)
 size_flags_horizontal = 8
 theme = SubResource("Theme_1k0fa")
 theme_override_colors/font_color = Color(0.670588, 0.494118, 0.360784, 1)
