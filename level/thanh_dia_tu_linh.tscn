@@ -1,17 +1,31 @@
-[gd_scene load_steps=10 format=3 uid="uid://dfs7tage6ng5e"]
+[gd_scene load_steps=17 format=3 uid="uid://dfs7tage6ng5e"]
 
 [ext_resource type="Script" path="res://script/level_manager/ThanhDiaTuLinh.gd" id="1_dk4yk"]
+[ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="2_8wt16"]
 [ext_resource type="Texture2D" uid="uid://cfhquscqbxm3y" path="res://asset/visual/sprite/background/layer 1.png" id="2_i4b4t"]
 [ext_resource type="Texture2D" uid="uid://co8jpjhxjqsgn" path="res://asset/visual/sprite/background/layer 4.png" id="3_3fwuc"]
 [ext_resource type="Texture2D" uid="uid://8435kv3tfqbx" path="res://asset/visual/sprite/foreground/cửa 1.png" id="3_xtybj"]
 [ext_resource type="Texture2D" uid="uid://rk7ietxqxqev" path="res://asset/visual/sprite/foreground/cửa 2.png" id="4_23xow"]
+[ext_resource type="Script" path="res://script/ui/clickable/Clickable.gd" id="5_141oo"]
 [ext_resource type="Texture2D" uid="uid://mskmayrqox3d" path="res://asset/visual/sprite/foreground/cửa 3.png" id="5_d2adl"]
+[ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="6_256v0"]
+[ext_resource type="Texture2D" uid="uid://bfdlinl0hdr3s" path="res://asset/visual/sprite/ui/mission.png" id="6_qujfx"]
 [ext_resource type="Texture2D" uid="uid://02nkp28uywx4" path="res://asset/visual/sprite/foreground/cửa 4.png" id="6_su2pn"]
+[ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="7_2c5n6"]
 [ext_resource type="Texture2D" uid="uid://b0fyhj1sugjxt" path="res://asset/visual/sprite/foreground/layer 2 (1).png" id="7_3e1hl"]
 [ext_resource type="Texture2D" uid="uid://86tfj55hppcq" path="res://asset/visual/sprite/background/layer 3.png" id="8_6ivcd"]
+[ext_resource type="Script" path="res://script/camera/BoundedCamera.gd" id="15_5hksv"]
+
+[sub_resource type="Resource" id="Resource_jew5c"]
+script = ExtResource("7_2c5n6")
+event_name = "cua_nhat"
+event_type = 1
 
 [node name="ThanhDiaTuLinh" type="Node2D"]
 script = ExtResource("1_dk4yk")
+
+[node name="SceneAnimationPlayer" type="AnimationPlayer" parent="."]
+script = ExtResource("2_8wt16")
 
 [node name="Sky" type="Sprite2D" parent="."]
 texture = ExtResource("2_i4b4t")
@@ -21,27 +35,175 @@ position = Vector2(-1037, 24)
 scale = Vector2(0.38, 0.38)
 texture = ExtResource("3_xtybj")
 
+[node name="Clickable" type="Control" parent="Door1" node_paths=PackedStringArray("arrow_sprite")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -692.0
+offset_top = -985.5
+offset_right = -692.0
+offset_bottom = -985.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("5_141oo")
+arrow_sprite = NodePath("Sprite2D")
+
+[node name="Button" type="Button" parent="Door1/Clickable"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("6_256v0")
+action = SubResource("Resource_jew5c")
+
+[node name="Sprite2D" type="TextureRect" parent="Door1/Clickable"]
+layout_mode = 0
+offset_left = 750.0
+offset_top = -450.0
+offset_right = 1271.0
+offset_bottom = 40.0
+rotation = 0.785398
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_qujfx")
+
 [node name="Door2" type="Sprite2D" parent="."]
 position = Vector2(-546, -90)
 scale = Vector2(0.49, 0.49)
 texture = ExtResource("4_23xow")
+
+[node name="Clickable2" type="Control" parent="Door2" node_paths=PackedStringArray("arrow_sprite")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -298.0
+offset_top = -413.5
+offset_right = -298.0
+offset_bottom = -413.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("5_141oo")
+arrow_sprite = NodePath("Sprite2D")
+
+[node name="Button" type="Button" parent="Door2/Clickable2"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("6_256v0")
+action = SubResource("Resource_jew5c")
+
+[node name="Sprite2D" type="TextureRect" parent="Door2/Clickable2"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = -350.0
+offset_right = 821.0
+offset_bottom = 140.0
+rotation = 0.785398
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("6_qujfx")
 
 [node name="Door3" type="Sprite2D" parent="."]
 position = Vector2(503, -75)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("5_d2adl")
 
+[node name="Clickable3" type="Control" parent="Door3" node_paths=PackedStringArray("arrow_sprite")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -358.0
+offset_top = -422.5
+offset_right = -358.0
+offset_bottom = -422.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("5_141oo")
+arrow_sprite = NodePath("Sprite2D")
+
+[node name="Button" type="Button" parent="Door3/Clickable3"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("6_256v0")
+action = SubResource("Resource_jew5c")
+
+[node name="Sprite2D" type="TextureRect" parent="Door3/Clickable3"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = -400.0
+offset_right = 851.0
+offset_bottom = 90.0
+rotation = 0.785398
+scale = Vector2(0.385, 0.385)
+texture = ExtResource("6_qujfx")
+
 [node name="Door4" type="Sprite2D" parent="."]
 position = Vector2(1016, 24)
 scale = Vector2(0.38, 0.38)
 texture = ExtResource("6_su2pn")
+
+[node name="Clickable4" type="Control" parent="Door4" node_paths=PackedStringArray("arrow_sprite")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -634.0
+offset_top = -916.5
+offset_right = -634.0
+offset_bottom = -916.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("5_141oo")
+arrow_sprite = NodePath("Sprite2D")
+
+[node name="Button" type="Button" parent="Door4/Clickable4"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("6_256v0")
+action = SubResource("Resource_jew5c")
+
+[node name="Sprite2D" type="TextureRect" parent="Door4/Clickable4"]
+layout_mode = 0
+offset_left = 550.0
+offset_top = -450.0
+offset_right = 1071.0
+offset_bottom = 40.0
+rotation = 0.785398
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_qujfx")
 
 [node name="Field" type="Sprite2D" parent="."]
 position = Vector2(-21, 207)
 scale = Vector2(0.38, 0.38)
 texture = ExtResource("7_3e1hl")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Rock" type="Sprite2D" parent="."]
 position = Vector2(647, 216)
 scale = Vector2(0.41, 0.41)
 texture = ExtResource("8_6ivcd")
@@ -52,5 +214,40 @@ scale = Vector2(0.46, 0.46)
 texture = ExtResource("3_3fwuc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("15_5hksv")
+speed_x = 500.0
+upper_bound = Vector2(390, 0)
+lower_bound = Vector2(-390, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CameraButtons" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left" type="TextureButton" parent="CanvasLayer/CameraButtons"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -4.0
+offset_right = 8.0
+offset_bottom = 4.0
+grow_vertical = 2
+
+[node name="Right" type="TextureButton" parent="CanvasLayer/CameraButtons"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 0
+grow_vertical = 2
