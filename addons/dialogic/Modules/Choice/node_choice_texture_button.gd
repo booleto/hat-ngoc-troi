@@ -1,5 +1,5 @@
-class_name DialogicNode_ChoiceButton
-extends Button
+class_name DialogicNode_ChoiceTextureButton
+extends TextureButton
 ## The button allows the player to make a choice in the Dialogic system.
 ##
 ## This class is used in the Choice Layer. [br]
@@ -11,8 +11,6 @@ extends Button
 ## Using a different node may allow using rich text effects; they are
 ## not supported on buttons at this point.
 
-var hover_sprite = load("res://asset/visual/sprite/ui/option hover.png")
-var normal_sprite = load("res://asset/visual/sprite/ui/option normal.png")
 
 ## Used to identify what choices to put on. If you leave it at -1, choices will be distributed automatically.
 @export var choice_index: int = -1
@@ -39,17 +37,9 @@ func _load_info(choice_info: Dictionary) -> void:
 	disabled = choice_info.disabled
 
 
-## Called when the text changes.
+# Called when the text changes.
 func set_choice_text(new_text: String) -> void:
 	if text_node:
 		text_node.text = new_text
 	else:
-		text = new_text
-
-
-func _on_mouse_entered():
-	self.icon = hover_sprite
-
-
-func _on_mouse_exited():
-	self.icon = normal_sprite
+		$Label.text = new_text

@@ -5,6 +5,23 @@
 [ext_resource type="Texture2D" uid="uid://by3oaw2hxqht5" path="res://asset/visual/sprite/cg/Scaled/a3-scaled.png" id="2_nrfir"]
 [ext_resource type="Texture2D" uid="uid://cxi4fsn7ija83" path="res://asset/visual/sprite/speech bubble/bb-02.png" id="3_1ms5o"]
 
+[sub_resource type="Animation" id="Animation_mljsp"]
+resource_name = "A3"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Segaydaden/A3-scaled:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_8vqkl"]
 resource_name = "Bb-02"
 length = 0.2
@@ -49,23 +66,6 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_mljsp"]
-resource_name = "A3"
-length = 0.2
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Segaydaden/A3-scaled:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ow5p8"]
 _data = {
 "A3": SubResource("Animation_mljsp"),
@@ -83,14 +83,12 @@ libraries = {
 
 [node name="Segaydaden" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-scale = Vector2(1, 1)
 texture = ExtResource("1_uovvp")
 
 [node name="A3-scaled" type="Sprite2D" parent="Segaydaden"]
 self_modulate = Color(1, 1, 1, 0)
 texture_filter = 1
 position = Vector2(0, 4.00006)
-scale = Vector2(1, 1)
 texture = ExtResource("2_nrfir")
 
 [node name="Bb-02" type="Sprite2D" parent="Segaydaden"]
