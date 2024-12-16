@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dfs7tage6ng5e"]
+[gd_scene load_steps=31 format=3 uid="uid://dfs7tage6ng5e"]
 
 [ext_resource type="Script" path="res://script/level_manager/ThanhDiaTuLinh.gd" id="1_dk4yk"]
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="2_8wt16"]
@@ -14,17 +14,163 @@
 [ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="7_2c5n6"]
 [ext_resource type="Texture2D" uid="uid://b0fyhj1sugjxt" path="res://asset/visual/sprite/foreground/layer 2 (1).png" id="7_3e1hl"]
 [ext_resource type="Texture2D" uid="uid://86tfj55hppcq" path="res://asset/visual/sprite/background/layer 3.png" id="8_6ivcd"]
+[ext_resource type="Script" path="res://script/ui/button/action/PlayTimelineAction.gd" id="13_xnpvt"]
 [ext_resource type="Script" path="res://script/camera/BoundedCamera.gd" id="15_5hksv"]
+[ext_resource type="Texture2D" uid="uid://dqd8vk1ick3n3" path="res://asset/visual/sprite/ui/GlowArrow.png" id="16_4fgxq"]
+[ext_resource type="Script" path="res://script/ui/button/ButtonHold.gd" id="17_nryqu"]
+[ext_resource type="Script" path="res://script/ui/button/action/CameraMoveAction.gd" id="17_yc2je"]
+
+[sub_resource type="Animation" id="Animation_hyub6"]
+resource_name = "arrows"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door1/Clickable/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.833333),
+"transitions": PackedFloat32Array(2.37841, 0.435275),
+"update": 0,
+"values": [Vector2(750, -450), Vector2(750, -400)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door2/Clickable2/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0104167, 0.833333),
+"transitions": PackedFloat32Array(2.37841, 0.435275),
+"update": 0,
+"values": [Vector2(300, -350), Vector2(300, -300)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Door3/Clickable3/Sprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0104167, 0.833333),
+"transitions": PackedFloat32Array(2.37841, 0.435275),
+"update": 0,
+"values": [Vector2(330, -400), Vector2(330, -350)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Door4/Clickable4/Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.833333),
+"transitions": PackedFloat32Array(2.37841, 0.435275),
+"update": 0,
+"values": [Vector2(550, -450), Vector2(550, -400)]
+}
+
+[sub_resource type="Animation" id="Animation_jd2gt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door4/Clickable4/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(550, -450)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door3/Clickable3/Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(330, -400)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Door2/Clickable2/Sprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, -350)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Door1/Clickable/Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(750, -450)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tn842"]
+_data = {
+"RESET": SubResource("Animation_jd2gt"),
+"arrows": SubResource("Animation_hyub6")
+}
+
+[sub_resource type="Resource" id="Resource_4swsp"]
+script = ExtResource("13_xnpvt")
+timeline = "tdtl_wrong_door"
 
 [sub_resource type="Resource" id="Resource_jew5c"]
 script = ExtResource("7_2c5n6")
-event_name = "cua_nhat"
+event_name = "door_tu"
 event_type = 1
 
+[sub_resource type="Resource" id="Resource_uaglt"]
+script = ExtResource("13_xnpvt")
+timeline = "tdtl_ruong"
+
+[sub_resource type="Resource" id="Resource_0v0gu"]
+script = ExtResource("13_xnpvt")
+timeline = "tdtl_da"
+
+[sub_resource type="Resource" id="Resource_myl3p"]
+script = ExtResource("17_yc2je")
+direction = Vector2(-1, 0)
+
+[sub_resource type="Resource" id="Resource_o2mp3"]
+script = ExtResource("17_yc2je")
+direction = Vector2(0, 0)
+
+[sub_resource type="Resource" id="Resource_jhoob"]
+script = ExtResource("17_yc2je")
+direction = Vector2(1, 0)
+
+[sub_resource type="Resource" id="Resource_gncde"]
+script = ExtResource("17_yc2je")
+direction = Vector2(0, 0)
+
 [node name="ThanhDiaTuLinh" type="Node2D"]
+texture_filter = 3
 script = ExtResource("1_dk4yk")
 
 [node name="SceneAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tn842")
+}
 script = ExtResource("2_8wt16")
 
 [node name="Sky" type="Sprite2D" parent="."]
@@ -60,9 +206,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("6_256v0")
-action = SubResource("Resource_jew5c")
+action = SubResource("Resource_4swsp")
 
 [node name="Sprite2D" type="TextureRect" parent="Door1/Clickable"]
+visible = false
 layout_mode = 0
 offset_left = 750.0
 offset_top = -450.0
@@ -102,9 +249,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("6_256v0")
-action = SubResource("Resource_jew5c")
+action = SubResource("Resource_4swsp")
 
 [node name="Sprite2D" type="TextureRect" parent="Door2/Clickable2"]
+visible = false
 layout_mode = 0
 offset_left = 300.0
 offset_top = -350.0
@@ -144,9 +292,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("6_256v0")
-action = SubResource("Resource_jew5c")
+action = SubResource("Resource_4swsp")
 
 [node name="Sprite2D" type="TextureRect" parent="Door3/Clickable3"]
+visible = false
 layout_mode = 0
 offset_left = 330.0
 offset_top = -400.0
@@ -189,6 +338,7 @@ script = ExtResource("6_256v0")
 action = SubResource("Resource_jew5c")
 
 [node name="Sprite2D" type="TextureRect" parent="Door4/Clickable4"]
+visible = false
 layout_mode = 0
 offset_left = 550.0
 offset_top = -450.0
@@ -203,10 +353,38 @@ position = Vector2(-21, 207)
 scale = Vector2(0.38, 0.38)
 texture = ExtResource("7_3e1hl")
 
+[node name="Button" type="Button" parent="Field"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1937.0
+offset_top = -357.0
+offset_right = -1937.0
+offset_bottom = -357.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("6_256v0")
+action = SubResource("Resource_uaglt")
+
 [node name="Rock" type="Sprite2D" parent="."]
 position = Vector2(647, 216)
 scale = Vector2(0.41, 0.41)
 texture = ExtResource("8_6ivcd")
+
+[node name="Button" type="Button" parent="Rock"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -328.5
+offset_top = -351.5
+offset_right = -328.5
+offset_bottom = -351.5
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+script = ExtResource("6_256v0")
+action = SubResource("Resource_0v0gu")
 
 [node name="Cloud" type="Sprite2D" parent="."]
 position = Vector2(0, 240)
@@ -221,33 +399,81 @@ lower_bound = Vector2(-390, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="CameraButtons" type="Control" parent="CanvasLayer"]
-layout_mode = 3
+[node name="CameraButtons" type="MarginContainer" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
 
-[node name="Left" type="TextureButton" parent="CanvasLayer/CameraButtons"]
+[node name="ButtonLeft" type="Control" parent="CanvasLayer/CameraButtons"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Scale" type="Control" parent="CanvasLayer/CameraButtons/ButtonLeft"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -4.0
-offset_right = 8.0
-offset_bottom = 4.0
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
 grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+mouse_filter = 2
 
-[node name="Right" type="TextureButton" parent="CanvasLayer/CameraButtons"]
+[node name="Left" type="TextureButton" parent="CanvasLayer/CameraButtons/ButtonLeft/Scale"]
 layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -8.0
-offset_top = -4.0
-offset_bottom = 4.0
-grow_horizontal = 0
+offset_top = -56.0
+offset_right = 65.0
+offset_bottom = 56.0
 grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture_normal = ExtResource("16_4fgxq")
+script = ExtResource("17_nryqu")
+on_press = SubResource("Resource_myl3p")
+on_release = SubResource("Resource_o2mp3")
+
+[node name="ButtonRight" type="Control" parent="CanvasLayer/CameraButtons"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Scale" type="Control" parent="CanvasLayer/CameraButtons/ButtonRight"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+scale = Vector2(-1.5, 1.5)
+mouse_filter = 2
+
+[node name="Right" type="TextureButton" parent="CanvasLayer/CameraButtons/ButtonRight/Scale"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -56.0
+offset_right = 65.0
+offset_bottom = 56.0
+grow_vertical = 2
+rotation = -6.28319
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture_normal = ExtResource("16_4fgxq")
+script = ExtResource("17_nryqu")
+on_press = SubResource("Resource_jhoob")
+on_release = SubResource("Resource_gncde")

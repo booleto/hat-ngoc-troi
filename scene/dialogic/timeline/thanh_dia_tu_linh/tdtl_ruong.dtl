@@ -1,0 +1,6 @@
+[style name="mainstyle"]
+[signal arg="darken_bg"]
+join trau (trau_gai_dau) leftmore
+trau: Sao ở nơi này cũng có ruộng nhỉ? Mà khô hết cả rồi…
+[signal arg="lighten_bg"]
+[end_timeline]
