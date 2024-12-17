@@ -32,6 +32,7 @@ var level_map: Dictionary = {
 	LEVEL.CG9 : load("res://level/cg9.tscn"),
 	LEVEL.CHIEM_BAO_MAY : load("res://level/chiem_bao_may.tscn"),
 	LEVEL.CONG_DEN_TU_LINH : load("res://level/cong_den_tu_linh.tscn"),
+	LEVEL.THANH_DIA_TU_LINH : load("res://level/thanh_dia_tu_linh.tscn"),
 	LEVEL.DEN_PHUONG : load("res://level/level_phuong.tscn"),
 	LEVEL.DRUM_MINIGAME : load("res://level/drum_minigame.tscn"),
 	LEVEL.DEN_PHUONG_SAU_MINIGAME : load("res://level/level_phuong_after_minigame.tscn")
