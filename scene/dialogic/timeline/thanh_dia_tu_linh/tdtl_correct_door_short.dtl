@@ -1,0 +1,8 @@
+[style name="mainstyle"]
+trau: Tuyệt. Giờ vào đó xem thử nào.
+- Vào trong
+	do LevelLoader.load_level_from_name("DEN_PHUONG")
+- Vẫn chưa sẵn sàng
+	[signal arg="darken_bg"]
+	trau (trau_gai_dau): Mình vẫn chưa sẵn sàng lắm, hồi hộp thật.
+	[signal arg="lighten_bg"]
