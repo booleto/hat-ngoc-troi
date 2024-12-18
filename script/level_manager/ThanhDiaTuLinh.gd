@@ -1,11 +1,18 @@
 extends Node2D
+class_name ThanhDiaTuLinh
 
+var found_door: bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	GameEventBus.play_animation.emit("arrows")
+	Dialogic.start("tdtl_start")
+	GameEventBus.game_event.connect(_on_game_event)
+	Dialogic.signal_event.connect(_on_game_event)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_game_event(event: String):
+	if event == "door_tu" and not found_door:
+		Dialogic.start("tdtl_correct_door")
+		found_door = true
+	if event == "door_tu" and found_door:
+		Dialogic.start("tdtl_correct_door_short")
+	

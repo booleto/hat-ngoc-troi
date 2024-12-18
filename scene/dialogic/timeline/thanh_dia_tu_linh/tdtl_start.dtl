@@ -1,0 +1,6 @@
+[style name="mainstyle"]
+[signal arg="darken_bg"]
+join trau (trau_binh_thuong) leftmore
+trau: Đây là Thánh Địa Tứ Linh sao? Đẹp thật.
+[signal arg="lighten_bg"]
+[end_timeline]

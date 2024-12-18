@@ -1,0 +1,15 @@
+[style name="mainstyle"]
+[signal arg="darken_bg"]
+join trau (trau_gai_dau) leftmore
+trau: Một phiến đá? Trên này mọc đầy rêu rồi.
+trau: Hửm?
+leave trau
+[signal arg="show_rock"]
+trau: Trên này hình như có chữ gì đó, để xem nào….
+trau: [center][i]“Nhất nhị tam tứ trong sân vắng,\
+Phép vua thường chẳng thắng lệ làng.\
+Ai ơi cứu lấy mùa màng,\
+Tứ tam nhị nhất, sắc vàng lúa thơm.”[/i][/center]
+trau: Là sao nhỉ?
+[signal arg="hide_rock"]
+[signal arg="lighten_bg"]

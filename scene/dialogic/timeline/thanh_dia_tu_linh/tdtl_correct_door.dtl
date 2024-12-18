@@ -1,0 +1,13 @@
+[style name="mainstyle"]
+[i][ Cánh cửa gỗ nặng trịch nhích nhẹ từng chút một, vừa đủ để tạo kẽ hở cho Trâu Vàng lách vào trong. ][/i]
+[signal arg="darken_bg"]
+join trau (trau_co_y_tuong) leftmore
+trau: Ơ, có hẳn một ngôi miếu phía sau cánh cửa luôn này!
+trau (trau_binh_thuong): Tuyệt. Giờ vào đó xem thử nào.
+[signal arg="lighten_bg"]
+- Vào trong
+	do LevelLoader.load_level_from_name("DEN_PHUONG")
+- Vẫn chưa sẵn sàng
+	[signal arg="darken_bg"]
+	trau (trau_gai_dau): Mình vẫn chưa sẵn sàng lắm, hồi hộp thật.
+	[signal arg="lighten_bg"]
