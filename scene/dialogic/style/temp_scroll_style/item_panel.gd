@@ -1,4 +1,4 @@
-extends DialogicLayoutLayer
+res://scene/dialogic/style/mainstyle/MissionTab/mission_tab.tscnextends DialogicLayoutLayer
 
 @onready var item_scroll = %ItemScroll
 # Called when the node enters the scene tree for the first time.
