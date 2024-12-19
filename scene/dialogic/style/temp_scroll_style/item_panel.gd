@@ -1,4 +1,4 @@
-res://scene/dialogic/style/mainstyle/MissionTab/mission_tab.tscnextends DialogicLayoutLayer
+extends DialogicLayoutLayer
 
 @onready var item_scroll = %ItemScroll
 @onready var rock_view = %RockView

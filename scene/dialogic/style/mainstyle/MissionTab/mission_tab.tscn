@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://ohj3lf8emyt4"]
+
+[ext_resource type="Script" path="res://scene/dialogic/style/mainstyle/MissionTab/mission_tab.gd" id="1_qir8v"]
+
+[node name="MissionTab" type="PanelContainer"]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_qir8v")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -320.0
+offset_right = -199.0
+offset_bottom = 69.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "lmao"
+horizontal_alignment = 1
+vertical_alignment = 1
