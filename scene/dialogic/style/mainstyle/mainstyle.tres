@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=29 format=3 uid="uid://3btj4q2lr6nw"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=27 format=3 uid="uid://3btj4q2lr6nw"]
 
 [ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_7qm62"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_ysb5a"]
@@ -14,7 +14,6 @@
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_xmshk"]
 [ext_resource type="PackedScene" uid="uid://bmdy2m7eoqy8y" path="res://scene/dialogic/style/mainstyle/BackgroundDarken/BackgroundDarken.tscn" id="12_bgcej"]
 [ext_resource type="PackedScene" uid="uid://du06j6hmkg4n" path="res://scene/dialogic/style/temp_scroll_style/item_panel.tscn" id="13_kdong"]
-[ext_resource type="PackedScene" uid="uid://ohj3lf8emyt4" path="res://scene/dialogic/style/mainstyle/MissionTab/mission_tab.tscn" id="14_dhcem"]
 
 [sub_resource type="Resource" id="Resource_3fk2a"]
 script = ExtResource("1_ysb5a")
@@ -105,17 +104,10 @@ script = ExtResource("1_ysb5a")
 scene = ExtResource("13_kdong")
 overrides = {}
 
-[sub_resource type="Resource" id="Resource_ru08p"]
-script = ExtResource("1_ysb5a")
-scene = ExtResource("14_dhcem")
-overrides = {
-"disabled": "true"
-}
-
 [resource]
 script = ExtResource("10_xmshk")
 name = "mainstyle"
-layer_list = Array[String](["10", "19", "11", "12", "13", "14", "1a", "15", "16", "18", "17", "1b"])
+layer_list = Array[String](["10", "19", "11", "12", "13", "14", "1a", "15", "16", "18", "17"])
 layer_info = {
 "": SubResource("Resource_3fk2a"),
 "10": SubResource("Resource_3fwpb"),
@@ -128,8 +120,7 @@ layer_info = {
 "17": SubResource("Resource_1fvfq"),
 "18": SubResource("Resource_n0qkq"),
 "19": SubResource("Resource_ipct3"),
-"1a": SubResource("Resource_grrk4"),
-"1b": SubResource("Resource_ru08p")
+"1a": SubResource("Resource_grrk4")
 }
 base_overrides = {}
 layers = Array[ExtResource("1_ysb5a")]([])

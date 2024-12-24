@@ -425,6 +425,7 @@ mouse_filter = 2
 texture = ExtResource("9_3gi32")
 
 [node name="Cards" type="Control" parent="CanvasLayer/MainPanel"]
+z_index = 3
 layout_mode = 2
 mouse_filter = 2
 
@@ -517,26 +518,6 @@ flat = true
 script = ExtResource("12_g1r5f")
 action = SubResource("Resource_yeq4k")
 delete_on_use = true
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainPanel"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
 
 [node name="MissionResultPanel" type="PanelContainer" parent="CanvasLayer"]
 visible = false

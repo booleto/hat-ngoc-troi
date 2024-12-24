@@ -82,6 +82,7 @@ variables={
 "kinh_thu": false
 },
 "card_count": 0,
+"mission": "",
 "ten_trau": ""
 }
 extensions_folder="res://addons/dialogic_additions"

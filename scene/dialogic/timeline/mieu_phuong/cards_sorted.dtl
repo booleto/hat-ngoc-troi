@@ -1,5 +1,6 @@
 [style name="mainstyle"]
 join trau left
+[signal arg="sort_done"]
 [signal arg="darken_bg"]
 trau: Chắc ổn rồi đó.
 [signal arg="lighten_bg"]
