@@ -10,3 +10,4 @@ leave trau
 [wait_input]
 trau: Một cái quẻ? Trên này ghi chữ “Lúa khô” nữa.
 trau: Có khi nào còn mấy cái nữa chăng? Thử đi tìm xem sao.
+[signal arg="find_card_start"]

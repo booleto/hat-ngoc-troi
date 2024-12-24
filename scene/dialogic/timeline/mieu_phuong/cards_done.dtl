@@ -1,4 +1,5 @@
 [style name="mainstyle"]
+[signal arg="find_card_done"]
 join trau left
 trau: Chắc là hết rồi nhỉ, để xem ta có gì nào.
 [signal arg="sort_start"]

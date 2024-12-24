@@ -1,6 +1,7 @@
 [background scene="res://scene/dialogic/background/TheNuocCan.tscn" fade="1.0"]
-[wait time="1.0"]
 set {card_count} += 1
+[signal arg="card_pressed"]
+[wait time="1.0"]
 [wait_input]
 if {card_count} == 6:
 	jump cards_done/

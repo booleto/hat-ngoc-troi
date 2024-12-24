@@ -1,5 +1,6 @@
 [style name="mainstyle"]
 join trau left
+[signal arg="sort_done"]
 [signal arg="darken_bg"]
 trau: Chắc ổn rồi đó.
 [signal arg="lighten_bg"]
@@ -10,9 +11,9 @@ leave trau
 [wait_input]
 [background scene="res://scene/dialogic/background/PhungEntry3.tscn" fade="1.0"]
 [wait_input]
-[background scene="res://scene/dialogic/background/PhungEntry4.tscn" fade="1.0"]
+[background scene="PhungEntry4.tscn" fade="1.0"]
 [wait_input]
-[background scene="res://scene/dialogic/background/PhungEntry1.tscn" fade="1.0"]
+[background scene="PhungEntry1.tscn" fade="1.0"]
 join trau (trau_troi_oi) left [animation="Fade In"]
 join phuong (phuong_tay_sau_lung) right [animation="Slide In Down" length="1.5"]
 phuong (phuong_normal): Chậc- Tên nào giờ này đến phá giấc ngủ của ta vậy?

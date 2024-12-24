@@ -54,19 +54,6 @@ timeline = "the_ai_oi"
 script = ExtResource("18_y8akg")
 actions = Array[ExtResource("15_xxfuc")]([SubResource("Resource_40vy0"), SubResource("Resource_yipdr")])
 
-[sub_resource type="Resource" id="Resource_4novq"]
-script = ExtResource("13_40fku")
-event_name = "card_gain"
-event_type = 1
-
-[sub_resource type="Resource" id="Resource_5fnaa"]
-script = ExtResource("17_2txnx")
-timeline = "the_cho_troi"
-
-[sub_resource type="Resource" id="Resource_yeq4k"]
-script = ExtResource("18_y8akg")
-actions = Array[ExtResource("15_xxfuc")]([SubResource("Resource_4novq"), SubResource("Resource_5fnaa")])
-
 [sub_resource type="Resource" id="Resource_8xf15"]
 script = ExtResource("13_40fku")
 event_name = "card_gain"
@@ -118,6 +105,19 @@ timeline = "the_tat_nuoc"
 [sub_resource type="Resource" id="Resource_npuso"]
 script = ExtResource("18_y8akg")
 actions = Array[ExtResource("15_xxfuc")]([SubResource("Resource_hi5ip"), SubResource("Resource_2875c")])
+
+[sub_resource type="Resource" id="Resource_4novq"]
+script = ExtResource("13_40fku")
+event_name = "card_gain"
+event_type = 1
+
+[sub_resource type="Resource" id="Resource_5fnaa"]
+script = ExtResource("17_2txnx")
+timeline = "the_cho_troi"
+
+[sub_resource type="Resource" id="Resource_yeq4k"]
+script = ExtResource("18_y8akg")
+actions = Array[ExtResource("15_xxfuc")]([SubResource("Resource_4novq"), SubResource("Resource_5fnaa")])
 
 [sub_resource type="Animation" id="Animation_lr3b7"]
 length = 0.001
@@ -425,6 +425,7 @@ mouse_filter = 2
 texture = ExtResource("9_3gi32")
 
 [node name="Cards" type="Control" parent="CanvasLayer/MainPanel"]
+z_index = 3
 layout_mode = 2
 mouse_filter = 2
 
@@ -441,21 +442,6 @@ icon = ExtResource("11_fvxhd")
 flat = true
 script = ExtResource("12_g1r5f")
 action = SubResource("Resource_hajxm")
-delete_on_use = true
-
-[node name="Button7" type="Button" parent="CanvasLayer/MainPanel/Cards"]
-self_modulate = Color(1, 1, 1, 0.735)
-layout_mode = 0
-offset_left = 889.0
-offset_top = 372.0
-offset_right = 1006.0
-offset_bottom = 947.0
-rotation = -0.869344
-scale = Vector2(0.09, 0.09)
-icon = ExtResource("11_fvxhd")
-flat = true
-script = ExtResource("12_g1r5f")
-action = SubResource("Resource_yeq4k")
 delete_on_use = true
 
 [node name="Button2" type="Button" parent="CanvasLayer/MainPanel/Cards"]
@@ -518,25 +504,20 @@ script = ExtResource("12_g1r5f")
 action = SubResource("Resource_npuso")
 delete_on_use = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MainPanel"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
-
-[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/MainPanel/HBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
+[node name="Button6" type="Button" parent="CanvasLayer/MainPanel/Cards"]
+self_modulate = Color(1, 1, 1, 0.735)
+layout_mode = 0
+offset_left = 889.0
+offset_top = 372.0
+offset_right = 1006.0
+offset_bottom = 947.0
+rotation = -0.869344
+scale = Vector2(0.09, 0.09)
+icon = ExtResource("11_fvxhd")
+flat = true
+script = ExtResource("12_g1r5f")
+action = SubResource("Resource_yeq4k")
+delete_on_use = true
 
 [node name="MissionResultPanel" type="PanelContainer" parent="CanvasLayer"]
 visible = false

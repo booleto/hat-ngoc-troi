@@ -1,6 +1,7 @@
 [background scene="res://scene/dialogic/background/TheConLau.tscn" fade="0.8"]
-[wait time="1.0"]
 set {card_count} += 1
+[signal arg="card_pressed"]
+[wait time="1.0"]
 [wait_input]
 if {card_count} == 6:
 	jump cards_done/

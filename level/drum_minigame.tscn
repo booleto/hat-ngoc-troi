@@ -1316,9 +1316,9 @@ mouse_filter = 2
 
 [node name="CloudRight" type="TextureRect" parent="UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3/Control2"]
 layout_mode = 2
-offset_left = -1490.0
+offset_left = -303.0
 offset_top = -180.0
-offset_right = -884.0
+offset_right = 303.0
 offset_bottom = 179.0
 mouse_filter = 2
 texture = ExtResource("15_46m70")
@@ -1329,9 +1329,9 @@ mouse_filter = 2
 
 [node name="CloudLeft" type="TextureRect" parent="UI/PanelContainer/StartScreen/HBoxContainer/CenterContainer3/Control"]
 layout_mode = 2
-offset_left = 903.0
+offset_left = -303.0
 offset_top = -180.0
-offset_right = 1509.0
+offset_right = 303.0
 offset_bottom = 179.0
 mouse_filter = 2
 texture = ExtResource("15_46m70")
