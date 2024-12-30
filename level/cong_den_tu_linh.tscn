@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cgtirnuuycc84"]
+[gd_scene load_steps=26 format=3 uid="uid://cgtirnuuycc84"]
 
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="1_20boj"]
 [ext_resource type="Script" path="res://script/level_manager/CongDenTuLinh.gd" id="1_bspnt"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://biu836f8gx3d4" path="res://asset/visual/sprite/foreground/tượng lân.png" id="4_8j0fk"]
 [ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="5_sgh6v"]
 [ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="6_v62vp"]
+[ext_resource type="Texture2D" uid="uid://1p1x8tj2vilo" path="res://asset/visual/sprite/foreground/layer 4.png" id="9_hh42w"]
 
 [sub_resource type="Animation" id="Animation_3v6yp"]
 length = 0.001
@@ -157,6 +158,9 @@ script = ExtResource("6_v62vp")
 event_name = "rua_lan_left"
 event_type = 1
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qxlv6"]
+texture = ExtResource("9_hh42w")
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpgjl"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
@@ -267,6 +271,11 @@ grow_vertical = 2
 theme = SubResource("Theme_8rj8s")
 script = ExtResource("5_sgh6v")
 action = SubResource("Resource_54gl0")
+
+[node name="Cloud" type="Panel" parent="CanvasLayer/Background"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qxlv6")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true

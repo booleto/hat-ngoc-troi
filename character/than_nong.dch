@@ -13,7 +13,7 @@
 "display_name": "Thần Câu Mang",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 150),
+"offset": Vector2(0, 0),
 "portraits": {
 "tn_buc": {
 "export_overrides": {
@@ -70,5 +70,5 @@
 "scene": ""
 }
 },
-"scale": 0.85
+"scale": 0.8
 }
