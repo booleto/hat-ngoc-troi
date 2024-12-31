@@ -6,6 +6,11 @@ func _ready() -> void:
 	
 	
 func _on_animation_request(animation: String):
+	if animation == "pause_animation":
+		self.pause()
+	if animation == "resume_animation":
+		self.play()
+		
 	if self.has_animation(animation):
 		self.play(animation)
 	else:

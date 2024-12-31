@@ -17,32 +17,22 @@ than_nong (tn_ok): Là ta đây.
 trau (trau_giai_thich): Ờm…. Xin cho hỏi ngài là ai vậy ạ?
 than_nong (tn_vui): Nào, ta và ngươi là bạn đồng hành kia mà, sao lại xa cách thế kia?
 than_nong (tn_vui): Ta chính là Thần Câu Mang, hằng năm các ngươi đều tiến hành lễ Tiến Xuân Ngưu không phải luôn có mặt ta sao?
-trau (trau_giai_thich): Nh- nhưng chúng con đâu thể nhìn thấy ngài…?
-than_nong (tn_gai_dau): À… Phải nhỉ.
-join trau (trau_met_moi) leftmore [animation="Fade In"]
-trau: (Ổng có phải Thần Câu Mang thật không hay mình đang sảng vậy?)
-than_nong (tn_buc): Này, đừng nghĩ ta không biết ngươi nghĩ gì chứ! Ta là thần linh thứ thiệt đấy nhé! Và ta đang hiển linh trong giấc mơ của ngươi để báo cho ngươi một chuyện quan trọng đấy.
-than_nong (tn_buc): Thôi, việc của ta đã hết, chúc cho hành trình của ngươi được thuận lợi.
-trau (trau_troi_oi): Á !?
-trau (trau_gai_dau): Dạ c-con xin lỗi, thưa ngài…..
-trau (trau_giai_thich): Người hiển linh hẳn có đôi lời, đầu trâu con xin được chỉ dạy ạ.
-than_nong (tn_suy_nghi): Thôi được thôi được… trước hết thì xưng tên cho ta biết đã nhỉ?
-trau (trau_binh_thuong): Dạ thưa ngài, tên con là….
-[text_input text="Tên con là" var="ten_trau" default="Trâu Vàng"]
+trau (trau_gai_dau): Ra là vậy…. Người hiển linh hẳn có đôi lời, đầu trâu con xin được chỉ dạy ạ.
+set {ten_trau} = "Trâu Vàng"
+than_nong (tn_ok): Thôi được thôi được… trước hết thì xưng tên cho ta biết đã nhỉ?
 trau (trau_binh_thuong): Dạ thưa ngài, tên con là {ten_trau} ạ.
 than_nong (tn_suy_nghi): {ten_trau} à… Thôi được, nể tình ngươi và ta là bạn, ta nhắc nhở đôi điều rằng cơn hạn hán kéo dài năm nay không phải tự nhiên mà có.
 than_nong (tn_ok): Các vị thần bảo hộ đang nổi trận lôi đình với nhân giới mà tước đi bốn bảo vật quan trọng giúp cho mùa màng thuận lợi đi mất rồi, nên các ngươi mới phải mất mùa như thế kia.
 trau (trau_troi_oi): T-thật sao ạ!?
-trau (trau_gai_dau): (Vậy là ông lão hàng xóm đã nói đúng…. mọi người nghĩ xấu ông ấy rồi….)
+trau (trau_troi_oi): (Vậy là ông lão hàng xóm đã nói đúng…. mọi người nghĩ xấu ông ấy rồi….)
 trau (trau_giai_thich): Vậy tệ quá… Ngài có thể cho con biết nguồn cơn do đâu không ạ?
 than_nong (tn_suy_nghi): Ta không tiện nói, chi bằng ngươi hãy tìm đường tự thân đi đến nơi ở của các thần thưa chuyện thử, biết đâu lại tìm được câu trả lời?
 than_nong (tn_vui): Đừng lo, từ ngôi làng này đi đến Thánh Địa Tứ Linh không gian nan lắm đâu, chỉ cần đi mãi về phương Bắc, lội suối vượt đèo cũng đến được thôi.
-trau (trau_gai_dau): (Nghe ngài ấy nói mình bắt đầu thấy hơi bất ổn rồi đấy….)
 trau (trau_giai_thich): Dạ thưa, con có chút thắc mắc, con tự ý mà đến có khiến các thần nổi giận hơn không ạ?
 than_nong (tn_ok): Dĩ nhiên không dễ dàng gì để ngươi được gặp họ rồi.
 than_nong (tn_suy_nghi): Mỗi một vị thần đều có bài kiểm tra thử lòng xem ngươi có thật tâm thật dạ cầu xin điềm lành cho nhân gian, hay chỉ muốn trục lợi cho chính ngươi.
 trau (trau_gai_dau): Bài kiểm tra sao….
-than_nong (tn_ok): Thôi, nếu ngươi không còn gì để hỏi nữa thì việc của ta đã hết.
+than_nong (tn_ok): Mà thời gian không còn nhiều… nếu ngươi không còn gì để hỏi nữa thì việc của ta đã hết.
 [signal arg="show_scroll"]
 than_nong: Trước khi đi thì cầm lấy cái này, nó sẽ chỉ dẫn cho ngươi phải làm gì.
 [signal arg="hide_scroll"]

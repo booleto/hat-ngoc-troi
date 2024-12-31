@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://xnss1wuoer13"]
+[gd_scene load_steps=17 format=3 uid="uid://xnss1wuoer13"]
 
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="1_c5kn3"]
 [ext_resource type="Script" path="res://script/level_manager/ChiemBaoMay.gd" id="1_mvqtl"]
@@ -12,20 +12,6 @@
 [ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="9_mq2t7"]
 [ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="10_rtjxl"]
 [ext_resource type="PackedScene" uid="uid://du06j6hmkg4n" path="res://scene/dialogic/style/temp_scroll_style/item_panel.tscn" id="11_hh54m"]
-
-[sub_resource type="Animation" id="Animation_tiqwg"]
-length = 0.001
-
-[sub_resource type="Animation" id="Animation_g8wi5"]
-resource_name = "cloud_sway"
-length = 10.0
-loop_mode = 1
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_djkx2"]
-_data = {
-"RESET": SubResource("Animation_tiqwg"),
-"cloud_sway": SubResource("Animation_g8wi5")
-}
 
 [sub_resource type="Animation" id="Animation_3h64e"]
 length = 0.001
@@ -63,7 +49,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -88,6 +74,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_vqnhd"]
@@ -139,7 +137,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 13.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1.8, 1.8)]
+"values": [Vector2(1, 1), Vector2(2.5, 2.5)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -167,6 +165,18 @@ tracks/5/keys = {
 "method": &"_on_game_event"
 }]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Background:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 13.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_403mx"]
 _data = {
@@ -193,13 +203,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="BackgroundAnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../CanvasLayer/PanelContainer")
-libraries = {
-"": SubResource("AnimationLibrary_djkx2")
-}
-script = ExtResource("1_c5kn3")
-
 [node name="SceneAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_403mx")
@@ -212,20 +215,39 @@ self_modulate = Color(0.992157, 0.992157, 0.992157, 1)
 z_index = 5
 
 [node name="Background" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
 z_index = -6
 position = Vector2(0, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background"]
-position = Vector2(7, 132)
+position = Vector2(0, 132)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_plmcx")
 
 [node name="BackCloud" type="Node2D" parent="."]
-z_index = -4
-position = Vector2(0, 1)
+z_index = -9
+position = Vector2(0, -150)
+scale = Vector2(1.285, 1.285)
+
+[node name="Sprite2D" type="Sprite2D" parent="BackCloud"]
+texture = ExtResource("4_d62hq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="BackCloud"]
+texture = ExtResource("5_u5uvo")
+
+[node name="Sprite2D3" type="Sprite2D" parent="BackCloud"]
+texture = ExtResource("6_mo6w2")
+
+[node name="Sprite2D4" type="Sprite2D" parent="BackCloud"]
+texture = ExtResource("7_52enq")
+
+[node name="Sprite2D5" type="Sprite2D" parent="BackCloud"]
+texture = ExtResource("8_clxia")
 
 [node name="FrontCloud" type="Node2D" parent="."]
 z_index = -1
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="FrontCloud"]
 texture = ExtResource("4_d62hq")
@@ -243,6 +265,8 @@ texture = ExtResource("7_52enq")
 texture = ExtResource("8_clxia")
 
 [node name="Statue" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
 z_index = -5
 position = Vector2(0, 1)
 

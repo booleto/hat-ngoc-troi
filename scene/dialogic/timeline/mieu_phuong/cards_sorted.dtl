@@ -61,3 +61,4 @@ join phuong right
 trau (trau_binh_thuong): …Tuy con không hiểu lắm nhưng con sẽ cố gắng hết sức!
 [signal arg="start_minigame"]
 do LevelLoader.load_level_from_name("DRUM_MINIGAME")
+[end_timeline]
