@@ -10,6 +10,7 @@ func _ready() -> void:
 	Dialogic.start("chiem_bao_start")
 	GameEventBus.game_event.connect(_on_game_event)
 	Dialogic.signal_event.connect(_on_game_event)
+	GameEventBus.play_animation.emit("arrow")
 	pass
 
 func _process(delta: float) -> void:
