@@ -1372,6 +1372,7 @@ scale = Vector2(-0.23, 0.23)
 [node name="TrauSprite" type="AnimatedSprite2D" parent="Trau"]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_7u4eb")
+frame = 4
 
 [node name="Sprite2D2" type="Sprite2D" parent="Trau"]
 position = Vector2(666.667, 475.556)

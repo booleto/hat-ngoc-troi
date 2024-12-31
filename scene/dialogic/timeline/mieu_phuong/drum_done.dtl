@@ -1,12 +1,12 @@
 [background scene="res://scene/dialogic/background/PhungEntry1.tscn" fade="0.0"]
 [style name="mainstyle"]
 join trau (trau_binh_thuong) leftmore
-join phuong (phuong_suy_nghi) rightmore
+join phuong (phuong_tay_sau_lung) rightmore
 trau: Thưa bà, vậy là làng con được cứu rồi đúng không ạ?
 phuong: Ai nói ngươi vậy?
 update trau (trau_giai_thich) [animation="Bounce"]
 trau (trau_giai_thich): Dạ….? Nhưng không phải bà mới nói là….
-phuong (phuong_suy_nghi):  Nhìn ra ngoài đi.
+phuong (phuong_tay_sau_lung):  Nhìn ra ngoài đi.
 trau (trau_gai_dau): Sao vẫn chưa có gì xảy ra….?
 phuong (phuong_tay_sau_lung): Nói gì vậy? Không phải mảnh đất kia đã trở nên màu mỡ hơn nhiều rồi hả?
 update trau (trau_co_y_tuong) [animation="Tada"]

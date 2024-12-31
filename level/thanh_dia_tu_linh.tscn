@@ -1,22 +1,20 @@
-[gd_scene load_steps=31 format=3 uid="uid://dfs7tage6ng5e"]
+[gd_scene load_steps=29 format=3 uid="uid://dfs7tage6ng5e"]
 
 [ext_resource type="Script" path="res://script/level_manager/ThanhDiaTuLinh.gd" id="1_dk4yk"]
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="2_8wt16"]
 [ext_resource type="Texture2D" uid="uid://cfhquscqbxm3y" path="res://asset/visual/sprite/background/layer 1.png" id="2_i4b4t"]
 [ext_resource type="Texture2D" uid="uid://co8jpjhxjqsgn" path="res://asset/visual/sprite/background/layer 4.png" id="3_3fwuc"]
-[ext_resource type="Texture2D" uid="uid://8435kv3tfqbx" path="res://asset/visual/sprite/foreground/cửa 1.png" id="3_xtybj"]
-[ext_resource type="Texture2D" uid="uid://rk7ietxqxqev" path="res://asset/visual/sprite/foreground/cửa 2.png" id="4_23xow"]
+[ext_resource type="Texture2D" uid="uid://vr1cgu4qnli6" path="res://asset/visual/sprite/foreground/cửa.png" id="4_d0uqn"]
 [ext_resource type="Script" path="res://script/ui/clickable/Clickable.gd" id="5_141oo"]
-[ext_resource type="Texture2D" uid="uid://mskmayrqox3d" path="res://asset/visual/sprite/foreground/cửa 3.png" id="5_d2adl"]
 [ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="6_256v0"]
 [ext_resource type="Texture2D" uid="uid://bfdlinl0hdr3s" path="res://asset/visual/sprite/ui/mission.png" id="6_qujfx"]
-[ext_resource type="Texture2D" uid="uid://02nkp28uywx4" path="res://asset/visual/sprite/foreground/cửa 4.png" id="6_su2pn"]
 [ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="7_2c5n6"]
-[ext_resource type="Texture2D" uid="uid://b0fyhj1sugjxt" path="res://asset/visual/sprite/foreground/layer 2 (1).png" id="7_3e1hl"]
 [ext_resource type="Texture2D" uid="uid://86tfj55hppcq" path="res://asset/visual/sprite/background/layer 3.png" id="8_6ivcd"]
+[ext_resource type="Texture2D" uid="uid://c4vg50qc53m8a" path="res://asset/visual/sprite/background/layer 2-2.png" id="10_q6ap3"]
 [ext_resource type="Script" path="res://script/ui/button/action/PlayTimelineAction.gd" id="13_xnpvt"]
 [ext_resource type="Script" path="res://script/camera/BoundedCamera.gd" id="15_5hksv"]
 [ext_resource type="Texture2D" uid="uid://dqd8vk1ick3n3" path="res://asset/visual/sprite/ui/GlowArrow.png" id="16_4fgxq"]
+[ext_resource type="Texture2D" uid="uid://dqdfndye7rl4n" path="res://asset/visual/sprite/foreground/ánh sáng.png" id="17_b5ye6"]
 [ext_resource type="Script" path="res://script/ui/button/ButtonHold.gd" id="17_nryqu"]
 [ext_resource type="Script" path="res://script/ui/button/action/CameraMoveAction.gd" id="17_yc2je"]
 
@@ -25,50 +23,74 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Door4/Clickable4/Sprite2D:position")
+tracks/0/path = NodePath("Door1/Clickable/Arrow1:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(550, -450)]
+"values": [Vector2(126, -142)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Door3/Clickable3/Sprite2D:position")
+tracks/1/path = NodePath("Door1/Clickable2/Arrow2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(330, -400)]
+"values": [Vector2(101, -175)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Door2/Clickable2/Sprite2D:position")
+tracks/2/path = NodePath("Door1/Clickable3/Arrow3:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(300, -350)]
+"values": [Vector2(81, -193)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Door1/Clickable/Sprite2D:position")
+tracks/3/path = NodePath("Door1/Clickable4/Arrow4:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(750, -450)]
+"values": [Vector2(119, -126)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Field/Clickable5/ArrowField:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(684, -108.095)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Rock/Clickable6/ArrowRock:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(120.18, -136.78)]
 }
 
 [sub_resource type="Animation" id="Animation_hyub6"]
@@ -78,50 +100,74 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Door1/Clickable/Sprite2D:position")
+tracks/0/path = NodePath("Door1/Clickable/Arrow1:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.833333),
-"transitions": PackedFloat32Array(2.37841, 0.435275),
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(2.37841, 0.392292),
 "update": 0,
-"values": [Vector2(750, -450), Vector2(750, -400)]
+"values": [Vector2(126, -142), Vector2(126, -92)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Door2/Clickable2/Sprite2D:position")
+tracks/1/path = NodePath("Door1/Clickable2/Arrow2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.0104167, 0.833333),
-"transitions": PackedFloat32Array(2.37841, 0.435275),
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(2.37841, 0.392292),
 "update": 0,
-"values": [Vector2(300, -350), Vector2(300, -300)]
+"values": [Vector2(101, -175), Vector2(101, -125)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Door3/Clickable3/Sprite2D:position")
+tracks/2/path = NodePath("Door1/Clickable3/Arrow3:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.0104167, 0.833333),
-"transitions": PackedFloat32Array(2.37841, 0.435275),
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(2.37841, 0.392292),
 "update": 0,
-"values": [Vector2(330, -400), Vector2(330, -350)]
+"values": [Vector2(81, -193), Vector2(81, -143)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Door4/Clickable4/Sprite2D:position")
+tracks/3/path = NodePath("Door1/Clickable4/Arrow4:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.833333),
-"transitions": PackedFloat32Array(2.37841, 0.435275),
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(2.37841, 0.392292),
 "update": 0,
-"values": [Vector2(550, -450), Vector2(550, -400)]
+"values": [Vector2(119, -126), Vector2(119, -76)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Field/Clickable5/ArrowField:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(2.37841, 0.392292),
+"update": 0,
+"values": [Vector2(684, -108.095), Vector2(684, -58.095)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Rock/Clickable6/ArrowRock:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(2.37841, 0.392292),
+"update": 0,
+"values": [Vector2(120.18, -136.78), Vector2(120.18, -86.78)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tn842"]
@@ -175,26 +221,26 @@ script = ExtResource("2_8wt16")
 
 [node name="Sky" type="Sprite2D" parent="."]
 texture = ExtResource("2_i4b4t")
+metadata/_edit_lock_ = true
 
 [node name="Door1" type="Sprite2D" parent="."]
-position = Vector2(-1037, 24)
-scale = Vector2(0.38, 0.38)
-texture = ExtResource("3_xtybj")
+texture = ExtResource("4_d0uqn")
+metadata/_edit_lock_ = true
 
 [node name="Clickable" type="Control" parent="Door1" node_paths=PackedStringArray("arrow_sprite")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -692.0
-offset_top = -985.5
-offset_right = -692.0
-offset_bottom = -985.5
+offset_left = -1111.0
+offset_top = -204.0
+offset_right = -3543.0
+offset_bottom = -676.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("5_141oo")
-arrow_sprite = NodePath("Sprite2D")
+arrow_sprite = NodePath("Arrow1")
 
 [node name="Button" type="Button" parent="Door1/Clickable"]
 self_modulate = Color(1, 1, 1, 0)
@@ -208,38 +254,33 @@ mouse_filter = 1
 script = ExtResource("6_256v0")
 action = SubResource("Resource_4swsp")
 
-[node name="Sprite2D" type="TextureRect" parent="Door1/Clickable"]
+[node name="Arrow1" type="TextureRect" parent="Door1/Clickable"]
 visible = false
 layout_mode = 0
-offset_left = 750.0
-offset_top = -450.0
-offset_right = 1271.0
-offset_bottom = 40.0
+offset_left = 126.0
+offset_top = -142.0
+offset_right = 647.0
+offset_bottom = 348.0
 rotation = 0.785398
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("6_qujfx")
 
-[node name="Door2" type="Sprite2D" parent="."]
-position = Vector2(-546, -90)
-scale = Vector2(0.49, 0.49)
-texture = ExtResource("4_23xow")
-
-[node name="Clickable2" type="Control" parent="Door2" node_paths=PackedStringArray("arrow_sprite")]
+[node name="Clickable2" type="Control" parent="Door1" node_paths=PackedStringArray("arrow_sprite")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -298.0
-offset_top = -413.5
-offset_right = -298.0
-offset_bottom = -413.5
+offset_left = -507.0
+offset_top = -200.0
+offset_right = -3022.0
+offset_bottom = -820.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("5_141oo")
-arrow_sprite = NodePath("Sprite2D")
+arrow_sprite = NodePath("Arrow2")
 
-[node name="Button" type="Button" parent="Door2/Clickable2"]
+[node name="Button" type="Button" parent="Door1/Clickable2"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -251,38 +292,33 @@ mouse_filter = 1
 script = ExtResource("6_256v0")
 action = SubResource("Resource_4swsp")
 
-[node name="Sprite2D" type="TextureRect" parent="Door2/Clickable2"]
+[node name="Arrow2" type="TextureRect" parent="Door1/Clickable2"]
 visible = false
 layout_mode = 0
-offset_left = 300.0
-offset_top = -350.0
-offset_right = 821.0
-offset_bottom = 140.0
+offset_left = 101.0
+offset_top = -175.0
+offset_right = 622.0
+offset_bottom = 315.0
 rotation = 0.785398
-scale = Vector2(0.385, 0.385)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("6_qujfx")
 
-[node name="Door3" type="Sprite2D" parent="."]
-position = Vector2(503, -75)
-scale = Vector2(0.45, 0.45)
-texture = ExtResource("5_d2adl")
-
-[node name="Clickable3" type="Control" parent="Door3" node_paths=PackedStringArray("arrow_sprite")]
+[node name="Clickable3" type="Control" parent="Door1" node_paths=PackedStringArray("arrow_sprite")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -358.0
-offset_top = -422.5
-offset_right = -358.0
-offset_bottom = -422.5
+offset_left = 261.0
+offset_top = -171.0
+offset_right = -2283.0
+offset_bottom = -809.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("5_141oo")
-arrow_sprite = NodePath("Sprite2D")
+arrow_sprite = NodePath("Arrow3")
 
-[node name="Button" type="Button" parent="Door3/Clickable3"]
+[node name="Button" type="Button" parent="Door1/Clickable3"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -294,38 +330,33 @@ mouse_filter = 1
 script = ExtResource("6_256v0")
 action = SubResource("Resource_4swsp")
 
-[node name="Sprite2D" type="TextureRect" parent="Door3/Clickable3"]
+[node name="Arrow3" type="TextureRect" parent="Door1/Clickable3"]
 visible = false
 layout_mode = 0
-offset_left = 330.0
-offset_top = -400.0
-offset_right = 851.0
-offset_bottom = 90.0
+offset_left = 81.0
+offset_top = -193.0
+offset_right = 602.0
+offset_bottom = 297.0
 rotation = 0.785398
-scale = Vector2(0.385, 0.385)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("6_qujfx")
 
-[node name="Door4" type="Sprite2D" parent="."]
-position = Vector2(1016, 24)
-scale = Vector2(0.38, 0.38)
-texture = ExtResource("6_su2pn")
-
-[node name="Clickable4" type="Control" parent="Door4" node_paths=PackedStringArray("arrow_sprite")]
+[node name="Clickable4" type="Control" parent="Door1" node_paths=PackedStringArray("arrow_sprite")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -634.0
-offset_top = -916.5
-offset_right = -634.0
-offset_bottom = -916.5
+offset_left = 806.0
+offset_top = -204.0
+offset_right = -1669.0
+offset_bottom = -669.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("5_141oo")
-arrow_sprite = NodePath("Sprite2D")
+arrow_sprite = NodePath("Arrow4")
 
-[node name="Button" type="Button" parent="Door4/Clickable4"]
+[node name="Button" type="Button" parent="Door1/Clickable4"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -337,59 +368,121 @@ mouse_filter = 1
 script = ExtResource("6_256v0")
 action = SubResource("Resource_jew5c")
 
-[node name="Sprite2D" type="TextureRect" parent="Door4/Clickable4"]
+[node name="Arrow4" type="TextureRect" parent="Door1/Clickable4"]
 visible = false
 layout_mode = 0
-offset_left = 550.0
-offset_top = -450.0
-offset_right = 1071.0
-offset_bottom = 40.0
+offset_left = 119.0
+offset_top = -126.0
+offset_right = 640.0
+offset_bottom = 364.0
 rotation = 0.785398
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("6_qujfx")
 
-[node name="Field" type="Sprite2D" parent="."]
-position = Vector2(-21, 207)
-scale = Vector2(0.38, 0.38)
-texture = ExtResource("7_3e1hl")
+[node name="Door2" type="Sprite2D" parent="."]
+position = Vector2(-546, -90)
+scale = Vector2(0.49, 0.49)
 
-[node name="Button" type="Button" parent="Field"]
+[node name="Door3" type="Sprite2D" parent="."]
+position = Vector2(503, -75)
+scale = Vector2(0.45, 0.45)
+
+[node name="Door4" type="Sprite2D" parent="."]
+position = Vector2(1016, 24)
+scale = Vector2(0.38, 0.38)
+
+[node name="Field" type="Sprite2D" parent="."]
+position = Vector2(-21, 280.095)
+texture = ExtResource("10_q6ap3")
+
+[node name="Clickable5" type="Control" parent="Field" node_paths=PackedStringArray("arrow_sprite")]
+z_index = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1937.0
-offset_top = -357.0
-offset_right = -1937.0
-offset_bottom = -357.0
+offset_left = -661.0
+offset_top = -156.0
+offset_right = -1054.0
+offset_bottom = -246.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("5_141oo")
+arrow_sprite = NodePath("ArrowField")
+
+[node name="Button2" type="Button" parent="Field/Clickable5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
 flat = true
 script = ExtResource("6_256v0")
 action = SubResource("Resource_uaglt")
 
+[node name="ArrowField" type="TextureRect" parent="Field/Clickable5"]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 684.0
+offset_top = -108.095
+offset_right = 1205.0
+offset_bottom = 381.905
+rotation = 0.785398
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_qujfx")
+
 [node name="Rock" type="Sprite2D" parent="."]
-position = Vector2(647, 216)
-scale = Vector2(0.41, 0.41)
+position = Vector2(-7.18, -25.72)
 texture = ExtResource("8_6ivcd")
 
-[node name="Button" type="Button" parent="Rock"]
+[node name="Clickable6" type="Control" parent="Rock" node_paths=PackedStringArray("arrow_sprite")]
+z_index = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -328.5
-offset_top = -351.5
-offset_right = -328.5
-offset_bottom = -351.5
+offset_left = -114.0
+offset_top = -123.5
+offset_right = -114.0
+offset_bottom = -123.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("5_141oo")
+arrow_sprite = NodePath("ArrowRock")
+
+[node name="Button" type="Button" parent="Rock/Clickable6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
 flat = true
 script = ExtResource("6_256v0")
 action = SubResource("Resource_0v0gu")
 
+[node name="ArrowRock" type="TextureRect" parent="Rock/Clickable6"]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 120.18
+offset_top = -136.78
+offset_right = 641.18
+offset_bottom = 353.22
+rotation = 0.785398
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_qujfx")
+
 [node name="Cloud" type="Sprite2D" parent="."]
 position = Vector2(0, 240)
-scale = Vector2(0.46, 0.46)
 texture = ExtResource("3_3fwuc")
+metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("15_5hksv")
@@ -477,3 +570,8 @@ texture_normal = ExtResource("16_4fgxq")
 script = ExtResource("17_nryqu")
 on_press = SubResource("Resource_jhoob")
 on_release = SubResource("Resource_gncde")
+
+[node name="Light" type="Sprite2D" parent="."]
+position = Vector2(88, -48)
+texture = ExtResource("17_b5ye6")
+metadata/_edit_lock_ = true

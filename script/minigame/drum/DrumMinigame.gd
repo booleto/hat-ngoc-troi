@@ -241,3 +241,5 @@ func update_trau_sprite():
 	elif trau_sprite.frame == 1:
 		trau_sprite.set_frame_and_progress(0, 0)
 		trau_sprite.queue_redraw()
+	else:
+		trau_sprite.set_frame_and_progress(0, 0)

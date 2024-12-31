@@ -1,5 +1,5 @@
 [style name="mainstyle"]
-join trau (trau_gai_dau) left [animation="Instant In"]
+join trau (trau_gai_dau) leftmore [animation="Instant In"]
 [signal arg="darken_bg"]
 trau: Ủa?
 [signal arg="lighten_bg"]
