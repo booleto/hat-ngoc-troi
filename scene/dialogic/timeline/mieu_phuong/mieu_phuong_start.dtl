@@ -4,6 +4,7 @@ join trau (trau_binh_thuong) leftmore
 trau: Woa, trong này rộng thật.
 trau: Mà sao không thấy ai ở đây nhỉ? Chắc mình đi ngó qua nơi này một chút.
 trau (trau_gai_dau): Hửm? Hình như có gì đó rớt ở đây.
+[wait time="0.2"]
 leave trau
 [background scene="res://scene/dialogic/background/TheLuaKho.tscn" fade="0.0"]
 [signal arg="lighten_bg"]

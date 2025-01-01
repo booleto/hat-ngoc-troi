@@ -1,110 +1,55 @@
 [style name="mainstyle"]
-join trau left
+join trau leftmore
 [signal arg="sort_done"]
 [signal arg="darken_bg"]
 trau: Chắc ổn rồi đó.
 [signal arg="lighten_bg"]
 leave trau
 [background scene="res://scene/dialogic/background/PhungEntry1.tscn" fade="3.0"]
+[wait time="1.0"]
 [wait_input]
 [background scene="res://scene/dialogic/background/PhungEntry2.tscn" fade="1.0"]
-[wait_input]
+[wait time="1.0"]
+[wait_input hide_text="false"]
 [background scene="res://scene/dialogic/background/PhungEntry3.tscn" fade="1.0"]
-[wait_input]
-[background scene="PhungEntry4.tscn" fade="1.0"]
-[wait_input]
-[background scene="PhungEntry1.tscn" fade="1.0"]
+[wait time="1.0"]
+[wait_input hide_text="false"]
+[background scene="res://scene/dialogic/background/PhungEntry4.tscn" fade="1.0"]
+[wait time="1.0"]
+[wait_input hide_text="false"]
+[background scene="res://scene/dialogic/background/PhungEntry1.tscn" fade="1.0"]
 join trau (trau_troi_oi) left [animation="Fade In"]
-join phuong (phuong_tay_sau_lung) right [animation="Slide In Down" length="1.5"]
+join phuong (phuong_tay_sau_lung) rightmore [animation="Slide In Down" length="1.5"]
 phuong (phuong_normal): Chậc- Tên nào giờ này đến phá giấc ngủ của ta vậy?
-update trau [animation="Bounce"]
+update trau [animation="Shake X"]
 trau (trau_giai_thich): D-Dạ……
-trau: (Bộ cánh to quá…. Lông vũ thì vàng óng, thật sặc sỡ….)
 phuong: Ngươi là kẻ dám quấy rối giấc ngủ của ta à?....Chỉ là một con trâu mà tự mò đến thánh địa của ta làm gì?
-phuong: Tên nhóc nhà ngươi là ai, mau xưng tên! Sao có thể bén mảng tới đây quấy phá được?
 trau (trau_troi_oi): T-Thưa bà….
+phuong: Tên nhóc nhà ngươi là ai, mau xưng tên! Sao có thể bén mảng tới đây quấy phá được?
 phuong: Nói nhanh gọn, đừng phí thời gian của ta.
 trau (trau_giai_thich): Thưa Bà Phượng! Con là {ten_trau} đến từ làng Trâu, được chỉ dẫn tìm đến nơi đây để thưa chuyện với thần linh về nạn hạn hán ở quê nhà, nếu chúng con có lỡ đắc tội với thánh thần mong được giơ cao đánh khẽ mà chỉ cho cách chuộc tội….
-phuong: Ồ, ra là chuyện này hả?
-phuong: ....
-phuong (phuong_normal): Haha, tưởng cái gì cơ chứ.
 trau (trau_giai_thich): ….T-Thưa bà, bà sẽ tha thứ cho chúng con c-
 phuong (phuong_normal): Mơ đi! Các ngươi tuy không năm nào quên dâng hương quả, nhưng có phải đã quá phụ thuộc vào chúng ta và tham lam không?
 phuong: Lúa tốt thì cầu cho lúa tốt hơn, tham ăn lười làm để sâu hại quấy phá thì lại chê trách thần thánh không có mắt, hỏi xem thần thánh phương nào có thể nhịn nhục tất thảy những điều sai quấy của nhân giới?
-trau (trau_giai_thich): Thưa bà, con đã được nghe rằng nông dân chúng con đã khiến các thần nổi giận, vậy nên con đã một mình tìm đến để chịu sự trừng phạt thích đáng, chỉ mong cứu lấy được mùa vụ cho quê hương con không lâm vào cảnh đói khổ.
-phuong: Chỉ có ngươi?
-- Chỉ một mình con thôi.
-- (Chỉ im lặng gật đầu)
-- Bà không tin con làm được việc sao?
-phuong: Dựa trên cái gì để ta tin ngươi được?
-trau: Bà sai gì con cũng làm, kể cả muốn xẻo thịt con ra cũng được ạ.
-phuong: Thôi khỏi, ta ăn chay.
-trau: ….Vậy con có thể làm gì không ạ?
-phuong: Chà, nếu ngươi có đáng tin thật thì ta cũng không nghĩ mấy kẻ khác trong làng của ngươi sẽ đáng tin cậy đâu nhóc. Ta đã thấy tất cả rồi, đừng nghĩ ta khờ.
-trau: Dạ thưa, con nào dám….
-trau: Con nhất định sẽ nói với bọn họ, để bọn họ sẽ phải suy nghĩ lại mà bỏ tính tham lam ấy, chúng con xin nhận lỗi lầm này và chấp nhận mọi sự trừng phạt của Bà, chỉ mong bà giúp cuộc sống của chúng con được bình an trở lại…
-phuong: Ngươi sẽ làm gì để nói với đám người đó được?
-trau: Con….
-phuong: Thế chẳng phải những điều ngươi vừa hứa hẹn chỉ là nói suông thôi sao? Ta không rảnh rỗi nghe ngươi tán dóc.
-phuong: Ngươi xem, từ khi bước vào đây đến giờ cũng chỉ toàn là những lời nói suông.  Thôi ta không có thừa thãi thời gian đâu.
-trau: ….
-- Con nhất định sẽ không làm bà thất vọng!
-- Chỉ một chút thôi ạ!
-- Bà ơi hãy nghe con nói!
-trau: Con xin bà! Bà có đánh chết con cũng được, nhưng con phải cứu lấy cánh đồng lúa của quê hương con… Xin bà hãy rủ lòng thương!
-phuong: Ngươi phiền phức thật đấy.
+phuong: Đúng là phiền phức, ta không có thời gian đâu.
 unknown: (Thôi nào, thằng bé trông có vẻ thành khẩn đó, sao không cho nó chút cơ hội nhỉ?)
+leave trau [animation="Slide Out Right"]
+update phuong center [move_time="0.5"]
 phuong: (….?)
-phuong (phuong_suy_nghi): (Hôm nay ông cũng rảnh nhỉ, ông già?)
+phuong (phuong_giai_thich): (Hôm nay ông cũng rảnh nhỉ, ông già?)
 phuong: (Tôi cũng cần được nghỉ ngơi chứ, hơi đâu mà ông bày cho thằng nhóc này tới phá ta vậy?)
 unknown: (Haha, lỗi ta, lỗi ta.)
 unknown: (Đằng nào thằng nhóc cũng bất chấp tới vậy rồi, sao không thử thách nó tí nhỉ?)
 phuong: (…..)
-phuong (phuong_normal): (Thôi được rồi, này là ta nể ông.)
-phuong: Nhóc con.
-update trau [animation="Bounce"]
+phuong: (Thôi được rồi, này là ta nể ông.)
+phuong (phuong_normal): Nhóc con.
+join trau (trau_giai_thich) leftmore [animation="Slide In Left"]
+update phuong rightmore [move_time="0.5"]
 trau (trau_giai_thich): D-dạ….?
 phuong: Ta sẽ cho ngươi cơ hội. Tất nhiên là phải vượt qua bài kiểm tra của ta đã.
 update trau (trau_happi) [animation="Tada"]
 trau (trau_happi): Ôi, thật ạ? Con đội ơn bà nhiều lắm!
-phuong: Giờ thì trả lời những gì ta hỏi sau đây.
-trau (trau_binh_thuong): Con xin nghe ạ.
-phuong (phuong_giai_thich): Ta đây vốn chuộng văn chương, để xem ngươi có thể khiến ta hài lòng không nào. Nói cho ta nghe\:
-label quiz1
-update trau (trau_gai_dau)
-phuong (phuong_giai_thich): [center][i][b][Thân em như ___,[/b][/i]\
-[i][b]Xanh cây tốt rễ, phởn phơ phơi màu.][/b][/i][/center]
-- Lúa nếp tơ
-	jump right
-- Mạ non xanh
-	jump wrong
-- Lúa chín thơm
-	jump wrong
-label wrong
-phuong (phuong_normal): Đơn giản vậy mà ngươi cũng không biết, ngươi có chắc ngươi làm được trò trống gì không vậy?
-update trau (trau_troi_oi) [animation="Bounce"]
-trau (trau_troi_oi): Úi, Bà ơi, xin hãy cho con thêm cơ hội nữa!
-jump quiz1
-label right
-phuong (phuong_normal): Hừm, mới có một câu thôi.
-label quiz2
-update trau (trau_gai_dau)
-phuong (phuong_giai_thich): Nghi lễ nào đòi hỏi Thiên Tử tức Hoàng Thượng của các ngươi phải đích thân đi cày?
-- Lễ Tịch Điền
-	jump right2
-- Lễ Tiến Xuân Ngưu
-	jump wrong2
-- Lễ Cầu Mưa
-	jump wrong2
-label wrong2
-phuong (phuong_tay_sau_lung): Ngươi thật sự là nông dân đấy à….?
-jump quiz2
-label right2
-update trau (trau_happi)
-phuong (phuong_normal): Cũng khá hơn ta nghĩ đấy.
-update trau (trau_binh_thuong)
-phuong (phuong_suy_nghi): Tốt, đằng nào cũng nghĩ ngươi đã không quản đường xa lặn lội đến đây một mình thưa chuyện cũng khiến ta động lòng.
-phuong (phuong_suy_nghi): Để không mang tiếng ức hiếp lũ phàm nhân mắt thịt các ngươi, ta có bồ lúa vàng đang phơi nắng ngoài sân. Nếu như ngươi có thể vượt qua được bài kiểm tra của ta thì ta sẽ ban cho món báu vật ẩn sâu bên trong bồ lúa ấy.
+phuong (phuong_tay_sau_lung): Để không mang tiếng ức hiếp lũ phàm nhân mắt thịt các ngươi, ta có bồ lúa vàng đang phơi nắng ngoài sân. Nếu như ngươi có thể vượt qua được bài kiểm tra của ta thì ta sẽ ban cho món báu vật ẩn sâu bên trong bồ lúa ấy.
 leave --All--
 phuong: Nhìn ra ngoài kia đi.
 [background scene="res://scene/dialogic/background/DrumOutside.tscn" fade="0.5"]
@@ -116,3 +61,4 @@ join phuong right
 trau (trau_binh_thuong): …Tuy con không hiểu lắm nhưng con sẽ cố gắng hết sức!
 [signal arg="start_minigame"]
 do LevelLoader.load_level_from_name("DRUM_MINIGAME")
+[end_timeline]

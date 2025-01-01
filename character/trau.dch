@@ -13,7 +13,7 @@
 "display_name": "{ten_trau}",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 150),
+"offset": Vector2(0, 0),
 "portraits": {
 "trau_binh_thuong": {
 "export_overrides": {
@@ -88,5 +88,5 @@
 "scene": ""
 }
 },
-"scale": 1.0
+"scale": 0.85
 }

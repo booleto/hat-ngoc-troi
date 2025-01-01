@@ -13,7 +13,7 @@
 "display_name": "Phượng Thần",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 150),
+"offset": Vector2(0, 0),
 "portraits": {
 "phuong_giai_thich": {
 "export_overrides": {
@@ -33,15 +33,6 @@
 "scale": 1,
 "scene": ""
 },
-"phuong_suy_nghi": {
-"export_overrides": {
-"image": "\"res://asset/visual/sprite/character/Phuong/Phung_4.png\""
-},
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
 "phuong_tay_sau_lung": {
 "export_overrides": {
 "image": "\"res://asset/visual/sprite/character/Phuong/Phung_2.png\""
@@ -52,5 +43,5 @@
 "scene": ""
 }
 },
-"scale": 1.0
+"scale": 0.9
 }

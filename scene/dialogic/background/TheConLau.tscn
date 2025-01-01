@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://m86xf0rxu5jc"]
+[gd_scene load_steps=6 format=3 uid="uid://m86xf0rxu5jc"]
 
 [ext_resource type="Script" path="res://addons/dialogic/Modules/Background/dialogic_background.gd" id="1_jylfh"]
 [ext_resource type="Texture2D" uid="uid://b7wfg12q555ir" path="res://asset/visual/sprite/ui/item frame.png" id="2_p7mgf"]
-[ext_resource type="Texture2D" uid="uid://dbxffeclc60yw" path="res://asset/visual/sprite/item/Thẻ 7 (1).png" id="3_l2kq1"]
+[ext_resource type="Texture2D" uid="uid://cis80puv10bpl" path="res://asset/visual/sprite/item/Thẻ 7.png" id="3_yph1d"]
+[ext_resource type="FontFile" uid="uid://cbgdlabaddx7x" path="res://asset/font/Montserrat-Medium.otf" id="4_lqrw2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m3nli"]
+font = ExtResource("4_lqrw2")
+font_size = 32
 
 [node name="The" type="PanelContainer"]
 z_index = -1
@@ -17,6 +22,7 @@ script = ExtResource("1_jylfh")
 layout_mode = 2
 
 [node name="ItemFrame" type="Control" parent="CenterContainer"]
+visible = false
 layout_mode = 2
 mouse_filter = 2
 
@@ -52,11 +58,32 @@ layout_mode = 2
 [node name="TextureRect2" type="TextureRect" parent="CenterContainer/AspectRatioContainer/Control"]
 z_index = 1
 custom_minimum_size = Vector2(0, 550)
-layout_mode = 2
-offset_left = -54.0
-offset_top = -325.0
-offset_right = 54.1356
-offset_bottom = 225.0
-texture = ExtResource("3_l2kq1")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.375
+offset_top = -305.0
+offset_right = 133.375
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_yph1d")
 expand_mode = 3
 stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_top = 670
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/CenterContainer"]
+layout_mode = 2
+text = "[Bấm bất kỳ đâu để tiếp tục]"
+label_settings = SubResource("LabelSettings_m3nli")
