@@ -132,6 +132,7 @@ expand_mode = 5
 script = ExtResource("12_ux1y5")
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/CardList/LuaKho"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -222,6 +223,7 @@ script = ExtResource("12_ux1y5")
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/CenterContainer/CardList/ConLau"]
 visible = false
+z_index = 2
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
