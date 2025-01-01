@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cgtirnuuycc84"]
+[gd_scene load_steps=25 format=3 uid="uid://cgtirnuuycc84"]
 
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="1_20boj"]
 [ext_resource type="Script" path="res://script/level_manager/CongDenTuLinh.gd" id="1_bspnt"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://biu836f8gx3d4" path="res://asset/visual/sprite/foreground/tượng lân.png" id="4_8j0fk"]
 [ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="5_sgh6v"]
 [ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="6_v62vp"]
+[ext_resource type="Material" uid="uid://l8yqks5qqaex" path="res://scene/vfx/shader_material/hover.tres" id="8_scsdn"]
 
 [sub_resource type="Animation" id="Animation_3v6yp"]
 length = 0.001
@@ -200,7 +201,7 @@ scale = Vector2(0.238, 0.238)
 mouse_filter = 2
 texture = ExtResource("3_opnfr")
 
-[node name="Button" type="Button" parent="CanvasLayer/Background/Gate/GateSprite"]
+[node name="Button" type="Button" parent="CanvasLayer/Background/Gate/GateSprite" groups=["cong_den_tu_linh_buttons"]]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -210,6 +211,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_sgh6v")
 action = SubResource("Resource_y54ax")
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Background/Gate/GateSprite/Button"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1112.5
+offset_top = -1092.0
+offset_right = 1112.5
+offset_bottom = 1092.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Background/Gate/GateSprite/Button/CenterContainer"]
+material = ExtResource("8_scsdn")
+custom_minimum_size = Vector2(2225, 2184)
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.7235, 0.21, 1)
 
 [node name="Building" type="Panel" parent="CanvasLayer/Background"]
 layout_mode = 2
@@ -231,7 +255,7 @@ mouse_filter = 2
 texture = SubResource("ViewportTexture_okbmt")
 flip_h = true
 
-[node name="Button" type="Button" parent="CanvasLayer/Background/Lan2/Sprite2D"]
+[node name="Button" type="Button" parent="CanvasLayer/Background/Lan2/Sprite2D" groups=["cong_den_tu_linh_buttons"]]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -241,6 +265,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_sgh6v")
 action = SubResource("Resource_afm3b")
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Background/Lan2/Sprite2D/Button"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -540.0
+offset_right = 450.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Background/Lan2/Sprite2D/Button/CenterContainer"]
+material = ExtResource("8_scsdn")
+custom_minimum_size = Vector2(430, 680)
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.7235, 0.21, 1)
 
 [node name="Lan1" type="Control" parent="CanvasLayer/Background"]
 layout_mode = 2
@@ -256,7 +303,7 @@ scale = Vector2(0.375, 0.375)
 mouse_filter = 2
 texture = SubResource("ViewportTexture_pvvwd")
 
-[node name="Button" type="Button" parent="CanvasLayer/Background/Lan1/Sprite2D"]
+[node name="Button" type="Button" parent="CanvasLayer/Background/Lan1/Sprite2D" groups=["cong_den_tu_linh_buttons"]]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -267,6 +314,29 @@ grow_vertical = 2
 theme = SubResource("Theme_8rj8s")
 script = ExtResource("5_sgh6v")
 action = SubResource("Resource_54gl0")
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Background/Lan1/Sprite2D/Button"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -540.0
+offset_right = 450.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Background/Lan1/Sprite2D/Button/CenterContainer"]
+material = ExtResource("8_scsdn")
+custom_minimum_size = Vector2(430, 680)
+layout_mode = 2
+mouse_filter = 2
+color = Color(1, 0.7235, 0.21, 1)
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true

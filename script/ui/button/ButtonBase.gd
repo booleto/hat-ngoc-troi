@@ -11,6 +11,8 @@ func _ready() -> void:
 	self.button_up.connect(_on_trigger)
 	self.mouse_entered.connect(_on_mouse_entered)
 	self.mouse_exited.connect(_on_mouse_exited)
+	if glow_obj != null:
+		glow_obj.visible = false
 
 func _on_trigger() -> void:
 	action.execute()
@@ -21,12 +23,14 @@ func _on_trigger() -> void:
 func _on_mouse_entered():
 	if self.is_in_group("main_menu_buttons"):
 		$Label.label_settings.font_color = Color.SADDLE_BROWN
-	elif self.is_in_group("den_phuong_buttons"):
+	elif self.is_in_group("den_phuong_buttons") or self.is_in_group("cong_den_tu_linh_buttons"):
 		glow_obj.visible = true
+		print("on")
 
 
 func _on_mouse_exited():
 	if self.is_in_group("main_menu_buttons"):
 		$Label.label_settings.font_color = Color.WHITE
-	elif self.is_in_group("den_phuong_buttons"):
+	elif self.is_in_group("den_phuong_buttons") or self.is_in_group("cong_den_tu_linh_buttons"):
 		glow_obj.visible = false
+		print("off")
