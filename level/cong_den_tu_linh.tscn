@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://biu836f8gx3d4" path="res://asset/visual/sprite/foreground/tượng lân.png" id="4_8j0fk"]
 [ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="5_sgh6v"]
 [ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="6_v62vp"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="Material" uid="uid://dvx40hwpdgki0" path="res://scene/vfx/shader_material/hover.tres" id="8_scsdn"]
+>>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://1p1x8tj2vilo" path="res://asset/visual/sprite/foreground/layer 4.png" id="9_hh42w"]
 
 [sub_resource type="Animation" id="Animation_3v6yp"]

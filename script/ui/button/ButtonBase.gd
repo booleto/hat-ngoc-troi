@@ -16,8 +16,24 @@ func _on_trigger() -> void:
 
 
 func _on_mouse_entered():
+<<<<<<< Updated upstream
 	$Label.label_settings.font_color = Color.SADDLE_BROWN
 
 
 func _on_mouse_exited():
 	$Label.label_settings.font_color = Color.WHITE
+=======
+	if self.is_in_group("main_menu_buttons"):
+		$Label.label_settings.font_color = Color.SADDLE_BROWN
+	elif self.is_in_group("den_phuong_buttons") or self.is_in_group("cong_den_tu_linh_buttons"):
+		glow_obj.visible = true
+		#print("on")
+
+
+func _on_mouse_exited():
+	if self.is_in_group("main_menu_buttons"):
+		$Label.label_settings.font_color = Color.WHITE
+	elif self.is_in_group("den_phuong_buttons") or self.is_in_group("cong_den_tu_linh_buttons"):
+		glow_obj.visible = false
+		#print("off")
+>>>>>>> Stashed changes

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dfs7tage6ng5e"]
+[gd_scene load_steps=31 format=3 uid="uid://dfs7tage6ng5e"]
 
 [ext_resource type="Script" path="res://script/level_manager/ThanhDiaTuLinh.gd" id="1_dk4yk"]
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="2_8wt16"]
@@ -185,9 +185,13 @@ script = ExtResource("7_2c5n6")
 event_name = "door_tu"
 event_type = 1
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jnsu6"]
+
 [sub_resource type="Resource" id="Resource_uaglt"]
 script = ExtResource("13_xnpvt")
 timeline = "tdtl_ruong"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_biqdo"]
 
 [sub_resource type="Resource" id="Resource_0v0gu"]
 script = ExtResource("13_xnpvt")
@@ -419,6 +423,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jnsu6")
 flat = true
 script = ExtResource("6_256v0")
 action = SubResource("Resource_uaglt")
@@ -463,6 +468,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme_override_styles/focus = SubResource("StyleBoxEmpty_biqdo")
 flat = true
 script = ExtResource("6_256v0")
 action = SubResource("Resource_0v0gu")
