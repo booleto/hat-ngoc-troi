@@ -5,4 +5,5 @@ trau: Phù….cuối cùng cũng đến nơi….
 trau: Đây là Đền Tứ Linh sao? Cái cổng trông lớn thật.
 trau (trau_binh_thuong): Thôi được rồi, phải nhanh nhanh vào trong thôi.
 [signal arg="lighten_bg"]
+[signal arg="open_gate_start"]
 [end_timeline]
