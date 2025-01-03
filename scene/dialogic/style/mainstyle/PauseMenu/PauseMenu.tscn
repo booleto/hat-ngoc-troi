@@ -83,6 +83,7 @@ script = ExtResource("10_74am2")
 action_to_do = 2
 
 [node name="PauseMenu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -1,0 +1,263 @@
+[gd_scene load_steps=23 format=3 uid="uid://3ujauoukr6f1"]
+
+[ext_resource type="Script" path="res://script/level_manager/LevelQuy.gd" id="1_0julx"]
+[ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="2_4re7o"]
+[ext_resource type="Texture2D" uid="uid://budxiifvek3jm" path="res://asset/visual/sprite/background/đền quy.png" id="3_1g75x"]
+[ext_resource type="Texture2D" uid="uid://b3a6v73dm2ijr" path="res://asset/visual/sprite/foreground/layer2.png" id="4_jbtc4"]
+[ext_resource type="Texture2D" uid="uid://d37wtxbobgst7" path="res://asset/visual/sprite/foreground/tượng bàn thờ 2.png" id="5_vavgd"]
+[ext_resource type="Texture2D" uid="uid://b5fv01vci3tv4" path="res://asset/visual/sprite/foreground/layer3.png" id="6_weu6h"]
+[ext_resource type="Texture2D" uid="uid://56ulwslsd2v3" path="res://asset/visual/sprite/foreground/ly vàng 1.png" id="7_7r248"]
+[ext_resource type="Texture2D" uid="uid://dolerunkbb6xt" path="res://asset/visual/sprite/foreground/ly vàng 2.png" id="8_esl1c"]
+[ext_resource type="Texture2D" uid="uid://cechlcvoyo2k8" path="res://asset/visual/sprite/foreground/rùa vàng.png" id="9_kf588"]
+[ext_resource type="Texture2D" uid="uid://oaihk8fcsv8v" path="res://asset/visual/sprite/foreground/lọ hoa.png" id="10_scoot"]
+[ext_resource type="Texture2D" uid="uid://ct8t1pqep3h03" path="res://asset/visual/sprite/foreground/mâm ngũ quả.png" id="11_p5ig6"]
+[ext_resource type="Texture2D" uid="uid://c4vboqsl2qyps" path="res://asset/visual/sprite/foreground/bình nhang.png" id="12_wadhk"]
+[ext_resource type="Texture2D" uid="uid://272eutjyvus7" path="res://asset/visual/sprite/foreground/bàn thờ.png" id="13_a63tj"]
+[ext_resource type="Texture2D" uid="uid://dhj2edi0ex026" path="res://asset/visual/sprite/foreground/bàn 1.png" id="14_op1pg"]
+[ext_resource type="Texture2D" uid="uid://cbj8pmyhjubxx" path="res://asset/visual/sprite/foreground/ấm trà.png" id="15_cnv0a"]
+[ext_resource type="Texture2D" uid="uid://bqy3hgdrkkr8s" path="res://asset/visual/sprite/foreground/hộp lá trà.png" id="16_r7f5r"]
+[ext_resource type="Texture2D" uid="uid://caeps7sg45tal" path="res://asset/visual/sprite/foreground/tách trà.png" id="17_ucl6k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_naprw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yifoo"]
+texture = ExtResource("3_1g75x")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dl3j2"]
+texture = ExtResource("4_jbtc4")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blmdm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_detail = 9
+shadow_color = Color(1, 0.7725, 0.09, 0.8)
+shadow_size = 15
+
+[sub_resource type="Theme" id="Theme_b162p"]
+Button/styles/hover = SubResource("StyleBoxFlat_blmdm")
+
+[node name="LevelQuy" type="Node2D"]
+script = ExtResource("1_0julx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SceneAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+script = ExtResource("2_4re7o")
+
+[node name="MainPanel" type="PanelContainer" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_naprw")
+
+[node name="Background" type="Panel" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yifoo")
+
+[node name="Pillars" type="Panel" parent="CanvasLayer/MainPanel"]
+z_index = 1
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dl3j2")
+
+[node name="StatueMid2" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainPanel/StatueMid2"]
+layout_mode = 0
+offset_left = 860.645
+offset_top = 406.975
+offset_right = 1988.65
+offset_bottom = 1861.97
+scale = Vector2(0.185, 0.185)
+mouse_filter = 2
+texture = ExtResource("5_vavgd")
+
+[node name="Curtain" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainPanel/Curtain"]
+layout_mode = 0
+offset_left = 676.0
+offset_top = 212.0
+offset_right = 3074.0
+offset_bottom = 1862.0
+scale = Vector2(0.235, 0.235)
+mouse_filter = 2
+texture = ExtResource("6_weu6h")
+
+[node name="GoldVaseLeft" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainPanel/GoldVaseLeft"]
+layout_mode = 0
+offset_left = 872.595
+offset_top = 635.38
+offset_right = 1016.59
+offset_bottom = 897.38
+scale = Vector2(0.26, 0.26)
+mouse_filter = 2
+texture = ExtResource("7_7r248")
+
+[node name="GoldVaseRight" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/MainPanel/GoldVaseRight"]
+layout_mode = 0
+offset_left = 1023.14
+offset_top = 634.775
+offset_right = 1146.14
+offset_bottom = 880.775
+scale = Vector2(0.26, 0.26)
+mouse_filter = 2
+texture = ExtResource("8_esl1c")
+
+[node name="StatueRight" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/StatueRight"]
+layout_mode = 0
+offset_left = 1176.0
+offset_top = 431.855
+offset_right = 3261.0
+offset_bottom = 2428.85
+scale = Vector2(0.29, 0.29)
+mouse_filter = 2
+theme = SubResource("Theme_b162p")
+texture = ExtResource("9_kf588")
+
+[node name="StatueLeft" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/StatueLeft"]
+layout_mode = 0
+offset_left = 140.475
+offset_top = 431.855
+offset_right = 2225.48
+offset_bottom = 2428.85
+scale = Vector2(0.29, 0.29)
+mouse_filter = 2
+texture = ExtResource("9_kf588")
+flip_h = true
+
+[node name="VaseLeft" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/VaseLeft"]
+layout_mode = 0
+offset_left = 763.26
+offset_top = 446.505
+offset_right = 1155.26
+offset_bottom = 1096.51
+scale = Vector2(0.4, 0.4)
+mouse_filter = 2
+texture = ExtResource("10_scoot")
+
+[node name="VaseRight" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/VaseRight"]
+layout_mode = 0
+offset_left = 1002.97
+offset_top = 448.015
+offset_right = 1394.97
+offset_bottom = 1098.02
+scale = Vector2(0.4, 0.4)
+mouse_filter = 2
+texture = ExtResource("10_scoot")
+
+[node name="FruitsDisplay" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/FruitsDisplay"]
+layout_mode = 0
+offset_left = 888.38
+offset_top = 558.235
+offset_right = 1359.38
+offset_bottom = 1020.23
+scale = Vector2(0.31, 0.31)
+mouse_filter = 2
+texture = ExtResource("11_p5ig6")
+
+[node name="IncencePot" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainPanel/IncencePot"]
+layout_mode = 0
+offset_left = 926.82
+offset_top = 627.11
+offset_right = 1261.82
+offset_bottom = 999.11
+scale = Vector2(0.215, 0.215)
+mouse_filter = 2
+texture = ExtResource("12_wadhk")
+
+[node name="Altar" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/Altar"]
+layout_mode = 0
+offset_left = 765.0
+offset_top = 656.0
+offset_right = 2385.0
+offset_bottom = 2050.0
+scale = Vector2(0.245, 0.245)
+mouse_filter = 2
+texture = ExtResource("13_a63tj")
+
+[node name="TeaTable" type="Control" parent="CanvasLayer/MainPanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Table" type="TextureRect" parent="CanvasLayer/MainPanel/TeaTable"]
+layout_mode = 0
+offset_left = 760.7
+offset_top = 896.6
+offset_right = 1909.7
+offset_bottom = 1290.6
+scale = Vector2(0.35, 0.35)
+mouse_filter = 2
+texture = ExtResource("14_op1pg")
+
+[node name="TeaPot" type="TextureRect" parent="CanvasLayer/MainPanel/TeaTable"]
+layout_mode = 0
+offset_left = 1005.02
+offset_top = 816.895
+offset_right = 1571.02
+offset_bottom = 1177.9
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("15_cnv0a")
+
+[node name="TeaStash" type="TextureRect" parent="CanvasLayer/MainPanel/TeaTable"]
+layout_mode = 0
+offset_left = 836.655
+offset_top = 783.46
+offset_right = 1120.66
+offset_bottom = 1287.46
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("16_r7f5r")
+
+[node name="TeaCup" type="TextureRect" parent="CanvasLayer/MainPanel/TeaTable"]
+layout_mode = 0
+offset_left = 940.0
+offset_top = 865.245
+offset_right = 1124.0
+offset_bottom = 1018.24
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("17_ucl6k")

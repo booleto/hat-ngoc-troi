@@ -215,6 +215,21 @@ script = ExtResource("10_rtjxl")
 event_name = "touch_statue"
 event_type = 1
 
+[sub_resource type="Animation" id="Animation_84cax"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arrow1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(400.5, 713)]
+}
+
 [sub_resource type="Animation" id="Animation_knypv"]
 resource_name = "arrow"
 length = 1.5
@@ -230,21 +245,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(2.21914, 0.31864),
 "update": 0,
 "values": [Vector2(400.5, 813), Vector2(400.5, 713)]
-}
-
-[sub_resource type="Animation" id="Animation_84cax"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Arrow1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(400.5, 713)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ygg7n"]
