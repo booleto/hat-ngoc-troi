@@ -6,24 +6,24 @@ trau: Đã xong, mùi trà này thơm thật đấy.
 [wait time="1.0"]
 leave trau
 join quy rightmore
-quy: ….! 
+quy (quy_noi_chuyen): ….!
 quy: Hôm nay có ai tới thăm sao?
 join trau (trau_troi_oi) leftmore
 trau: Úi! Là Ông Quy-
 trau (trau_giai_thich): D-Dạ thưa Ông, con có làm Ông giật mình không ạ…? Mong Ông thứ lỗi cho con, con không cố ý-
-quy: Ồ, là con à, chàng trai trẻ? Không biết cơn gió nào đã đưa con tới đây vậy?
+quy (quy_normal): Ồ, là con à, chàng trai trẻ? Không biết cơn gió nào đã đưa con tới đây vậy?
 trau: Dạ thưa Ông Rùa… con là Trâu Vàng tới từ làng Trâu, được chỉ dẫn đến nơi linh thiêng này để trình về cơn hạn hán ở quê nhà và xin tìm cách chuộc tội ạ.
-quy: À, ta hiểu rồi. Chắc con mới từ chỗ Bà Phụng qua đây đúng không? Ở đây con không cần giữ lễ nghi quá đâu, ta lành lắm.
+quy (quy_suy_nghi): À, ta hiểu rồi. Chắc con mới từ chỗ Bà Phụng qua đây đúng không? Ở đây con không cần giữ lễ nghi quá đâu, ta lành lắm.
 trau (trau_binh_thuong): Dạ thưa Ông.
 trau: (Ông ấy có vẻ hiền từ thật, mình thấy nhẹ nhõm hơn rồi)
-quy: Vậy… giờ con biết tại sao năm nay mắc phải cơn hạn hán nặng thế này rồi chứ? 
+quy (quy_normal): Vậy… giờ con biết tại sao năm nay mắc phải cơn hạn hán nặng thế này rồi chứ?
 trau (trau_giai_thich): Dạ thưa Ông…. lỗi do chúng con quá lười nhác và dựa dẫm vào thần linh khiến các ngài nổi giận và phải gánh chịu hậu quả nghiêm trọng như bây giờ….
 quy: Tốt, xem ra con đã nắm rõ được vấn đề.
 quy: Không phải là không có cách chuộc tội, nhưng ta phải xem con có thành tâm thành ý vì quê hương mà chấp nhận thử thách gian nan không đã.
 trau (trau_binh_thuong): Con luôn sẵn sàng ạ!
-quy: Tốt tốt, rất có chí khí.
-quy: Chẳng là thửa ruộng giữa thánh địa, như con thấy đấy, nó có mối liên kết với mùa màng dưới hạ giới kia. Con người đã quá ỷ lại vào chúng ta mà không chăm sóc ruộng đồng khiến cho đất đai trở nên tồi tệ như này.
-quy: Hẳn Bà Phụng cũng đã sai con đánh trống làm lễ hồi sinh mảnh ruộng đó, chiếc trống thứ 2 ở đây, con giúp chúng ta được chứ?
+quy (quy_suy_nghi): Tốt tốt, rất có chí khí.
+quy (quy_normal): Chẳng là thửa ruộng giữa thánh địa, như con thấy đấy, nó có mối liên kết với mùa màng dưới hạ giới kia. Con người đã quá ỷ lại vào chúng ta mà không chăm sóc ruộng đồng khiến cho đất đai trở nên tồi tệ như này.
+quy (quy_suy_nghi): Hẳn Bà Phụng cũng đã sai con đánh trống làm lễ hồi sinh mảnh ruộng đó, chiếc trống thứ 2 ở đây, con giúp chúng ta được chứ?
 trau (trau_happi): Tất nhiên rồi, con sẽ giúp người biến thửa ruộng tươi tốt như ban đầu ạ!
 [signal arg="lighten_bg"]
 [end_timeline]

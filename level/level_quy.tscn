@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://3ujauoukr6f1"]
+[gd_scene load_steps=38 format=3 uid="uid://3ujauoukr6f1"]
 
 [ext_resource type="Script" path="res://script/level_manager/LevelQuy.gd" id="1_0julx"]
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="2_4re7o"]
@@ -9,7 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://56ulwslsd2v3" path="res://asset/visual/sprite/foreground/ly vàng 1.png" id="7_7r248"]
 [ext_resource type="Texture2D" uid="uid://dolerunkbb6xt" path="res://asset/visual/sprite/foreground/ly vàng 2.png" id="8_esl1c"]
 [ext_resource type="Texture2D" uid="uid://cechlcvoyo2k8" path="res://asset/visual/sprite/foreground/rùa vàng.png" id="9_kf588"]
+[ext_resource type="Script" path="res://script/ui/clickable/Clickable.gd" id="9_ubno6"]
+[ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="10_b8fw5"]
 [ext_resource type="Texture2D" uid="uid://oaihk8fcsv8v" path="res://asset/visual/sprite/foreground/lọ hoa.png" id="10_scoot"]
+[ext_resource type="Script" path="res://script/ui/button/action/GameEventAction.gd" id="11_31nem"]
+[ext_resource type="Texture2D" uid="uid://bfdlinl0hdr3s" path="res://asset/visual/sprite/ui/mission.png" id="11_mt0r4"]
 [ext_resource type="Texture2D" uid="uid://ct8t1pqep3h03" path="res://asset/visual/sprite/foreground/mâm ngũ quả.png" id="11_p5ig6"]
 [ext_resource type="Texture2D" uid="uid://c4vboqsl2qyps" path="res://asset/visual/sprite/foreground/bình nhang.png" id="12_wadhk"]
 [ext_resource type="Texture2D" uid="uid://272eutjyvus7" path="res://asset/visual/sprite/foreground/bàn thờ.png" id="13_a63tj"]
@@ -17,6 +21,94 @@
 [ext_resource type="Texture2D" uid="uid://cbj8pmyhjubxx" path="res://asset/visual/sprite/foreground/ấm trà.png" id="15_cnv0a"]
 [ext_resource type="Texture2D" uid="uid://bqy3hgdrkkr8s" path="res://asset/visual/sprite/foreground/hộp lá trà.png" id="16_r7f5r"]
 [ext_resource type="Texture2D" uid="uid://caeps7sg45tal" path="res://asset/visual/sprite/foreground/tách trà.png" id="17_ucl6k"]
+[ext_resource type="Texture2D" uid="uid://rm7qo0to3ebg" path="res://asset/visual/sprite/ui/bia rùa.png" id="22_m5uvo"]
+[ext_resource type="FontFile" uid="uid://b0j1noaxjt1dr" path="res://asset/font/Merriweather-Bold.otf" id="23_eopqd"]
+
+[sub_resource type="Animation" id="Animation_dkynu"]
+resource_name = "arrows"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%MainPanel/StatueRight/Clickable2/Arrow1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(2.37841, 0.378929),
+"update": 0,
+"values": [Vector2(323, -165), Vector2(323, -115)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%MainPanel/StatueLeft/Clickable2/Arrow1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(2.37841, 0.378929),
+"update": 0,
+"values": [Vector2(293, -165), Vector2(293, -115)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%MainPanel/TeaTable/Clickable2/Arrow1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.733333),
+"transitions": PackedFloat32Array(2.37841, 0.378929),
+"update": 0,
+"values": [Vector2(182, -165), Vector2(182, -115)]
+}
+
+[sub_resource type="Animation" id="Animation_grpjb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%MainPanel/StatueLeft/Clickable2/Arrow1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(293, -165)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%MainPanel/TeaTable/Clickable2/Arrow1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(182, -165)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%MainPanel/StatueRight/Clickable2/Arrow1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(323, -165)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sx0ta"]
+_data = {
+"RESET": SubResource("Animation_grpjb"),
+"arrows": SubResource("Animation_dkynu")
+}
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_naprw"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -27,6 +119,11 @@ texture = ExtResource("3_1g75x")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dl3j2"]
 texture = ExtResource("4_jbtc4")
 
+[sub_resource type="Resource" id="Resource_8sbhe"]
+script = ExtResource("11_31nem")
+event_name = "view_statue_right"
+event_type = 1
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blmdm"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 corner_detail = 9
@@ -36,12 +133,41 @@ shadow_size = 15
 [sub_resource type="Theme" id="Theme_b162p"]
 Button/styles/hover = SubResource("StyleBoxFlat_blmdm")
 
+[sub_resource type="Resource" id="Resource_w6lrd"]
+script = ExtResource("11_31nem")
+event_name = "view_statue_left"
+event_type = 1
+
+[sub_resource type="Resource" id="Resource_ioby2"]
+script = ExtResource("11_31nem")
+event_name = "view_table"
+event_type = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_yraps"]
+line_spacing = 12.0
+font = ExtResource("23_eopqd")
+font_size = 32
+font_color = Color(0.74902, 0.564706, 0, 1)
+
+[sub_resource type="Resource" id="Resource_u344j"]
+script = ExtResource("11_31nem")
+event_name = "hide_statue_left"
+event_type = 1
+
+[sub_resource type="Resource" id="Resource_flrwf"]
+script = ExtResource("11_31nem")
+event_name = "hide_statue_right"
+event_type = 1
+
 [node name="LevelQuy" type="Node2D"]
 script = ExtResource("1_0julx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="SceneAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+"": SubResource("AnimationLibrary_sx0ta")
+}
 script = ExtResource("2_4re7o")
 
 [node name="MainPanel" type="PanelContainer" parent="CanvasLayer"]
@@ -53,17 +179,20 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_naprw")
+metadata/_edit_lock_ = true
 
 [node name="Background" type="Panel" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_yifoo")
+metadata/_edit_lock_ = true
 
 [node name="Pillars" type="Panel" parent="CanvasLayer/MainPanel"]
 z_index = 1
 layout_mode = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_dl3j2")
+metadata/_edit_lock_ = true
 
 [node name="StatueMid2" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -78,6 +207,7 @@ offset_bottom = 1861.97
 scale = Vector2(0.185, 0.185)
 mouse_filter = 2
 texture = ExtResource("5_vavgd")
+metadata/_edit_lock_ = true
 
 [node name="Curtain" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -92,6 +222,7 @@ offset_bottom = 1862.0
 scale = Vector2(0.235, 0.235)
 mouse_filter = 2
 texture = ExtResource("6_weu6h")
+metadata/_edit_lock_ = true
 
 [node name="GoldVaseLeft" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -106,6 +237,7 @@ offset_bottom = 897.38
 scale = Vector2(0.26, 0.26)
 mouse_filter = 2
 texture = ExtResource("7_7r248")
+metadata/_edit_lock_ = true
 
 [node name="GoldVaseRight" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
@@ -120,10 +252,50 @@ offset_bottom = 880.775
 scale = Vector2(0.26, 0.26)
 mouse_filter = 2
 texture = ExtResource("8_esl1c")
+metadata/_edit_lock_ = true
 
 [node name="StatueRight" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
 mouse_filter = 2
+
+[node name="Clickable2" type="Control" parent="CanvasLayer/MainPanel/StatueRight" node_paths=PackedStringArray("arrow_sprite")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1176.0
+offset_top = 432.0
+offset_right = -196.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("9_ubno6")
+arrow_sprite = NodePath("Arrow1")
+
+[node name="Button2" type="Button" parent="CanvasLayer/MainPanel/StatueRight/Clickable2"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("10_b8fw5")
+action = SubResource("Resource_8sbhe")
+
+[node name="Arrow1" type="TextureRect" parent="CanvasLayer/MainPanel/StatueRight/Clickable2"]
+visible = false
+z_index = 30
+layout_mode = 0
+offset_left = 323.0
+offset_top = -165.0
+offset_right = 844.0
+offset_bottom = 325.0
+rotation = 0.785398
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("11_mt0r4")
 
 [node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/StatueRight"]
 layout_mode = 0
@@ -135,10 +307,51 @@ scale = Vector2(0.29, 0.29)
 mouse_filter = 2
 theme = SubResource("Theme_b162p")
 texture = ExtResource("9_kf588")
+metadata/_edit_lock_ = true
 
 [node name="StatueLeft" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="Clickable2" type="Control" parent="CanvasLayer/MainPanel/StatueLeft" node_paths=PackedStringArray("arrow_sprite")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 143.0
+offset_top = 432.0
+offset_right = -1171.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("9_ubno6")
+arrow_sprite = NodePath("Arrow1")
+
+[node name="Button2" type="Button" parent="CanvasLayer/MainPanel/StatueLeft/Clickable2"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("10_b8fw5")
+action = SubResource("Resource_w6lrd")
+
+[node name="Arrow1" type="TextureRect" parent="CanvasLayer/MainPanel/StatueLeft/Clickable2"]
+visible = false
+z_index = 30
+layout_mode = 0
+offset_left = 293.0
+offset_top = -165.0
+offset_right = 814.0
+offset_bottom = 325.0
+rotation = 0.785398
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("11_mt0r4")
 
 [node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/StatueLeft"]
 layout_mode = 0
@@ -150,10 +363,12 @@ scale = Vector2(0.29, 0.29)
 mouse_filter = 2
 texture = ExtResource("9_kf588")
 flip_h = true
+metadata/_edit_lock_ = true
 
 [node name="VaseLeft" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/VaseLeft"]
 layout_mode = 0
@@ -164,10 +379,12 @@ offset_bottom = 1096.51
 scale = Vector2(0.4, 0.4)
 mouse_filter = 2
 texture = ExtResource("10_scoot")
+metadata/_edit_lock_ = true
 
 [node name="VaseRight" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/VaseRight"]
 layout_mode = 0
@@ -178,10 +395,12 @@ offset_bottom = 1098.02
 scale = Vector2(0.4, 0.4)
 mouse_filter = 2
 texture = ExtResource("10_scoot")
+metadata/_edit_lock_ = true
 
 [node name="FruitsDisplay" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/FruitsDisplay"]
 layout_mode = 0
@@ -192,10 +411,12 @@ offset_bottom = 1020.23
 scale = Vector2(0.31, 0.31)
 mouse_filter = 2
 texture = ExtResource("11_p5ig6")
+metadata/_edit_lock_ = true
 
 [node name="IncencePot" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MainPanel/IncencePot"]
 layout_mode = 0
@@ -206,10 +427,12 @@ offset_bottom = 999.11
 scale = Vector2(0.215, 0.215)
 mouse_filter = 2
 texture = ExtResource("12_wadhk")
+metadata/_edit_lock_ = true
 
 [node name="Altar" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="TextureButton" type="TextureRect" parent="CanvasLayer/MainPanel/Altar"]
 layout_mode = 0
@@ -220,10 +443,12 @@ offset_bottom = 2050.0
 scale = Vector2(0.245, 0.245)
 mouse_filter = 2
 texture = ExtResource("13_a63tj")
+metadata/_edit_lock_ = true
 
 [node name="TeaTable" type="Control" parent="CanvasLayer/MainPanel"]
 layout_mode = 2
 mouse_filter = 2
+metadata/_edit_lock_ = true
 
 [node name="Table" type="TextureRect" parent="CanvasLayer/MainPanel/TeaTable"]
 layout_mode = 0
@@ -234,6 +459,7 @@ offset_bottom = 1290.6
 scale = Vector2(0.35, 0.35)
 mouse_filter = 2
 texture = ExtResource("14_op1pg")
+metadata/_edit_lock_ = true
 
 [node name="TeaPot" type="TextureRect" parent="CanvasLayer/MainPanel/TeaTable"]
 layout_mode = 0
@@ -242,7 +468,9 @@ offset_top = 816.895
 offset_right = 1571.02
 offset_bottom = 1177.9
 scale = Vector2(0.23, 0.23)
+mouse_filter = 2
 texture = ExtResource("15_cnv0a")
+metadata/_edit_lock_ = true
 
 [node name="TeaStash" type="TextureRect" parent="CanvasLayer/MainPanel/TeaTable"]
 layout_mode = 0
@@ -251,7 +479,9 @@ offset_top = 783.46
 offset_right = 1120.66
 offset_bottom = 1287.46
 scale = Vector2(0.23, 0.23)
+mouse_filter = 2
 texture = ExtResource("16_r7f5r")
+metadata/_edit_lock_ = true
 
 [node name="TeaCup" type="TextureRect" parent="CanvasLayer/MainPanel/TeaTable"]
 layout_mode = 0
@@ -260,4 +490,267 @@ offset_top = 865.245
 offset_right = 1124.0
 offset_bottom = 1018.24
 scale = Vector2(0.23, 0.23)
+mouse_filter = 2
 texture = ExtResource("17_ucl6k")
+metadata/_edit_lock_ = true
+
+[node name="Clickable2" type="Control" parent="CanvasLayer/MainPanel/TeaTable" node_paths=PackedStringArray("arrow_sprite")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 775.0
+offset_top = 774.0
+offset_right = -785.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("9_ubno6")
+arrow_sprite = NodePath("Arrow1")
+
+[node name="Button2" type="Button" parent="CanvasLayer/MainPanel/TeaTable/Clickable2"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("10_b8fw5")
+action = SubResource("Resource_ioby2")
+
+[node name="Arrow1" type="TextureRect" parent="CanvasLayer/MainPanel/TeaTable/Clickable2"]
+visible = false
+z_index = 30
+layout_mode = 0
+offset_left = 182.0
+offset_top = -165.0
+offset_right = 703.0
+offset_bottom = 325.0
+rotation = 0.785398
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("11_mt0r4")
+
+[node name="StatuePanels" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="StatueLeftPanel" type="PanelContainer" parent="CanvasLayer/StatuePanels"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/StatuePanels/StatueLeftPanel"]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/StatuePanels/StatueLeftPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/StatuePanels/StatueLeftPanel/MarginContainer/CenterContainer"]
+custom_minimum_size = Vector2(0, 1000)
+layout_mode = 2
+texture = ExtResource("22_m5uvo")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/StatuePanels/StatueLeftPanel/MarginContainer/CenterContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/StatuePanels/StatueLeftPanel/MarginContainer/CenterContainer/TextureRect/CenterContainer"]
+layout_mode = 2
+text = "Nhất thủy
+Nhì trà
+Tam pha
+Tứ ấm
+Ngũ quần anh
+"
+label_settings = SubResource("LabelSettings_yraps")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonBase" type="BaseButton" parent="CanvasLayer/StatuePanels/StatueLeftPanel"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = true
+script = ExtResource("10_b8fw5")
+action = SubResource("Resource_u344j")
+
+[node name="StatueRightPanel" type="PanelContainer" parent="CanvasLayer/StatuePanels"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/StatuePanels/StatueRightPanel"]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/StatuePanels/StatueRightPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/StatuePanels/StatueRightPanel/MarginContainer/CenterContainer"]
+custom_minimum_size = Vector2(0, 1000)
+layout_mode = 2
+texture = ExtResource("22_m5uvo")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/StatuePanels/StatueRightPanel/MarginContainer/CenterContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/StatuePanels/StatueRightPanel/MarginContainer/CenterContainer/TextureRect/CenterContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 100
+
+[node name="Label" type="Label" parent="CanvasLayer/StatuePanels/StatueRightPanel/MarginContainer/CenterContainer/TextureRect/CenterContainer/MarginContainer"]
+layout_mode = 2
+text = "Quy trình pha trà:
+
+1. Làm nóng ấm 
+    chén
+2. Đong trà
+3. Đánh thức trà
+4. Hãm trà
+5. Rót trà
+
+"
+label_settings = SubResource("LabelSettings_yraps")
+vertical_alignment = 2
+
+[node name="ButtonBase" type="BaseButton" parent="CanvasLayer/StatuePanels/StatueRightPanel"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = true
+script = ExtResource("10_b8fw5")
+action = SubResource("Resource_flrwf")

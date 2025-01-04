@@ -15,9 +15,36 @@
 "nicknames": [""],
 "offset": Vector2(0, 150),
 "portraits": {
+"quy_khoanh_tay": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Quy/Quy_4.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"quy_noi_chuyen": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Quy/Quy_2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "quy_normal": {
 "export_overrides": {
-"image": "\"res://asset/visual/sprite/character/Quy/quy_normal.png\""
+"image": "\"res://asset/visual/sprite/character/Quy/Quy_1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"quy_suy_nghi": {
+"export_overrides": {
+"image": "\"res://asset/visual/sprite/character/Quy/Quy_3.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
