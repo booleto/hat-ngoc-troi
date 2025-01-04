@@ -38,9 +38,9 @@ func _handle_pause():
 func _on_toggle_pause():
 	if pause_panel.visible:
 		turn_off_pause()
-		Dialogic.paused = false
+		#Dialogic.paused = false
 	else:
-		Dialogic.paused = true
+		#Dialogic.paused = true
 		turn_on_pause()
 		if inventory_panel.visible:
 			turn_off_inventory()
@@ -49,9 +49,9 @@ func _on_toggle_pause():
 func _on_toggle_inventory():
 	if inventory_panel.visible:
 		turn_off_inventory()
-		Dialogic.paused = false
+		#Dialogic.paused = false
 	else:
-		Dialogic.paused = true
+		#Dialogic.paused = true
 		turn_on_inventory()
 		if pause_panel.visible:
 			turn_off_pause()
