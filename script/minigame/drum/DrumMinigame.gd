@@ -13,7 +13,9 @@ class_name DrumMinigame
 @onready var okay_area: Area2D = %OkayArea
 @onready var perfect_area: Area2D = %PerfectArea
 @onready var rating_label: RatingLabel = %RatingLabel
-@onready var trau_sprite: AnimatedSprite2D = %TrauSprite
+@onready var red_stick_sprite: AnimatedSprite2D = %RedStick
+@onready var blue_stick_sprite: AnimatedSprite2D = %BlueStick
+@onready var progress_bar: TextureProgressBar = %ProgressBar
 
 @onready var sfx_player: AudioStreamPlayer = %SFXPlayer
 @onready var music_player: AudioStreamPlayer = %MusicPlayer
@@ -29,6 +31,8 @@ var bads: int = 0
 var misses: int = 0
 var combo: int = 0
 var song_position: int = 0
+var red_stick: bool = true
+var blue_stick: bool = false
 
 enum RATING {
 	MISS, BAD, OK, PERFECT
@@ -36,6 +40,7 @@ enum RATING {
 
 
 func _ready() -> void:
+	progress_bar.max_value = min_score
 	GameEventBus.play_animation.emit("grass_sway")
 	GameEventBus.play_animation.emit("grass_growth")
 	GameEventBus.play_animation.emit("start_stage")
@@ -68,6 +73,7 @@ func start_minigame():
 	misses = 0
 	combo = 0
 	update_score()
+	update_progress()
 	music_player.play()
 	
 
@@ -123,7 +129,7 @@ func _process_rhythm_input(delta: float) -> void:
 	
 	GameEventBus.play_animation.emit("drum_hit")
 	sfx_player.play()
-	update_trau_sprite()
+	update_stick_sprite()
 	var arrow: Arrow = get_latest_arrow()
 	if arrow == null:
 		_on_miss()
@@ -170,7 +176,7 @@ func get_latest_arrow() -> Arrow:
 		return
 	var body: Arrow = bodies[0]
 	for b: Arrow in bodies:
-		if b.position.x < body.position.x:
+		if b.position.x > body.position.x:
 			body = b
 	
 	return body
@@ -208,38 +214,49 @@ func update_combo(rating: RATING) -> void:
 	combo_num.text = str(combo)
 
 func update_score() -> void:
-	score_num.text = str(bads + okays + perfects) + " / " + str(min_score)
+	score_num.text = str((bads + okays + perfects)*100)
+
+func update_progress() -> void:
+	progress_bar.value = bads + okays + perfects
 
 func _on_miss() -> void:
 	print("Miss")
 	misses += 1
 	update_score()
+	update_progress()
 	update_combo(RATING.MISS)
 
 func _on_bad() -> void:
 	print("Bad")
 	okays += 1
 	update_score()
+	update_progress()
 	update_combo(RATING.BAD)
 	
 func _on_okay() -> void:
 	print("Okay")
 	okays += 1
 	update_score()
+	update_progress()
 	update_combo(RATING.OK)
 
 func _on_perfect() -> void:
 	print("Perfect")
 	perfects += 1
 	update_score()
+	update_progress()
 	update_combo(RATING.PERFECT)
 
-func update_trau_sprite():
-	if trau_sprite.frame == 0:
-		trau_sprite.set_frame_and_progress(1, 0)
-		trau_sprite.queue_redraw()
-	elif trau_sprite.frame == 1:
-		trau_sprite.set_frame_and_progress(0, 0)
-		trau_sprite.queue_redraw()
-	else:
-		trau_sprite.set_frame_and_progress(0, 0)
+func update_stick_sprite():
+	if red_stick:
+		red_stick = false
+		blue_stick = true
+		red_stick_sprite.play()
+		await red_stick_sprite.animation_finished
+		red_stick_sprite.set_frame(0)
+	elif blue_stick:
+		blue_stick = false
+		red_stick = true
+		blue_stick_sprite.play()
+		await blue_stick_sprite.animation_finished
+		blue_stick_sprite.set_frame(0)
