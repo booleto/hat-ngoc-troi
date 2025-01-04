@@ -1,0 +1,4 @@
+[style name="mainstyle"]
+[signal arg="darken_bg"]
+Sai rồi.
+[signal arg="lighten_bg"]

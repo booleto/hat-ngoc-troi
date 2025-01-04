@@ -15,3 +15,6 @@ func _on_animation_request(animation: String):
 		self.play(animation)
 	else:
 		print("This scene's animation player does not have the animation " + animation)
+
+func emit_event(event: String):
+	GameEventBus.game_event.emit(event)
