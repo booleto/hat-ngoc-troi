@@ -10,10 +10,10 @@
 },
 "default_portrait": "quy_normal",
 "description": "",
-"display_name": "QUY",
+"display_name": "Quy Thần",
 "mirror": false,
 "nicknames": [""],
-"offset": Vector2(0, 150),
+"offset": Vector2(0, 0),
 "portraits": {
 "quy_khoanh_tay": {
 "export_overrides": {
@@ -52,5 +52,5 @@
 "scene": ""
 }
 },
-"scale": 1.0
+"scale": 0.85
 }

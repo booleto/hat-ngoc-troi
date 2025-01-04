@@ -2,6 +2,7 @@
 [signal arg="darken_bg"]
 join trau (trau_binh_thuong) leftmore
 trau: Đã xong, mùi trà này thơm thật đấy.
+[signal arg="lighten_bg"]
 [background scene="res://scene/dialogic/background/PhungEntry1.tscn" fade="1.0"]
 [wait time="1.0"]
 leave trau
@@ -25,5 +26,4 @@ quy (quy_suy_nghi): Tốt tốt, rất có chí khí.
 quy (quy_normal): Chẳng là thửa ruộng giữa thánh địa, như con thấy đấy, nó có mối liên kết với mùa màng dưới hạ giới kia. Con người đã quá ỷ lại vào chúng ta mà không chăm sóc ruộng đồng khiến cho đất đai trở nên tồi tệ như này.
 quy (quy_suy_nghi): Hẳn Bà Phụng cũng đã sai con đánh trống làm lễ hồi sinh mảnh ruộng đó, chiếc trống thứ 2 ở đây, con giúp chúng ta được chứ?
 trau (trau_happi): Tất nhiên rồi, con sẽ giúp người biến thửa ruộng tươi tốt như ban đầu ạ!
-[signal arg="lighten_bg"]
 [end_timeline]

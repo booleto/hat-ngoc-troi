@@ -17,3 +17,4 @@ Một cái muỗng đong trà.
 [signal arg="show_pot"]
 Một cái ấm pha trà bằng gốm.
 [signal arg="hide_pot"]
+[signal arg="start_tea_brew"]
