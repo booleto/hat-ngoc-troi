@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://3ujauoukr6f1"]
+[gd_scene load_steps=58 format=3 uid="uid://3ujauoukr6f1"]
 
 [ext_resource type="Script" path="res://script/level_manager/LevelQuy.gd" id="1_0julx"]
 [ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="2_4re7o"]
@@ -23,6 +23,58 @@
 [ext_resource type="Texture2D" uid="uid://caeps7sg45tal" path="res://asset/visual/sprite/foreground/tách trà.png" id="17_ucl6k"]
 [ext_resource type="Texture2D" uid="uid://rm7qo0to3ebg" path="res://asset/visual/sprite/ui/bia rùa.png" id="22_m5uvo"]
 [ext_resource type="FontFile" uid="uid://b0j1noaxjt1dr" path="res://asset/font/Merriweather-Bold.otf" id="23_eopqd"]
+[ext_resource type="Texture2D" uid="uid://cqnlhuehk3hnn" path="res://asset/visual/sprite/ui/bàn bày thẻ.png" id="24_f1jrq"]
+[ext_resource type="Texture2D" uid="uid://dp2hfivtto5nv" path="res://asset/visual/sprite/minigame/tea_brew/hộp lá trà 2.png" id="25_jk6a2"]
+[ext_resource type="Texture2D" uid="uid://cthnu17f4620f" path="res://asset/visual/sprite/minigame/tea_brew/ấm trà 2.png" id="26_r6idb"]
+[ext_resource type="Texture2D" uid="uid://dq06r4m2ha274" path="res://asset/visual/sprite/minigame/tea_brew/bình nước sôi.png" id="27_6o5dm"]
+[ext_resource type="Texture2D" uid="uid://c7lu5gckixr6e" path="res://asset/visual/sprite/minigame/tea_brew/tấm lót.png" id="28_dgtl0"]
+[ext_resource type="Texture2D" uid="uid://4xuko13qon4u" path="res://asset/visual/sprite/minigame/tea_brew/tách trà 1.png" id="29_v7j8k"]
+[ext_resource type="Texture2D" uid="uid://d3vtqcckvtcox" path="res://asset/visual/sprite/minigame/tea_brew/chậu tráng.png" id="30_6q1hh"]
+[ext_resource type="Texture2D" uid="uid://cn18kudfp14rq" path="res://asset/visual/sprite/minigame/tea_brew/thìa trà 1.png" id="31_0a1g1"]
+[ext_resource type="Script" path="res://script/ui/button/HoverTween.gd" id="32_ytyr6"]
+[ext_resource type="Texture2D" uid="uid://6fyl510dpawa" path="res://asset/visual/sprite/minigame/tea_brew/thanh chọn.png" id="33_jhhq6"]
+[ext_resource type="Script" path="res://script/ui/button/action/PlayTimelineAction.gd" id="34_luukb"]
+[ext_resource type="Texture2D" uid="uid://brki1oe7onh0m" path="res://asset/visual/sprite/minigame/tea_brew/thanh tre.png" id="35_abgwo"]
+[ext_resource type="Script" path="res://script/minigame/brew_tea/TimingGameManager.gd" id="36_uxslb"]
+
+[sub_resource type="Animation" id="Animation_grpjb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%MainPanel/StatueLeft/Clickable2/Arrow1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(293, -165)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%MainPanel/TeaTable/Clickable2/Arrow1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(182, -165)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%MainPanel/StatueRight/Clickable2/Arrow1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(323, -165)]
+}
 
 [sub_resource type="Animation" id="Animation_dkynu"]
 resource_name = "arrows"
@@ -63,45 +115,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(2.37841, 0.378929),
 "update": 0,
 "values": [Vector2(182, -165), Vector2(182, -115)]
-}
-
-[sub_resource type="Animation" id="Animation_grpjb"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("%MainPanel/StatueLeft/Clickable2/Arrow1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(293, -165)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("%MainPanel/TeaTable/Clickable2/Arrow1:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(182, -165)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("%MainPanel/StatueRight/Clickable2/Arrow1:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(323, -165)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sx0ta"]
@@ -158,6 +171,36 @@ event_type = 1
 script = ExtResource("11_31nem")
 event_name = "hide_statue_right"
 event_type = 1
+
+[sub_resource type="Resource" id="Resource_br6ki"]
+script = ExtResource("11_31nem")
+event_name = "hide_table"
+event_type = 1
+
+[sub_resource type="Resource" id="Resource_0nshe"]
+script = ExtResource("34_luukb")
+timeline = "quy_wrong_tea_step"
+
+[sub_resource type="LabelSettings" id="LabelSettings_iw676"]
+font = ExtResource("23_eopqd")
+font_size = 48
+font_color = Color(0.356863, 0.0588235, 0, 1)
+
+[sub_resource type="Resource" id="Resource_bgfhg"]
+script = ExtResource("11_31nem")
+event_name = "heat_cups"
+event_type = 1
+
+[sub_resource type="Resource" id="Resource_qrg6s"]
+script = ExtResource("34_luukb")
+timeline = "quy_wrong_tea_step"
+
+[sub_resource type="Resource" id="Resource_xkt2n"]
+script = ExtResource("34_luukb")
+timeline = "quy_wrong_tea_step"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6qwa"]
+size = Vector2(468.43, 50)
 
 [node name="LevelQuy" type="Node2D"]
 script = ExtResource("1_0julx")
@@ -534,6 +577,7 @@ scale = Vector2(0.15, 0.15)
 texture = ExtResource("11_mt0r4")
 
 [node name="StatuePanels" type="Control" parent="CanvasLayer"]
+z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -754,3 +798,419 @@ shortcut_feedback = true
 shortcut_in_tooltip = true
 script = ExtResource("10_b8fw5")
 action = SubResource("Resource_flrwf")
+
+[node name="TeaPanel" type="Control" parent="CanvasLayer"]
+z_index = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TeaTablePanel" type="PanelContainer" parent="CanvasLayer/TeaPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonBase" type="BaseButton" parent="CanvasLayer/TeaPanel/TeaTablePanel"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+theme = null
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = true
+script = ExtResource("10_b8fw5")
+action = SubResource("Resource_br6ki")
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="TeaTable" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/CenterContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1500, 0)
+layout_mode = 2
+texture = ExtResource("24_f1jrq")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="TeaStash" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/CenterContainer/TeaTable"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 125.0
+offset_top = 109.0
+offset_right = 823.0
+offset_bottom = 806.0
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("25_jk6a2")
+
+[node name="TeaPot" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/CenterContainer/TeaTable"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 335.0
+offset_top = 101.0
+offset_right = 2027.0
+offset_bottom = 1027.0
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("26_r6idb")
+
+[node name="WaterBowl" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/CenterContainer/TeaTable"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 719.0
+offset_top = 88.0
+offset_right = 1398.0
+offset_bottom = 765.0
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("27_6o5dm")
+
+[node name="Pad1" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/CenterContainer/TeaTable"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 362.0
+offset_right = 1217.0
+offset_bottom = 1150.0
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("28_dgtl0")
+
+[node name="Pad2" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/CenterContainer/TeaTable"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 551.0
+offset_top = 364.0
+offset_right = 1500.0
+offset_bottom = 1152.0
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("28_dgtl0")
+
+[node name="Cup1" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/CenterContainer/TeaTable"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 349.0
+offset_top = 410.0
+offset_right = 857.0
+offset_bottom = 918.0
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("29_v7j8k")
+
+[node name="Cup2" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/CenterContainer/TeaTable"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 634.0
+offset_top = 414.0
+offset_right = 1142.0
+offset_bottom = 922.0
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("29_v7j8k")
+
+[node name="WashWaterBowl" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/CenterContainer/TeaTable"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 948.0
+offset_top = 169.0
+offset_right = 2104.0
+offset_bottom = 1325.0
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("30_6q1hh")
+
+[node name="Spoon" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/CenterContainer/TeaTable"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 617.0
+offset_top = 419.0
+offset_right = 1522.0
+offset_bottom = 613.0
+rotation = 1.51495
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("31_0a1g1")
+
+[node name="ChoiceSet1" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HoverTween" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1" node_paths=PackedStringArray("actor")]
+anchors_preset = 0
+offset_top = 310.0
+offset_right = 956.0
+offset_bottom = 511.0
+scale = Vector2(0.7, 0.7)
+mouse_filter = 1
+script = ExtResource("32_ytyr6")
+tween_start = Vector2(-300, 0)
+actor = NodePath("TextureButton")
+duration = 0.14
+ease = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween"]
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 199.0
+mouse_filter = 1
+texture_normal = ExtResource("33_jhhq6")
+flip_h = true
+script = ExtResource("10_b8fw5")
+action = SubResource("Resource_0nshe")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_right = 140
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween/TextureButton/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween/TextureButton/MarginContainer/CenterContainer"]
+layout_mode = 2
+text = "Đong trà"
+label_settings = SubResource("LabelSettings_iw676")
+
+[node name="HoverTween2" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1" node_paths=PackedStringArray("actor")]
+anchors_preset = 0
+offset_top = 580.0
+offset_right = 956.0
+offset_bottom = 781.0
+scale = Vector2(0.7, 0.7)
+mouse_filter = 1
+script = ExtResource("32_ytyr6")
+tween_start = Vector2(-300, 0)
+actor = NodePath("TextureButton")
+duration = 0.14
+ease = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween2"]
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 199.0
+mouse_filter = 1
+texture_normal = ExtResource("33_jhhq6")
+flip_h = true
+script = ExtResource("10_b8fw5")
+action = SubResource("Resource_bgfhg")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween2/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_right = 140
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween2/TextureButton/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween2/TextureButton/MarginContainer/CenterContainer"]
+layout_mode = 2
+text = "Làm nóng ấm chén"
+label_settings = SubResource("LabelSettings_iw676")
+
+[node name="HoverTween3" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1" node_paths=PackedStringArray("actor")]
+anchors_preset = 0
+offset_left = 1250.0
+offset_top = 580.0
+offset_right = 2206.0
+offset_bottom = 781.0
+scale = Vector2(0.7, 0.7)
+mouse_filter = 1
+script = ExtResource("32_ytyr6")
+tween_start = Vector2(300, 0)
+actor = NodePath("TextureButton")
+duration = 0.14
+ease = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween3"]
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 199.0
+mouse_filter = 1
+texture_normal = ExtResource("33_jhhq6")
+script = ExtResource("10_b8fw5")
+action = SubResource("Resource_qrg6s")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween3/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 140
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween3/TextureButton/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween3/TextureButton/MarginContainer/CenterContainer"]
+layout_mode = 2
+text = "Rót nước sôi vào ấm"
+label_settings = SubResource("LabelSettings_iw676")
+
+[node name="HoverTween4" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1" node_paths=PackedStringArray("actor")]
+anchors_preset = 0
+offset_left = 1250.0
+offset_top = 310.0
+offset_right = 2206.0
+offset_bottom = 511.0
+scale = Vector2(0.7, 0.7)
+mouse_filter = 1
+script = ExtResource("32_ytyr6")
+tween_start = Vector2(300, 0)
+actor = NodePath("TextureButton")
+duration = 0.14
+ease = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween4"]
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 199.0
+mouse_filter = 1
+texture_normal = ExtResource("33_jhhq6")
+script = ExtResource("10_b8fw5")
+action = SubResource("Resource_xkt2n")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween4/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 140
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween4/TextureButton/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween4/TextureButton/MarginContainer/CenterContainer"]
+layout_mode = 2
+text = "Cho trà vào chén"
+label_settings = SubResource("LabelSettings_iw676")
+
+[node name="TimingMinigame" type="MarginContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_bottom = 100
+metadata/_edit_lock_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame"]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer"]
+custom_minimum_size = Vector2(1600, 0)
+layout_mode = 2
+texture = ExtResource("35_abgwo")
+expand_mode = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BambooCenter" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/TextureRect/CenterContainer"]
+layout_mode = 2
+
+[node name="SuccessArea" type="Area2D" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/TextureRect/CenterContainer/BambooCenter"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/TextureRect/CenterContainer/BambooCenter/SuccessArea"]
+shape = SubResource("RectangleShape2D_v6qwa")
+
+[node name="StartMark" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_vertical = 2
+
+[node name="StartPoint" type="Marker2D" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/TextureRect/StartMark"]
+
+[node name="EndMark" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="EndPoint" type="Marker2D" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/TextureRect/EndMark"]
+
+[node name="TimingGameManager" type="Node" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame"]
+unique_name_in_owner = true
+script = ExtResource("36_uxslb")

@@ -1,0 +1,19 @@
+[style name="mainstyle"]
+[signal arg="show_tea_stash"]
+Một hộp lá trà khô có mùi rất thơm.
+[signal arg="hide_tea_stash"]
+[signal arg="show_pads_and_cups"]
+Hai chén gốm được đặt trên tấm lót đan bằng tre.
+[signal arg="hide_pads_and_cups"]
+[signal arg="show_wash_bowl"]
+Chậu nước sôi dùng để tráng ấm chén.
+[signal arg="hide_wash_bowl"]
+[signal arg="show_water_bowl"]
+Một bình gốm đựng nước đã được đun nóng.
+[signal arg="hide_water_bowl"]
+[signal arg="show_spoon"]
+Một cái muỗng đong trà.
+[signal arg="hide_spoon"]
+[signal arg="show_pot"]
+Một cái ấm pha trà bằng gốm.
+[signal arg="hide_pot"]
