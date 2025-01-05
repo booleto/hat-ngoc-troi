@@ -19,14 +19,28 @@ func _process(delta: float) -> void:
 		UiEventBus.toggle_pause.emit()
 	if Input.is_action_just_released("ui_focus_next") and inventory_openable:
 		UiEventBus.toggle_inventory.emit()
+	
+	# Skip feature, triggerd by pressing P
+	_handle_pause()
+		
+		
+func _handle_pause():
+	if Input.is_action_just_released("dialogic_skip") and Dialogic.current_timeline != null and not Dialogic.Inputs.auto_skip.enabled:
+		print_debug("setting autoskip true")
+		Dialogic.Inputs.auto_skip.enabled = true
+		return
+	if Input.is_action_just_released("dialogic_skip") and Dialogic.Inputs.auto_skip.enabled:
+		print_debug("setting autoskip false")
+		Dialogic.Inputs.auto_skip.enabled = false
+		return
 
 
 func _on_toggle_pause():
 	if pause_panel.visible:
 		turn_off_pause()
-		Dialogic.paused = false
+		#Dialogic.paused = false
 	else:
-		Dialogic.paused = true
+		#Dialogic.paused = true
 		turn_on_pause()
 		if inventory_panel.visible:
 			turn_off_inventory()
@@ -35,9 +49,9 @@ func _on_toggle_pause():
 func _on_toggle_inventory():
 	if inventory_panel.visible:
 		turn_off_inventory()
-		Dialogic.paused = false
+		#Dialogic.paused = false
 	else:
-		Dialogic.paused = true
+		#Dialogic.paused = true
 		turn_on_inventory()
 		if pause_panel.visible:
 			turn_off_pause()
