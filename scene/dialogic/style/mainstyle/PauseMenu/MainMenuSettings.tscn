@@ -718,7 +718,7 @@ mouse_filter = 2
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
+theme_override_constants/margin_top = 40
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MenuButtons/MarginContainer"]
 layout_mode = 2
