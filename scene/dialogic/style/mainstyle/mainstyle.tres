@@ -89,6 +89,11 @@ overrides = {
 "disabled": "true"
 }
 
+[sub_resource type="Resource" id="Resource_akgca"]
+script = ExtResource("1_ysb5a")
+scene = ExtResource("13_83ek4")
+overrides = {}
+
 [sub_resource type="Resource" id="Resource_ipct3"]
 script = ExtResource("1_ysb5a")
 scene = ExtResource("12_bgcej")
@@ -97,11 +102,6 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_grrk4"]
 script = ExtResource("1_ysb5a")
 scene = ExtResource("13_kdong")
-overrides = {}
-
-[sub_resource type="Resource" id="Resource_akgca"]
-script = ExtResource("1_ysb5a")
-scene = ExtResource("13_83ek4")
 overrides = {}
 
 [resource]
