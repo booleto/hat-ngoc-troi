@@ -7,6 +7,7 @@ func _ready():
 	$Segaydaden/B4.visible = false
 	$Segaydaden/B5.visible = false
 	$Segaydaden/B6.visible = false
+	GlobalMusicPlayer.stop()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -22,6 +22,8 @@ func _ready() -> void:
 	Dialogic.start("mieu_phuong_start")
 	GameEventBus.game_event.connect(_on_game_event)
 	Dialogic.signal_event.connect(_on_game_event)
+	GlobalMusicPlayer.stop()
+	GlobalMusicPlayer.play_music(GlobalMusicPlayer.SONG.DEN_PHUONG)
 
 func _on_game_event(event: String) -> void:
 	print("Received Event: ", event)

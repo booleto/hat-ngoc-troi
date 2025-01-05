@@ -18,7 +18,6 @@
 [ext_resource type="FontFile" uid="uid://b4i1pjlpwlcmc" path="res://asset/font/Montserrat-ExtraBold.otf" id="11_o6pqa"]
 [ext_resource type="Texture2D" uid="uid://wmhrn3rj1bj3" path="res://asset/visual/sprite/cg/cửa 1.png" id="11_pv1ao"]
 [ext_resource type="Texture2D" uid="uid://ewd7gf02rfye" path="res://asset/visual/sprite/minigame/dùi xanh 2.png" id="11_vw6mi"]
-[ext_resource type="Texture2D" uid="uid://ctsvvpfhdxpa1" path="res://asset/visual/sprite/ui/option -long answer-.png" id="11_y6vk2"]
 [ext_resource type="Texture2D" uid="uid://br22seq2l3yoq" path="res://asset/visual/sprite/cg/cửa 2.png" id="12_nxd40"]
 [ext_resource type="Texture2D" uid="uid://dulfrctpm6hnp" path="res://asset/visual/sprite/minigame/dùi đỏ 1.png" id="12_oh00n"]
 [ext_resource type="FontFile" uid="uid://cgr0ende1nca5" path="res://asset/font/Montserrat-Black.otf" id="12_sgfid"]
@@ -28,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://bj63rjb7nfd7c" path="res://asset/visual/sprite/minigame/Logo & icon-02.png" id="15_46m70"]
 [ext_resource type="Texture2D" uid="uid://8y6bfwgapa6d" path="res://asset/visual/sprite/minigame/bar 2.png" id="15_sggvx"]
 [ext_resource type="Texture2D" uid="uid://bo4ueoqff2qr7" path="res://asset/visual/sprite/minigame/bar 1.png" id="16_ds2ji"]
+[ext_resource type="Texture2D" uid="uid://gjx4m8jwnjem" path="res://asset/visual/sprite/ui/option -long answer-2.png" id="16_gaipe"]
 [ext_resource type="Texture2D" uid="uid://djwf7qm2xeflt" path="res://asset/visual/sprite/minigame/Fail.png" id="18_lt645"]
 [ext_resource type="Texture2D" uid="uid://dwbx413rmpatk" path="res://asset/visual/sprite/minigame/batdau.png" id="19_o8qm0"]
 [ext_resource type="PackedScene" uid="uid://busbr02uxdgor" path="res://scene/dialogic/style/mainstyle/PauseMenu/MainMenuSettings.tscn" id="22_jqmb1"]
@@ -778,7 +778,7 @@ libraries = {
 texture_filter = 1
 position = Vector2(315.275, 248)
 scale = Vector2(0.9, 0.9)
-texture = ExtResource("11_y6vk2")
+texture = ExtResource("16_gaipe")
 
 [node name="ComboCounter" type="Control" parent="UI/PanelContainer/ScoreAndComboBackground"]
 layout_mode = 3

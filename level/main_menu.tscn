@@ -288,16 +288,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_cio03")]
-offset_left = -8.0
-offset_top = -16.0
-offset_right = -8.0
-offset_bottom = -16.0
 show_pause_button = false
 show_inventory_button = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_gn7vj")
 autoplay = true
+bus = &"Music"
 
 [connection signal="mouse_entered" from="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button" to="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button" to="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button" method="_on_mouse_exited"]

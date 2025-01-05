@@ -25,6 +25,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 LevelLoader="*res://script/autoload/LevelLoader.gd"
 UiEventBus="*res://script/autoload/UIEventBus.gd"
 GameEventBus="*res://script/autoload/GameEventBus.gd"
+GlobalMusicPlayer="*res://scene/autoload/GlobalMusicPlayer.tscn"
 
 [dialogic]
 
@@ -53,6 +54,7 @@ directories/dtl_directory={
 "prologue": "res://scene/dialogic/timeline/prologue.dtl",
 "quy_after_tea": "res://scene/dialogic/timeline/den_quy/quy_after_tea.dtl",
 "quy_inspect_tea_table": "res://scene/dialogic/timeline/den_quy/quy_inspect_tea_table.dtl",
+"quy_start": "res://scene/dialogic/timeline/den_quy/quy_start.dtl",
 "quy_wrong_tea_step": "res://scene/dialogic/timeline/den_quy/quy_wrong_tea_step.dtl",
 "rework-prologue": "res://scene/dialogic/timeline/rework-prologue.dtl",
 "rua_door_1": "res://scene/dialogic/timeline/rua/rua_door_1.dtl",

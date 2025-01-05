@@ -45,6 +45,7 @@ func _ready() -> void:
 	GameEventBus.play_animation.emit("grass_growth")
 	GameEventBus.play_animation.emit("start_stage")
 	GameEventBus.game_event.connect(_on_game_event)
+	GlobalMusicPlayer.stop()
 	start_minigame()
 
 

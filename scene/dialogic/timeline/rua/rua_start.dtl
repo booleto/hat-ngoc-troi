@@ -1,5 +1,6 @@
 [style name="mainstyle"]
 join trau (trau_gai_dau) left [animation="Fade In Up"]
+[music path="res://asset/sound/bgm/cổng.mp3" fade="0.0" volume="0.0"]
 [signal arg="darken_bg"]
 trau: Phù….cuối cùng cũng đến nơi….
 trau: Đây là Đền Tứ Linh sao? Cái cổng trông lớn thật.

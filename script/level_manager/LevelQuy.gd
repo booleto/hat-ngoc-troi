@@ -45,6 +45,8 @@ func _ready() -> void:
 	GameEventBus.play_animation.emit("arrows")
 	Dialogic.signal_event.connect(_on_game_event)
 	GameEventBus.game_event.connect(_on_game_event)
+	GlobalMusicPlayer.stop()
+	GlobalMusicPlayer.play_music(GlobalMusicPlayer.SONG.DEN_QUY)
 	
 func _on_game_event(event: String):
 	print_debug("Received Event: ", event)

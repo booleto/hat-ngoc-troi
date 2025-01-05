@@ -16,6 +16,8 @@ func _ready() -> void:
 	Dialogic.signal_event.connect(_on_game_event)
 	GameEventBus.game_event.connect(_on_game_event)
 	Dialogic.start("rua_start")
+	GlobalMusicPlayer.stop()
+	GlobalMusicPlayer.play_music(GlobalMusicPlayer.SONG.CONG_TDTL)
 
 
 func _preload_timelines():

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dyfebmy3wm8u5"
-path="res://.godot/imported/Thần nông.mp3-0cae73e1e45e6d70ba473334e8f9a83f.mp3str"
+path="res://.godot/imported/thần nông.mp3-77af2c8ec6619ddf7e864e994d743ff7.mp3str"
 
 [deps]
 
-source_file="res://asset/sound/bgm/Thần nông.mp3"
-dest_files=["res://.godot/imported/Thần nông.mp3-0cae73e1e45e6d70ba473334e8f9a83f.mp3str"]
+source_file="res://asset/sound/bgm/thần nông.mp3"
+dest_files=["res://.godot/imported/thần nông.mp3-77af2c8ec6619ddf7e864e994d743ff7.mp3str"]
 
 [params]
 

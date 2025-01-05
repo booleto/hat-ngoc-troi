@@ -4,6 +4,7 @@ var animation_counter: int = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GlobalMusicPlayer.play_music(GlobalMusicPlayer.SONG.PROLOGUE)
 	pass
 
 

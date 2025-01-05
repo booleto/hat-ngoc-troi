@@ -11,8 +11,8 @@ extends Button
 ## Using a different node may allow using rich text effects; they are
 ## not supported on buttons at this point.
 
-var hover_sprite = load("res://asset/visual/sprite/ui/option-02.png")
-var normal_sprite = load("res://asset/visual/sprite/ui/option -long answer-.png")
+var hover_sprite = load("res://asset/visual/sprite/ui/option-03-scaled.png")
+var normal_sprite = load("res://asset/visual/sprite/ui/option -short answer-scaled.png")
 
 ## Used to identify what choices to put on. If you leave it at -1, choices will be distributed automatically.
 @export var choice_index: int = -1
