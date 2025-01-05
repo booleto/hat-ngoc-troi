@@ -2048,7 +2048,7 @@ mouse_filter = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet1/HoverTween4/TextureButton/MarginContainer/CenterContainer"]
 layout_mode = 2
-text = "Cho trà vào chén"
+text = "Cho trà vào ấm"
 label_settings = SubResource("LabelSettings_iw676")
 
 [node name="ChoiceSet2" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel"]
@@ -2226,7 +2226,7 @@ mouse_filter = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet2/HoverTween4/TextureButton/MarginContainer/CenterContainer"]
 layout_mode = 2
-text = "Cho trà vào chén"
+text = "Cho trà vào ấm"
 label_settings = SubResource("LabelSettings_iw676")
 
 [node name="ChoiceSet3" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel"]
@@ -2404,7 +2404,7 @@ mouse_filter = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet3/HoverTween4/TextureButton/MarginContainer/CenterContainer"]
 layout_mode = 2
-text = "Cho trà vào chén"
+text = "Cho trà vào ấm"
 label_settings = SubResource("LabelSettings_iw676")
 
 [node name="ChoiceSet4" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel"]
@@ -2582,7 +2582,7 @@ mouse_filter = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/TeaPanel/TeaTablePanel/ChoiceSet4/HoverTween4/TextureButton/MarginContainer/CenterContainer"]
 layout_mode = 2
-text = "Cho trà vào chén"
+text = "Cho trà vào ấm"
 label_settings = SubResource("LabelSettings_iw676")
 
 [node name="ChoiceSet5" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bsb25rej8w2hn"]
+[gd_scene load_steps=27 format=3 uid="uid://bsb25rej8w2hn"]
 
 [ext_resource type="Texture2D" uid="uid://biule84r2yuks" path="res://asset/visual/sprite/logo/Logo (2).png" id="1_6716l"]
 [ext_resource type="Script" path="res://script/level_manager/MainMenu.gd" id="1_t2rss"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://1gh1s1v6hnmg" path="res://asset/visual/sprite/ui/option-04.png" id="5_5wjxf"]
 [ext_resource type="Script" path="res://script/ui/button/action/LoadLevelAction.gd" id="5_rarhj"]
 [ext_resource type="Script" path="res://script/ui/button/action/UIAction.gd" id="6_2sy1i"]
+[ext_resource type="Texture2D" uid="uid://deiftcmntejfu" path="res://asset/visual/sprite/cg/mây.png" id="6_monp5"]
 [ext_resource type="PackedScene" uid="uid://busbr02uxdgor" path="res://scene/dialogic/style/mainstyle/PauseMenu/MainMenuSettings.tscn" id="7_cio03"]
 [ext_resource type="FontFile" uid="uid://b0j1noaxjt1dr" path="res://asset/font/Merriweather-Bold.otf" id="7_slk2d"]
 [ext_resource type="AudioStream" uid="uid://da7e87cycui7w" path="res://asset/sound/bgm/Main screen.mp3" id="11_gn7vj"]
@@ -123,17 +124,21 @@ position = Vector2(960, 540.5)
 texture = ExtResource("3_i0lli")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(909, -83)
-amount = 3000
-lifetime = 8.0
+position = Vector2(366, 1158)
+amount = 4000
+lifetime = 11.0
 emission_shape = 3
-emission_rect_extents = Vector2(1000, 1)
-direction = Vector2(0, 1)
+emission_rect_extents = Vector2(1500, 1)
+direction = Vector2(1.5, -1)
 spread = 0.0
-gravity = Vector2(0, 10)
+gravity = Vector2(15, -10)
 initial_velocity_min = 30.31
 initial_velocity_max = 98.49
 color = Color(0.882353, 0.756863, 0.592157, 1)
+
+[node name="Cloud" type="Sprite2D" parent="."]
+position = Vector2(963, 781)
+texture = ExtResource("6_monp5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

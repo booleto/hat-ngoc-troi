@@ -1,6 +1,7 @@
 extends DialogicLayoutLayer
 
 @onready var item_scroll = %ItemScroll
+@onready var item_seed = %ItemSeed
 @onready var rock_view = %RockView
 @onready var field_dry_view = %FieldDryView
 
@@ -13,6 +14,11 @@ func _on_event(event: String):
 		item_scroll.show()
 	if event == "hide_scroll":
 		item_scroll.hide()
+		
+	if event == "show_seed":
+		item_seed.show()
+	if event == "hide_seed":
+		item_seed.hide()
 	
 	if event == "show_rock":
 		rock_view.show()

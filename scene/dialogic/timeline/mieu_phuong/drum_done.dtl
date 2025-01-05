@@ -15,7 +15,17 @@ phuong (phuong_tay_sau_lung): Ngươi không thể làm nó ra lúa một cách 
 phuong (phuong_normal): Nhưng ta phải công nhận, nhà ngươi được việc lắm.
 trau (trau_binh_thuong): Con sẽ cố gắng hơn nữa ạ, Bà sai con gấp trăm, gấp nghìn lần con cũng làm!
 phuong: Thôi được rồi. Giờ tới 3 cánh cổng tiếp theo đi, phần ta đã xong, ta sẽ để cho ba lão kia lo liệu nốt. Mau mau đón lấy bảo vật thần thánh đầu tiên của ngươi!
-[ Từ trên đài cao, vật thể tỏa ra tia rực rỡ hoàng kim chậm rãi đáp xuống lòng bàn tay lật ngửa của Trâu Vàng. Khi ánh sáng tắt hẳn, anh nhận ra đó là một hạt lúa bằng vàng ròng. Ngay lúc Trâu vừa bỏ hạt lúa vào tay nải thì trong chớp mắt, anh đã bị thổi ra giữ thánh Địa Tứ Linh, trở về vị trí ban đầu. Cuộn kinh trong tay Trâu Vàng nóng lên, anh giở ra xem thì thấy một chỗ trống đã hiện rõ chữ. ]
+leave --All--
+[signal arg="show_seed"]
+[i]Từ trên đài cao, vật thể tỏa ra tia rực rỡ hoàng kim chậm rãi đáp xuống lòng bàn tay lật ngửa của Trâu Vàng. Khi ánh sáng tắt hẳn, anh nhận ra đó là một hạt lúa vàng lấp lánh. [/i]
+[signal arg="hide_seed"]
+join trau leftmore
+join phuong rightmore
+trau (trau_gai_dau): Chỉ có một hạt lúa sao?
+phuong (phuong_normal): Không phải hạt lúa thường đâu, sau khi xong xuôi ngươi cứ đem nó về gieo trên thửa ruộng, ngươi sẽ thấy điều kì diệu.
+trau (trau_binh_thuong): Thật sao ạ? Con đội ơn Bà nhiều lắm!
+trau: Vậy… con xin phép được qua đền tiếp theo ạ.
+phuong (phuong_normal): Chúc ngươi vượt qua thử thách thuận lợi, hãy bảo trọng.
 leave --All--
 [background arg="res://asset/visual/sprite/background/flashbang.png" fade="1.0"]
 [wait time="1.0"]
