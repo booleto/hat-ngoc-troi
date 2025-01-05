@@ -366,6 +366,7 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("9_mq2t7")
 action = SubResource("Resource_8v0u5")
+delete_on_use = true
 
 [node name="Arrow1" type="TextureRect" parent="Statue/Sprite2D/Clickable"]
 visible = false

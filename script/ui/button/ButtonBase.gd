@@ -16,8 +16,8 @@ func _on_trigger() -> void:
 
 
 func _on_mouse_entered():
-	$Label.label_settings.font_color = Color.SADDLE_BROWN
+	$Label.label_settings.font_color = Color.WHITE
 
 
 func _on_mouse_exited():
-	$Label.label_settings.font_color = Color.WHITE
+	$Label.label_settings.font_color = Color.SADDLE_BROWN

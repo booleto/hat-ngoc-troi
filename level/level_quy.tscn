@@ -44,6 +44,57 @@
 [ext_resource type="Texture2D" uid="uid://fc68hy1jined" path="res://asset/visual/sprite/minigame/complete.png" id="42_sqvxb"]
 [ext_resource type="Texture2D" uid="uid://djwf7qm2xeflt" path="res://asset/visual/sprite/minigame/Fail.png" id="43_7qcqj"]
 
+[sub_resource type="Animation" id="Animation_bjl5i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MissionResultPanel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MissionResultPanel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MissionResultPanel/CenterContainer/TextureRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MissionResultPanel/CenterContainer/WinText/Control/TextureRect:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4500, -200.5)]
+}
+
 [sub_resource type="Animation" id="Animation_glf2l"]
 resource_name = "mission_completed"
 length = 2.0
@@ -96,114 +147,10 @@ tracks/3/keys = {
 "values": [Vector2(-4500, -200.5), Vector2(-1262.5, -200.5)]
 }
 
-[sub_resource type="Animation" id="Animation_bjl5i"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MissionResultPanel:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("MissionResultPanel:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("MissionResultPanel/CenterContainer/TextureRect:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("MissionResultPanel/CenterContainer/WinText/Control/TextureRect:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-4500, -200.5)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bwm80"]
 _data = {
 "RESET": SubResource("Animation_bjl5i"),
 "mission_completed": SubResource("Animation_glf2l")
-}
-
-[sub_resource type="Animation" id="Animation_wv0ua"]
-resource_name = "heat_cups"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("%TeaPot:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.25, 1),
-"update": 0,
-"values": [Vector2(335, 101), Vector2(1003, 219)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("%Cup1:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.25, 1),
-"update": 0,
-"values": [Vector2(349, 410), Vector2(1045, 416)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("%Cup2:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.25, 1),
-"update": 0,
-"values": [Vector2(634, 414), Vector2(1176, 420)]
-}
-tracks/3/type = "method"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("%TimingGameManager")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [0.785],
-"method": &"start_timing_game"
-}]
 }
 
 [sub_resource type="Animation" id="Animation_dgxna"]
@@ -353,44 +300,27 @@ tracks/11/keys = {
 "values": [ExtResource("29_v7j8k")]
 }
 
-[sub_resource type="Animation" id="Animation_n5sp7"]
-resource_name = "heat_cups_done"
-tracks/0/type = "value"
+[sub_resource type="Animation" id="Animation_ajmps"]
+resource_name = "brew_tea"
+length = 0.1
+tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("%TeaPot:position")
+tracks/0/path = NodePath("%TimingGameManager")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.00833333, 1),
-"transitions": PackedFloat32Array(0.210224, 0.25),
-"update": 0,
-"values": [Vector2(1003, 219), Vector2(335, 101)]
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1.571],
+"method": &"start_timing_game"
+}]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("%Cup1:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.00833333, 1),
-"transitions": PackedFloat32Array(0.210224, 0.25),
-"update": 0,
-"values": [Vector2(1045, 416), Vector2(349, 410)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("%Cup2:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.00833333, 1),
-"transitions": PackedFloat32Array(0.210224, 0.25),
-"update": 0,
-"values": [Vector2(1176, 420), Vector2(634, 414)]
-}
+
+[sub_resource type="Animation" id="Animation_p28ir"]
+resource_name = "brew_tea_done"
+length = 0.1
 
 [sub_resource type="Animation" id="Animation_vf8he"]
 resource_name = "get_tea"
@@ -460,6 +390,116 @@ tracks/1/keys = {
 "values": [Vector2(233, 159), Vector2(617, 419)]
 }
 
+[sub_resource type="Animation" id="Animation_wv0ua"]
+resource_name = "heat_cups"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%TeaPot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(335, 101), Vector2(1003, 219)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%Cup1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(349, 410), Vector2(1045, 416)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%Cup2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [Vector2(634, 414), Vector2(1176, 420)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%TimingGameManager")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.785],
+"method": &"start_timing_game"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_n5sp7"]
+resource_name = "heat_cups_done"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%TeaPot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00833333, 1),
+"transitions": PackedFloat32Array(0.210224, 0.25),
+"update": 0,
+"values": [Vector2(1003, 219), Vector2(335, 101)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%Cup1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.00833333, 1),
+"transitions": PackedFloat32Array(0.210224, 0.25),
+"update": 0,
+"values": [Vector2(1045, 416), Vector2(349, 410)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%Cup2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.00833333, 1),
+"transitions": PackedFloat32Array(0.210224, 0.25),
+"update": 0,
+"values": [Vector2(1176, 420), Vector2(634, 414)]
+}
+
+[sub_resource type="Animation" id="Animation_xlyn7"]
+resource_name = "place_tea"
+length = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%TimingGameManager")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [1.047],
+"method": &"start_timing_game"
+}]
+}
+
 [sub_resource type="Animation" id="Animation_g62ah"]
 resource_name = "place_tea"
 tracks/0/type = "value"
@@ -499,8 +539,8 @@ tracks/2/keys = {
 "values": [ExtResource("26_r6idb"), ExtResource("5_m0q3q")]
 }
 
-[sub_resource type="Animation" id="Animation_xlyn7"]
-resource_name = "place_tea"
+[sub_resource type="Animation" id="Animation_2hpek"]
+resource_name = "pour_tea"
 length = 0.1
 tracks/0/type = "method"
 tracks/0/imported = false
@@ -509,12 +549,87 @@ tracks/0/path = NodePath("%TimingGameManager")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.1),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": [1.047],
+"args": [2.094],
 "method": &"start_timing_game"
 }]
+}
+
+[sub_resource type="Animation" id="Animation_abkfc"]
+resource_name = "pour_tea"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%TeaPot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.666667, 0.766667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(335, 101), Vector2(301, 489), Vector2(301, 489), Vector2(585, 493), Vector2(585, 493), Vector2(335, 101)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%TeaPot:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.666667, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("26_r6idb"), ExtResource("6_ewc4a"), ExtResource("26_r6idb"), ExtResource("6_ewc4a"), ExtResource("26_r6idb")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%TeaPot:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.766667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -1.5708, -1.5708, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%Cup1:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("8_c6vbk"), ExtResource("8_c6vbk")]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("%Cup2:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("8_c6vbk"), ExtResource("8_c6vbk")]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("%TeaPot:z_index")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.933333, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 1, 0]
 }
 
 [sub_resource type="Animation" id="Animation_wgnn4"]
@@ -607,121 +722,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [1, 0]
-}
-
-[sub_resource type="Animation" id="Animation_ajmps"]
-resource_name = "brew_tea"
-length = 0.1
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("%TimingGameManager")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [1.571],
-"method": &"start_timing_game"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_p28ir"]
-resource_name = "brew_tea_done"
-length = 0.1
-
-[sub_resource type="Animation" id="Animation_abkfc"]
-resource_name = "pour_tea"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("%TeaPot:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.4, 0.666667, 0.766667, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(335, 101), Vector2(301, 489), Vector2(301, 489), Vector2(585, 493), Vector2(585, 493), Vector2(335, 101)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("%TeaPot:texture")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.4, 0.666667, 0.766667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("26_r6idb"), ExtResource("6_ewc4a"), ExtResource("26_r6idb"), ExtResource("6_ewc4a"), ExtResource("26_r6idb")]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("%TeaPot:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.766667, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -1.5708, -1.5708, 0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("%Cup1:texture")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("8_c6vbk"), ExtResource("8_c6vbk")]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("%Cup2:texture")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [ExtResource("8_c6vbk"), ExtResource("8_c6vbk")]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("%TeaPot:z_index")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.933333, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 1, 0]
-}
-
-[sub_resource type="Animation" id="Animation_2hpek"]
-resource_name = "pour_tea"
-length = 0.1
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("%TimingGameManager")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [2.094],
-"method": &"start_timing_game"
-}]
 }
 
 [sub_resource type="Animation" id="Animation_ruaip"]
@@ -1468,9 +1468,6 @@ rotation = 0.785398
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("11_mt0r4")
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/MainPanel"]
-layout_mode = 2
-
 [node name="StatuePanels" type="Control" parent="CanvasLayer"]
 z_index = 1
 layout_mode = 3
@@ -1706,7 +1703,6 @@ mouse_filter = 2
 
 [node name="TeaTablePanel" type="PanelContainer" parent="CanvasLayer/TeaPanel"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2824,11 +2820,13 @@ label_settings = SubResource("LabelSettings_iw676")
 [node name="TimingMinigame" type="MarginContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel"]
 layout_mode = 2
 size_flags_vertical = 8
+mouse_filter = 2
 theme_override_constants/margin_bottom = 100
 metadata/_edit_lock_ = true
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame"]
 layout_mode = 2
+mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="RatingBar" type="TextureRect" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer"]
@@ -2836,6 +2834,7 @@ unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(1600, 0)
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("35_abgwo")
 expand_mode = 5
 
@@ -2846,9 +2845,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="BambooCenter" type="Control" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/RatingBar/CenterContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="SuccessArea" type="Area2D" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/RatingBar/CenterContainer/BambooCenter"]
 unique_name_in_owner = true
@@ -2862,6 +2863,7 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="StartPoint" type="Marker2D" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/RatingBar/StartMark"]
 unique_name_in_owner = true
@@ -2875,6 +2877,7 @@ anchor_right = 1.0
 anchor_bottom = 0.5
 grow_horizontal = 0
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="EndPoint" type="Marker2D" parent="CanvasLayer/TeaPanel/TeaTablePanel/TimingMinigame/CenterContainer/RatingBar/EndMark"]
 unique_name_in_owner = true

@@ -1,16 +1,56 @@
-[gd_scene load_steps=19 format=3 uid="uid://bsb25rej8w2hn"]
+[gd_scene load_steps=25 format=3 uid="uid://bsb25rej8w2hn"]
 
 [ext_resource type="Texture2D" uid="uid://biule84r2yuks" path="res://asset/visual/sprite/logo/Logo (2).png" id="1_6716l"]
 [ext_resource type="Script" path="res://script/level_manager/MainMenu.gd" id="1_t2rss"]
-[ext_resource type="Texture2D" uid="uid://bwjfsrjygefc4" path="res://asset/visual/sprite/background/Main screen (1).png" id="2_0lwkw"]
-[ext_resource type="Texture2D" uid="uid://mn4gsve2vptx" path="res://asset/visual/sprite/ui/Button 2.png" id="3_5mni0"]
+[ext_resource type="Script" path="res://script/ui/animation/SceneAnimationPlayer.gd" id="2_wo0ra"]
+[ext_resource type="Texture2D" uid="uid://cx4cpmsdto85q" path="res://asset/visual/sprite/cg/lúa (animation).png" id="3_bog45"]
+[ext_resource type="Texture2D" uid="uid://brnq68ckv6yby" path="res://asset/visual/sprite/cg/Main screen.png" id="3_i0lli"]
 [ext_resource type="Script" path="res://script/ui/button/ButtonBase.gd" id="4_bamqk"]
-[ext_resource type="Texture2D" uid="uid://dvcqgfm57jhri" path="res://asset/visual/sprite/ui/Button 1.png" id="4_sv6fn"]
+[ext_resource type="Texture2D" uid="uid://u5stb3wx2fgk" path="res://asset/visual/sprite/ui/option -yes,no-.png" id="4_hq84g"]
+[ext_resource type="Texture2D" uid="uid://1gh1s1v6hnmg" path="res://asset/visual/sprite/ui/option-04.png" id="5_5wjxf"]
 [ext_resource type="Script" path="res://script/ui/button/action/LoadLevelAction.gd" id="5_rarhj"]
 [ext_resource type="Script" path="res://script/ui/button/action/UIAction.gd" id="6_2sy1i"]
 [ext_resource type="PackedScene" uid="uid://busbr02uxdgor" path="res://scene/dialogic/style/mainstyle/PauseMenu/MainMenuSettings.tscn" id="7_cio03"]
 [ext_resource type="FontFile" uid="uid://b0j1noaxjt1dr" path="res://asset/font/Merriweather-Bold.otf" id="7_slk2d"]
 [ext_resource type="AudioStream" uid="uid://da7e87cycui7w" path="res://asset/sound/bgm/Main screen.mp3" id="11_gn7vj"]
+
+[sub_resource type="Animation" id="Animation_aph11"]
+resource_name = "wheat_sway"
+length = 12.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WheatField:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6, 9),
+"transitions": PackedFloat32Array(0.450625, 1.93188, 0.353554, 2.2974),
+"update": 0,
+"values": [0.0, 0.0349066, 0.0, -0.0349066]
+}
+
+[sub_resource type="Animation" id="Animation_tqqio"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WheatField:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gtbuj"]
+_data = {
+"RESET": SubResource("Animation_tqqio"),
+"wheat_sway": SubResource("Animation_aph11")
+}
 
 [sub_resource type="Resource" id="Resource_e8x7j"]
 script = ExtResource("5_rarhj")
@@ -21,7 +61,8 @@ Label/colors/font_color = Color(0.411765, 0.219608, 0.0156863, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_aifu1"]
 font = ExtResource("7_slk2d")
-font_size = 40
+font_size = 64
+font_color = Color(0.470588, 0.247059, 0.0156863, 1)
 shadow_size = 0
 shadow_offset = Vector2(0, 0)
 
@@ -31,7 +72,8 @@ level_to_load = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_7ip31"]
 font = ExtResource("7_slk2d")
-font_size = 40
+font_size = 64
+font_color = Color(0.470588, 0.247059, 0.0156863, 1)
 
 [sub_resource type="Resource" id="Resource_vwmbv"]
 script = ExtResource("6_2sy1i")
@@ -39,39 +81,112 @@ action_to_do = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_kqx3v"]
 font = ExtResource("7_slk2d")
-font_size = 40
+font_size = 64
+font_color = Color(0.470588, 0.247059, 0.0156863, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0q1bt"]
+font = ExtResource("7_slk2d")
+font_size = 64
+font_color = Color(0.470588, 0.247059, 0.0156863, 1)
 
 [node name="Main" type="Node2D"]
 position = Vector2(0, -1)
 script = ExtResource("1_t2rss")
 
+[node name="SceneAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gtbuj")
+}
+script = ExtResource("2_wo0ra")
+
+[node name="WheatField" type="Sprite2D" parent="."]
+position = Vector2(954, 1080)
+scale = Vector2(0.615, 0.615)
+texture = ExtResource("3_bog45")
+offset = Vector2(16.5122, -377.789)
+
 [node name="Logo" type="Sprite2D" parent="."]
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(960, 574)
-scale = Vector2(0.269, 0.3)
+position = Vector2(938.195, 637.325)
+scale = Vector2(0.239, 0.239)
 texture = ExtResource("1_6716l")
 
 [node name="MainScreen" type="Sprite2D" parent="."]
 z_index = -1
 texture_filter = 1
 position = Vector2(960, 540.5)
-scale = Vector2(0.24, 0.240222)
-texture = ExtResource("2_0lwkw")
+texture = ExtResource("3_i0lli")
 
-[node name="Button" type="TextureButton" parent="."]
-z_index = 1
-offset_left = 704.0
-offset_top = 729.0
-offset_right = 1216.0
-offset_bottom = 841.0
-texture_normal = ExtResource("3_5mni0")
-texture_hover = ExtResource("4_sv6fn")
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(909, -83)
+amount = 3000
+lifetime = 8.0
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 10)
+initial_velocity_min = 30.31
+initial_velocity_max = 98.49
+color = Color(0.882353, 0.756863, 0.592157, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ButtonsPanel" type="PanelContainer" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ButtonsPanel"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_bottom = 140
+
+[node name="Control" type="Control" parent="CanvasLayer/ButtonsPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Scale" type="Control" parent="CanvasLayer/ButtonsPanel/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.545, 0.545)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -99.5
+offset_right = 960.0
+offset_bottom = 99.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 120
+alignment = 1
+
+[node name="Button" type="TextureButton" parent="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture_normal = ExtResource("4_hq84g")
+texture_hover = ExtResource("5_5wjxf")
+stretch_mode = 5
 script = ExtResource("4_bamqk")
 action = SubResource("Resource_e8x7j")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="Button"]
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -90,54 +205,85 @@ label_settings = SubResource("LabelSettings_aifu1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button2" type="TextureButton" parent="."]
-offset_left = 704.0
-offset_top = 848.0
-offset_right = 1216.0
-offset_bottom = 960.0
-texture_normal = ExtResource("3_5mni0")
-texture_hover = ExtResource("4_sv6fn")
+[node name="Button2" type="TextureButton" parent="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_hq84g")
+texture_hover = ExtResource("5_5wjxf")
 script = ExtResource("4_bamqk")
 action = SubResource("Resource_s66hi")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="Button2"]
-layout_mode = 0
-offset_left = 143.0
-offset_top = 30.5
-offset_right = 369.0
-offset_bottom = 81.5
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -25.5
+offset_right = 113.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Tiếp tục"
 label_settings = SubResource("LabelSettings_7ip31")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button3" type="TextureButton" parent="."]
-offset_left = 704.0
-offset_top = 967.0
-offset_right = 1216.0
-offset_bottom = 1079.0
-texture_normal = ExtResource("3_5mni0")
-texture_hover = ExtResource("4_sv6fn")
+[node name="Button3" type="TextureButton" parent="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_hq84g")
+texture_hover = ExtResource("5_5wjxf")
 script = ExtResource("4_bamqk")
 action = SubResource("Resource_vwmbv")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="Button3"]
-layout_mode = 0
-offset_left = 143.0
-offset_top = 30.5
-offset_right = 369.0
-offset_bottom = 81.5
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -25.5
+offset_right = 113.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
 text = "Cài đặt"
 label_settings = SubResource("LabelSettings_kqx3v")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Button4" type="TextureButton" parent="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_hq84g")
+texture_hover = ExtResource("5_5wjxf")
+script = ExtResource("4_bamqk")
+action = SubResource("Resource_vwmbv")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -25.5
+offset_right = 113.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Thoát"
+label_settings = SubResource("LabelSettings_0q1bt")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_cio03")]
-visible = false
 offset_left = -8.0
 offset_top = -16.0
 offset_right = -8.0
@@ -147,9 +293,11 @@ offset_bottom = -16.0
 stream = ExtResource("11_gn7vj")
 autoplay = true
 
-[connection signal="mouse_entered" from="Button" to="Button" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Button" to="Button" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="Button2" to="Button2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Button2" to="Button2" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="Button3" to="Button3" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Button3" to="Button3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button" to="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button" to="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button2" to="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button2" to="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button3" to="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button3" to="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button4" to="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button4" to="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button4" method="_on_mouse_exited"]

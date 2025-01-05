@@ -7,9 +7,12 @@ enum TEA_STATE {
 var tea_state: TEA_STATE = TEA_STATE.NOT_STARTED
 
 # Panels
+@onready var mission_tab_scene = preload("res://scene/dialogic/style/mainstyle/MissionTab/mission_tab.tscn")
 @onready var statue_right_panel : PanelContainer = %StatueRightPanel
 @onready var statue_left_panel : PanelContainer = %StatueLeftPanel
 @onready var tea_table_panel : PanelContainer = %TeaTablePanel
+@onready var main_panel : PanelContainer = %MainPanel
+
 
 # Tea table elements
 @onready var tea_table: TextureRect = %TeaTable
@@ -36,6 +39,7 @@ var tea_state: TEA_STATE = TEA_STATE.NOT_STARTED
 @onready var choice_set_7: Control = %ChoiceSet7
 
 var viewed_table: bool = false
+var mission_tab: Node
 
 func _ready() -> void:
 	GameEventBus.play_animation.emit("arrows")
@@ -68,6 +72,7 @@ func _on_game_event(event: String):
 	# Tea brew game progression
 	if event == "start_tea_brew":
 		tea_state = TEA_STATE.STARTED
+		init_tea_mission()
 		start_tea_minigame()
 		
 	if event == "heat_cup":
@@ -136,6 +141,7 @@ func _on_game_event(event: String):
 				GameEventBus.play_animation.emit("pour_tea_done")
 				await get_tree().create_timer(2.0).timeout
 				GameEventBus.play_animation.emit("mission_completed")
+				terminate_tea_mission()
 				await get_tree().create_timer(2.0).timeout
 				tea_table_panel.hide()
 				Dialogic.start("quy_after_tea")
@@ -189,3 +195,13 @@ func unhighlight_table_object(obj: TextureRect):
 func start_tea_minigame():
 	tea_table_panel.show()
 	choice_set_1.show()
+	
+func init_tea_mission():
+	mission_tab = mission_tab_scene.instantiate()
+	main_panel.add_child(mission_tab)
+	mission_tab.z_index = 6
+	mission_tab.label.text = "Nhiệm vụ: Pha trà"
+	
+func terminate_tea_mission():
+	mission_tab.queue_free()
+	mission_tab = null
