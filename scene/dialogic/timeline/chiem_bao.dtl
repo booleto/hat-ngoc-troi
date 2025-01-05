@@ -40,7 +40,7 @@ than_nong (tn_ok): Chúc ngươi lên đường bình an, ta sẽ gặp lại ng
 [signal arg="lighten_bg"]
 leave than_nong [animation="Fade Out"]
 leave trau [animation="Fade Out"]
-[background arg="res://asset/visual/sprite/background/01. đồng lúa.png" fade="4.0"]
+[background arg="res://asset/visual/sprite/logo/segaydaden.png" fade="4.0"]
 Khi thần dứt lời, bóng hình của thần tan đi trong làn khói. Khi khung cảnh xung quanh đã trở nên rõ ràng, Trâu Vàng bừng tỉnh và nhận ra rằng mình vừa chiêm bao. Tuy vậy, cuộn kinh vàng trong tay anh lại là thật. Hiểu rằng thần đã hiển linh báo mộng cho mình, Trâu Vàng tức tốc chuẩn bị lên đường.
 Trâu Vàng chuẩn bị một tay nải chứa nước, lương thực đi đường, khi đảm bảo đã đầy đủ thì anh tức tốc hướng về phía cổng làng mà đi thẳng. Sợ nói ra chẳng ai tin, anh cứ thế mà đi không một lời tạm biệt.
 do LevelLoader.load_level_from_name("CONG_DEN_TU_LINH")
