@@ -15,7 +15,6 @@
 [ext_resource type="FontFile" uid="uid://qexotyysjoiu" path="res://asset/font/Merriweather-Black.otf" id="8_cw20i"]
 [ext_resource type="Script" path="res://script/minigame/drum/RatingText.gd" id="9_x5bp3"]
 [ext_resource type="Texture2D" uid="uid://b3b5x2hhrcff1" path="res://asset/visual/sprite/minigame/dùi xanh 1.png" id="10_l3xvx"]
-[ext_resource type="PackedScene" uid="uid://b3i3dc777cxtd" path="res://scene/dialogic/style/mainstyle/PauseMenu/MinigamePauseMenu.tscn" id="10_snpuc"]
 [ext_resource type="FontFile" uid="uid://b4i1pjlpwlcmc" path="res://asset/font/Montserrat-ExtraBold.otf" id="11_o6pqa"]
 [ext_resource type="Texture2D" uid="uid://wmhrn3rj1bj3" path="res://asset/visual/sprite/cg/cửa 1.png" id="11_pv1ao"]
 [ext_resource type="Texture2D" uid="uid://ewd7gf02rfye" path="res://asset/visual/sprite/minigame/dùi xanh 2.png" id="11_vw6mi"]
@@ -31,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://bo4ueoqff2qr7" path="res://asset/visual/sprite/minigame/bar 1.png" id="16_ds2ji"]
 [ext_resource type="Texture2D" uid="uid://djwf7qm2xeflt" path="res://asset/visual/sprite/minigame/Fail.png" id="18_lt645"]
 [ext_resource type="Texture2D" uid="uid://dwbx413rmpatk" path="res://asset/visual/sprite/minigame/batdau.png" id="19_o8qm0"]
+[ext_resource type="PackedScene" uid="uid://busbr02uxdgor" path="res://scene/dialogic/style/mainstyle/PauseMenu/MainMenuSettings.tscn" id="22_jqmb1"]
 
 [sub_resource type="Animation" id="Animation_lr3b7"]
 length = 0.001
@@ -855,8 +855,10 @@ texture_over = ExtResource("16_ds2ji")
 texture_progress = ExtResource("15_sggvx")
 tint_progress = Color(1, 0, 0, 1)
 
-[node name="PauseMenu" parent="UI/PanelContainer" instance=ExtResource("10_snpuc")]
+[node name="PauseMenu" parent="UI/PanelContainer" instance=ExtResource("22_jqmb1")]
 layout_mode = 2
+show_inventory_button = false
+inventory_openable = false
 
 [node name="StartScreen" type="Control" parent="UI/PanelContainer"]
 visible = false

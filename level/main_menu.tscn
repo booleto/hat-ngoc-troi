@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bsb25rej8w2hn"]
+[gd_scene load_steps=26 format=3 uid="uid://bsb25rej8w2hn"]
 
 [ext_resource type="Texture2D" uid="uid://biule84r2yuks" path="res://asset/visual/sprite/logo/Logo (2).png" id="1_6716l"]
 [ext_resource type="Script" path="res://script/level_manager/MainMenu.gd" id="1_t2rss"]
@@ -83,6 +83,10 @@ action_to_do = 0
 font = ExtResource("7_slk2d")
 font_size = 64
 font_color = Color(0.470588, 0.247059, 0.0156863, 1)
+
+[sub_resource type="Resource" id="Resource_2k4re"]
+script = ExtResource("6_2sy1i")
+action_to_do = 5
 
 [sub_resource type="LabelSettings" id="LabelSettings_0q1bt"]
 font = ExtResource("7_slk2d")
@@ -262,7 +266,7 @@ layout_mode = 2
 texture_normal = ExtResource("4_hq84g")
 texture_hover = ExtResource("5_5wjxf")
 script = ExtResource("4_bamqk")
-action = SubResource("Resource_vwmbv")
+action = SubResource("Resource_2k4re")
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="CanvasLayer/ButtonsPanel/MarginContainer/Control/Scale/HBoxContainer/Button4"]
@@ -288,6 +292,8 @@ offset_left = -8.0
 offset_top = -16.0
 offset_right = -8.0
 offset_bottom = -16.0
+show_pause_button = false
+show_inventory_button = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_gn7vj")

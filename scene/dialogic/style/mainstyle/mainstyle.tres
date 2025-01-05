@@ -10,9 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://cowqavxagppf5" path="res://scene/dialogic/style/mainstyle/CenteredChoices/custom_centered_choices.tscn" id="8_1wmqb"]
 [ext_resource type="PackedScene" uid="uid://d2y2b07jiplj" path="res://scene/dialogic/style/mainstyle/SimpleTextInputBox/custom_simple_text_input_box.tscn" id="8_gb5lx"]
 [ext_resource type="PackedScene" uid="uid://lx24i8fl6uo" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.tscn" id="9_usp7x"]
-[ext_resource type="PackedScene" uid="uid://yvssq8ew27vg" path="res://scene/dialogic/style/mainstyle/PauseMenu/PauseMenu.tscn" id="10_34ny5"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_xmshk"]
 [ext_resource type="PackedScene" uid="uid://bmdy2m7eoqy8y" path="res://scene/dialogic/style/mainstyle/BackgroundDarken/BackgroundDarken.tscn" id="12_bgcej"]
+[ext_resource type="PackedScene" uid="uid://busbr02uxdgor" path="res://scene/dialogic/style/mainstyle/PauseMenu/MainMenuSettings.tscn" id="13_83ek4"]
 [ext_resource type="PackedScene" uid="uid://du06j6hmkg4n" path="res://scene/dialogic/style/temp_scroll_style/item_panel.tscn" id="13_kdong"]
 
 [sub_resource type="Resource" id="Resource_3fk2a"]
@@ -89,11 +89,6 @@ overrides = {
 "disabled": "true"
 }
 
-[sub_resource type="Resource" id="Resource_n0qkq"]
-script = ExtResource("1_ysb5a")
-scene = ExtResource("10_34ny5")
-overrides = {}
-
 [sub_resource type="Resource" id="Resource_ipct3"]
 script = ExtResource("1_ysb5a")
 scene = ExtResource("12_bgcej")
@@ -104,10 +99,15 @@ script = ExtResource("1_ysb5a")
 scene = ExtResource("13_kdong")
 overrides = {}
 
+[sub_resource type="Resource" id="Resource_akgca"]
+script = ExtResource("1_ysb5a")
+scene = ExtResource("13_83ek4")
+overrides = {}
+
 [resource]
 script = ExtResource("10_xmshk")
 name = "mainstyle"
-layer_list = Array[String](["10", "19", "11", "12", "13", "14", "1a", "15", "16", "18", "17"])
+layer_list = Array[String](["10", "19", "11", "12", "13", "14", "1a", "15", "16", "17", "18"])
 layer_info = {
 "": SubResource("Resource_3fk2a"),
 "10": SubResource("Resource_3fwpb"),
@@ -118,10 +118,10 @@ layer_info = {
 "15": SubResource("Resource_y54ca"),
 "16": SubResource("Resource_yrjbb"),
 "17": SubResource("Resource_1fvfq"),
-"18": SubResource("Resource_n0qkq"),
+"18": SubResource("Resource_akgca"),
 "19": SubResource("Resource_ipct3"),
 "1a": SubResource("Resource_grrk4")
 }
 base_overrides = {}
 layers = Array[ExtResource("1_ysb5a")]([])
-metadata/_latest_layer = "1a"
+metadata/_latest_layer = ""
