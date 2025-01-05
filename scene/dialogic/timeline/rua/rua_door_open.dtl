@@ -11,5 +11,8 @@ trau: Ra là phải đẩy tượng lân thì cửa mới mở được.
 	[signal arg="darken_bg"]
 	trau: Mà nãy đi cũng mệt rồi, ngồi đây nghỉ chút đã.
 	trau (trau_gai_dau): À không được, làng đang khó khăn, mình không thể chậm trễ nữa.
+leave --All--
 [signal arg="lighten_bg"]
+[background arg="res://asset/visual/sprite/background/flashbang.png" fade="1.0"]
+[wait time="1.0"]
 do LevelLoader.load_level_from_name("THANH_DIA_TU_LINH")

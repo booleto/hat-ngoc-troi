@@ -1,3 +1,6 @@
+[background arg="res://asset/visual/sprite/background/flashbang.png" fade="0.0"]
+[background fade="1.0"]
+[wait time="1.0"]
 [style name="mainstyle"]
 join trau (trau_binh_thuong) leftmore
 [signal arg="darken_bg"]

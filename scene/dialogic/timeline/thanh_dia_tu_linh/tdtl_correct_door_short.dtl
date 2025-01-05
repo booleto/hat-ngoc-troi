@@ -6,3 +6,6 @@ trau: Tuyệt. Giờ vào đó xem thử nào.
 	[signal arg="darken_bg"]
 	trau (trau_gai_dau): Mình vẫn chưa sẵn sàng lắm, hồi hộp thật.
 	[signal arg="lighten_bg"]
+leave --All--
+[background arg="res://asset/visual/sprite/background/flashbang.png" fade="1.0"]
+[wait time="1.0"]

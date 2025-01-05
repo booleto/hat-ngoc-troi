@@ -16,4 +16,7 @@ phuong (phuong_normal): Nhưng ta phải công nhận, nhà ngươi được vi�
 trau (trau_binh_thuong): Con sẽ cố gắng hơn nữa ạ, Bà sai con gấp trăm, gấp nghìn lần con cũng làm!
 phuong: Thôi được rồi. Giờ tới 3 cánh cổng tiếp theo đi, phần ta đã xong, ta sẽ để cho ba lão kia lo liệu nốt. Mau mau đón lấy bảo vật thần thánh đầu tiên của ngươi!
 [ Từ trên đài cao, vật thể tỏa ra tia rực rỡ hoàng kim chậm rãi đáp xuống lòng bàn tay lật ngửa của Trâu Vàng. Khi ánh sáng tắt hẳn, anh nhận ra đó là một hạt lúa bằng vàng ròng. Ngay lúc Trâu vừa bỏ hạt lúa vào tay nải thì trong chớp mắt, anh đã bị thổi ra giữ thánh Địa Tứ Linh, trở về vị trí ban đầu. Cuộn kinh trong tay Trâu Vàng nóng lên, anh giở ra xem thì thấy một chỗ trống đã hiện rõ chữ. ]
+leave --All--
+[background arg="res://asset/visual/sprite/background/flashbang.png" fade="1.0"]
+[wait time="1.0"]
 do LevelLoader.load_level_from_name("DEN_QUY")

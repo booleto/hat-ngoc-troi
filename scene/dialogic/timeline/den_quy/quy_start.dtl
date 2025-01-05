@@ -1,2 +1,4 @@
-[music fade="0.0" volume="0.0"]
+[background arg="res://asset/visual/sprite/background/flashbang.png" fade="0.0"]
+[background fade="1.0"]
+[wait time="1.0"]
 [end_timeline]
