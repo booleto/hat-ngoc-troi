@@ -252,11 +252,13 @@ func update_stick_sprite():
 		red_stick = false
 		blue_stick = true
 		red_stick_sprite.play()
-		await red_stick_sprite.animation_finished
-		red_stick_sprite.set_frame(0)
+		$Background/RedStick/AnimationPlayer.play("red_effect")
+		#await red_stick_sprite.animation_finished
+		#red_stick_sprite.set_frame(0)
 	elif blue_stick:
 		blue_stick = false
 		red_stick = true
 		blue_stick_sprite.play()
-		await blue_stick_sprite.animation_finished
-		blue_stick_sprite.set_frame(0)
+		$Background/BlueStick/AnimationPlayer.play("blue_effect")
+		#await blue_stick_sprite.animation_finished
+		#blue_stick_sprite.set_frame(0)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dtw7wu10r7kbk"]
+[gd_scene load_steps=58 format=3 uid="uid://dtw7wu10r7kbk"]
 
 [ext_resource type="Texture2D" uid="uid://2eynch24d576" path="res://asset/visual/sprite/minigame/bg.png" id="1_06gx8"]
 [ext_resource type="Script" path="res://script/minigame/drum/DrumMinigame.gd" id="1_cdk5x"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://br22seq2l3yoq" path="res://asset/visual/sprite/cg/cửa 2.png" id="12_nxd40"]
 [ext_resource type="Texture2D" uid="uid://dulfrctpm6hnp" path="res://asset/visual/sprite/minigame/dùi đỏ 1.png" id="12_oh00n"]
 [ext_resource type="FontFile" uid="uid://cgr0ende1nca5" path="res://asset/font/Montserrat-Black.otf" id="12_sgfid"]
+[ext_resource type="Texture2D" uid="uid://bvi7t5v80l4k8" path="res://asset/visual/sprite/minigame/effect.png" id="12_uekir"]
 [ext_resource type="Texture2D" uid="uid://b0n4q5di2eaja" path="res://asset/visual/sprite/minigame/dùi đỏ 2.png" id="13_rwtas"]
 [ext_resource type="Texture2D" uid="uid://bmo8k8e8xj1b2" path="res://asset/visual/sprite/cg/cửa 3.png" id="13_wiekc"]
 [ext_resource type="Texture2D" uid="uid://cqqpuowxyym6d" path="res://asset/visual/sprite/cg/cửa 4.png" id="14_3jqpt"]
@@ -499,47 +500,99 @@ _data = {
 "start_stage": SubResource("Animation_25wxh")
 }
 
-[sub_resource type="Animation" id="Animation_bil8j"]
-length = 0.8
-step = 0.4
-
-[sub_resource type="Animation" id="Animation_ujlun"]
-resource_name = "drum_hit"
-length = 0.8
-step = 0.4
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_a5a0q"]
-_data = {
-"RESET": SubResource("Animation_bil8j"),
-"drum_hit": SubResource("Animation_ujlun")
-}
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_t2t8k"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_l3xvx")
+"texture": ExtResource("11_vw6mi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_vw6mi")
+"texture": ExtResource("10_l3xvx")
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
+
+[sub_resource type="Animation" id="Animation_eldjr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Effect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%RedStick/Effect2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gtkm0"]
+resource_name = "blue_effect"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Effect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_m2qmv"]
+resource_name = "red_effect"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Effect2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q1g1v"]
+_data = {
+"RESET": SubResource("Animation_eldjr"),
+"blue_effect": SubResource("Animation_gtkm0"),
+"red_effect": SubResource("Animation_m2qmv")
+}
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vracx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_oh00n")
+"texture": ExtResource("13_rwtas")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_rwtas")
+"texture": ExtResource("12_oh00n")
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 50.0
 }]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_02wxr"]
@@ -681,7 +734,7 @@ music_sheet = ExtResource("3_y4eky")
 
 [node name="Screenshot2025-01-04104635" type="Sprite2D" parent="."]
 visible = false
-self_modulate = Color(1, 1, 1, 0.184314)
+self_modulate = Color(1, 1, 1, 0.556863)
 z_index = 7
 position = Vector2(960, 540)
 scale = Vector2(1, 1.00741)
@@ -690,13 +743,6 @@ texture = ExtResource("4_fsmay")
 [node name="SceneAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_hd7qh")
-}
-script = ExtResource("4_ujshx")
-
-[node name="RedStick" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Background/RedStick")
-libraries = {
-"": SubResource("AnimationLibrary_a5a0q")
 }
 script = ExtResource("4_ujshx")
 
@@ -721,23 +767,52 @@ position = Vector2(-1138, 90)
 texture = ExtResource("1_06gx8")
 
 [node name="Drum" type="Sprite2D" parent="Background"]
-position = Vector2(659, 76.75)
-scale = Vector2(1.01701, 1.02644)
+position = Vector2(660, 76.75)
+scale = Vector2(1.02041, 1.02644)
 texture = ExtResource("8_2v21l")
 
 [node name="BlueStick" type="AnimatedSprite2D" parent="Background"]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(801.5, 272)
-scale = Vector2(1.17176, 1.21033)
+position = Vector2(804, 272)
+scale = Vector2(1.19084, 1.21033)
 sprite_frames = SubResource("SpriteFrames_t2t8k")
+frame = 1
+frame_progress = 1.0
+
+[node name="Effect" type="Sprite2D" parent="Background/BlueStick"]
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+position = Vector2(-70.538, -66.0977)
+scale = Vector2(0.974357, 0.969697)
+texture = ExtResource("12_uekir")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/BlueStick"]
+root_node = NodePath("../../BlueStick")
+libraries = {
+"": SubResource("AnimationLibrary_q1g1v")
+}
 
 [node name="RedStick" type="AnimatedSprite2D" parent="Background"]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(818, -164)
-scale = Vector2(1.04545, 1.01857)
+position = Vector2(820.523, -164)
+scale = Vector2(1.06471, 1.01857)
 sprite_frames = SubResource("SpriteFrames_vracx")
+frame = 1
+
+[node name="Effect2" type="Sprite2D" parent="Background/RedStick"]
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+position = Vector2(-71.8723, 74.6144)
+scale = Vector2(1.03243, 1.15226)
+texture = ExtResource("12_uekir")
+flip_v = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background/RedStick"]
+libraries = {
+"": SubResource("AnimationLibrary_q1g1v")
+}
 
 [node name="UI" type="CanvasLayer" parent="."]
 
