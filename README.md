@@ -12,6 +12,12 @@ Sau khi tải xuống, giải nén file game.
 
 Chọn `game.exe` để bắt đầu trò chơi.
 
+![Màn hình chính](https://github.com/booleto/hat-ngoc-troi/blob/main/preview0.png?raw=true)
+![Lựa chọn](https://github.com/booleto/hat-ngoc-troi/blob/main/preview1.png?raw=true)
+![Minigame](https://github.com/booleto/hat-ngoc-troi/blob/main/preview2.png?raw=true)
+![Minigame](https://github.com/booleto/hat-ngoc-troi/blob/main/preview3.png?raw=true)
+![Màn chơi](https://github.com/booleto/hat-ngoc-troi/blob/main/preview4.png?raw=true)
+
 ## Tương thích
 
 Game được làm cho hệ máy: Windows 10/11
