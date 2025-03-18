@@ -1,4 +1,20 @@
-# Hạt ngọc trời
+# Ngọc trời
+
+Ngọc Trời là dự án game visual novel/giải đố, với các yếu tố đến từ văn hóa dân gian Việt Nam.
+
+## Cài đặt
+
+Tải game tại đường link: https://drive.google.com/file/d/1uXrI6_ofArf3LCuNLCQB5_MZ3nuUeLWB/view?usp=sharing
+
+Chọn bản mởi nhất: `Ngọc Trời.zip`. Các file còn lại là các bản cũ hơn. Bấm chuột phải -> Chọn Tải xuống
+
+Sau khi tải xuống, giải nén file game.
+
+Chọn `game.exe` để bắt đầu trò chơi.
+
+## Tương thích
+
+Game được làm cho hệ máy: Windows 10/11
 
 ## Hướng dẫn dự án
 
