@@ -59,7 +59,7 @@ position = Vector2(960, 540.5)
 scale = Vector2(0.24, 0.240222)
 texture = ExtResource("2_0lwkw")
 
-[node name="Button" type="TextureButton" parent="."]
+[node name="Button" type="TextureButton" parent="." groups=["main_menu_buttons"]]
 z_index = 1
 offset_left = 704.0
 offset_top = 729.0
@@ -90,7 +90,7 @@ label_settings = SubResource("LabelSettings_aifu1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button2" type="TextureButton" parent="."]
+[node name="Button2" type="TextureButton" parent="." groups=["main_menu_buttons"]]
 offset_left = 704.0
 offset_top = 848.0
 offset_right = 1216.0
@@ -112,7 +112,7 @@ label_settings = SubResource("LabelSettings_7ip31")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button3" type="TextureButton" parent="."]
+[node name="Button3" type="TextureButton" parent="." groups=["main_menu_buttons"]]
 offset_left = 704.0
 offset_top = 967.0
 offset_right = 1216.0

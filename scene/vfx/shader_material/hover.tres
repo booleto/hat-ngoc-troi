@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dvx40hwpdgki0"]
+
+[ext_resource type="Shader" path="res://scene/vfx/shader/rect_glow.gdshader" id="1_b12k3"]
+
+[resource]
+shader = ExtResource("1_b12k3")
+shader_parameter/rect_size = Vector2(0.001, 0.001)
+shader_parameter/bness = 0.25
+shader_parameter/fall_off_scale = 1.0
+shader_parameter/b_offset = 0.1

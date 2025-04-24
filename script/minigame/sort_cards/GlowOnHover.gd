@@ -8,6 +8,8 @@ func _ready() -> void:
 
 func _on_mouse_entered() -> void:
 	glow_obj.visible = true
+	print("on")
 	
 func _on_mouse_exit() -> void:
 	glow_obj.visible = false
+	print("off")
